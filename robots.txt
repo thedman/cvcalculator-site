@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thedman.github.io/cvcalculator-site/sitemap.xml
+Sitemap: https://cvcalculator.ca/sitemap.xml
