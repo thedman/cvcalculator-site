@@ -594,61 +594,35 @@
     }
 
     .breakeven-visual {
-      background: var(--navy-2);
-      border: 1px solid var(--border-2);
-      border-radius: 20px;
-      padding: 28px;
-    }
-
-    .be-title {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      margin-bottom: 20px;
-    }
-
-    .be-row {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border-2);
+      justify-content: center;
     }
 
-    .be-row:last-child { border-bottom: none; }
-
-    .be-rate {
-      font-family: 'DM Mono', monospace;
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--gold);
+    .screenshot-phone {
+      width: 260px;
+      background: var(--navy-3);
+      border-radius: 40px;
+      border: 1px solid var(--border);
+      padding: 12px;
+      box-shadow:
+        0 40px 80px rgba(0,0,0,0.6),
+        0 0 0 1px rgba(255,255,255,0.04),
+        inset 0 1px 0 rgba(255,255,255,0.08);
     }
 
-    .be-label {
-      font-size: 0.75rem;
-      color: var(--text-3);
-      margin-left: 4px;
+    .screenshot-notch {
+      width: 70px;
+      height: 20px;
+      background: var(--navy);
+      border-radius: 10px;
+      margin: 0 auto 10px;
     }
 
-    .be-result {
-      text-align: right;
+    .screenshot-phone img {
+      width: 100%;
+      border-radius: 28px;
+      display: block;
     }
-
-    .be-age {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.9rem;
-      color: var(--text-1);
-    }
-
-    .be-verdict {
-      font-size: 0.65rem;
-      font-weight: 600;
-      margin-top: 2px;
-    }
-
-    .be-verdict.pension { color: var(--gold); }
-    .be-verdict.cv { color: var(--blue); }
 
     /* ── FAQ ── */
     .faq {
@@ -761,44 +735,6 @@
       height: 54px;
     }
 
-    .app-store-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px 32px;
-      background: var(--navy-3);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      text-decoration: none;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-
-    .app-store-btn:hover {
-      border-color: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    .app-store-btn-icon {
-      font-size: 2rem;
-    }
-
-    .app-store-btn-text {
-      text-align: left;
-    }
-
-    .app-store-btn-sub {
-      font-size: 0.65rem;
-      color: var(--text-3);
-      font-family: 'DM Mono', monospace;
-      letter-spacing: 0.1em;
-    }
-
-    .app-store-btn-main {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text-1);
-    }
-
     /* ── DISCLAIMER ── */
     .disclaimer {
       padding: 40px 0;
@@ -875,6 +811,7 @@
       .how-steps::before { display: none; }
       .breakeven-inner   { grid-template-columns: 1fr; gap: 48px; }
       .stats-inner       { grid-template-columns: repeat(2, 1fr); }
+      .screenshot-phone  { width: 220px; }
     }
 
     @media (max-width: 600px) {
@@ -1064,60 +1001,13 @@
           <div class="eyebrow">Break-Even Analysis</div>
           <h2>At what age does the pension actually win?</h2>
           <p>This is the question most people never get a clear answer to. CVCalculator models your commuted value growing pre-retirement, then drawing down annually once you start collecting — the same way your real money would actually work.</p>
-          <p>At a 4% return, the pension surpasses the invested CV at age 79. At 6% or higher, the CV outlasts age 95. Tap any row to see the full math behind the verdict.</p>
+          <p>For example, at a 4% return, the CV depletes at age 82 — but at 8% return, the CV outlasts 95. Tap any row to see the full math behind the verdict.</p>
           <p style="font-size:0.8rem; color:var(--text-3); margin-top:8px;">Results vary based on your pension amount, retirement age, and return assumptions. This is illustrative only.</p>
         </div>
         <div class="breakeven-visual reveal">
-          <div class="be-title">BREAK-EVEN ANALYSIS · ILLUSTRATIVE</div>
-          <div class="be-row">
-            <div>
-              <span class="be-rate">4%</span>
-              <span class="be-label">return</span>
-            </div>
-            <div class="be-result">
-              <div class="be-age">Age 79</div>
-              <div class="be-verdict pension">Pension wins</div>
-            </div>
-          </div>
-          <div class="be-row">
-            <div>
-              <span class="be-rate">5%</span>
-              <span class="be-label">return</span>
-            </div>
-            <div class="be-result">
-              <div class="be-age">Age 86</div>
-              <div class="be-verdict pension">Pension wins</div>
-            </div>
-          </div>
-          <div class="be-row">
-            <div>
-              <span class="be-rate">6%</span>
-              <span class="be-label">return</span>
-            </div>
-            <div class="be-result">
-              <div class="be-age">Age 95+</div>
-              <div class="be-verdict cv">CV wins</div>
-            </div>
-          </div>
-          <div class="be-row">
-            <div>
-              <span class="be-rate">7%</span>
-              <span class="be-label">return</span>
-            </div>
-            <div class="be-result">
-              <div class="be-age">Age 95+</div>
-              <div class="be-verdict cv">CV wins</div>
-            </div>
-          </div>
-          <div class="be-row">
-            <div>
-              <span class="be-rate">8%</span>
-              <span class="be-label">return</span>
-            </div>
-            <div class="be-result">
-              <div class="be-age">Age 95+</div>
-              <div class="be-verdict cv">CV wins</div>
-            </div>
+          <div class="screenshot-phone">
+            <div class="screenshot-notch"></div>
+            <img src="IMG_2527.png" alt="CVCalculator break-even analysis showing CV depletion ages across return rate scenarios" />
           </div>
         </div>
       </div>
