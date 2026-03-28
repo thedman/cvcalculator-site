@@ -18,20 +18,20 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:       #080f1e;
-      --navy-2:     #0d1628;
-      --navy-3:     #111e35;
-      --navy-4:     #172440;
-      --gold:       #c9a84c;
-      --gold-light: #e2c47a;
-      --gold-dim:   #8a6d2f;
-      --blue:       #3a7bd5;
-      --blue-dim:   #1e3a5f;
-      --text-1:     #f0e8d6;
-      --text-2:     #b8a98a;
+      --navy:       #f5f0e8;
+      --navy-2:     #ede8df;
+      --navy-3:     #e4ddd2;
+      --navy-4:     #d9d0c3;
+      --gold:       #8a6d2f;
+      --gold-light: #a07d35;
+      --gold-dim:   #c9a84c;
+      --blue:       #1e3a5f;
+      --blue-dim:   #cdd8e8;
+      --text-1:     #0d1628;
+      --text-2:     #2d3d56;
       --text-3:     #6b7a94;
-      --border:     rgba(201,168,76,0.15);
-      --border-2:   rgba(255,255,255,0.06);
+      --border:     rgba(138,109,47,0.2);
+      --border-2:   rgba(0,0,0,0.08);
     }
 
     html { scroll-behavior: smooth; }
@@ -96,7 +96,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(8,15,30,0.85);
+      background: rgba(245,240,232,0.92);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-2);
     }
@@ -118,7 +118,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-weight: 700;
       font-size: 1rem;
-      color: #1a1200;
+      color: #f5f0e8;
     }
 
     .nav-logo-text {
@@ -134,7 +134,7 @@
       gap: 8px;
       padding: 8px 20px;
       background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      color: #1a1200;
+      color: #f5f0e8;
       font-weight: 600;
       font-size: 0.8rem;
       border-radius: 24px;
@@ -160,7 +160,7 @@
       position: absolute;
       top: -200px; right: -200px;
       width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(138,109,47,0.06) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -169,7 +169,7 @@
       position: absolute;
       bottom: -100px; left: -100px;
       width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(58,123,213,0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(58,123,213,0.04) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -219,18 +219,18 @@
       gap: 10px;
       padding: 14px 28px;
       background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      color: #1a1200;
+      color: #f5f0e8;
       font-weight: 600;
       font-size: 0.95rem;
       border-radius: 32px;
       text-decoration: none;
       transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 8px 32px rgba(201,168,76,0.25);
+      box-shadow: 0 8px 32px rgba(138,109,47,0.2);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(201,168,76,0.35);
+      box-shadow: 0 12px 40px rgba(138,109,47,0.3);
     }
 
     .btn-secondary {
@@ -278,12 +278,12 @@
 
     .phone-frame {
       width: 260px;
-      background: var(--navy-3);
+      background: #111e35;
       border-radius: 40px;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(201,168,76,0.15);
       padding: 16px;
       box-shadow:
-        0 40px 80px rgba(0,0,0,0.6),
+        0 40px 80px rgba(0,0,0,0.4),
         0 0 0 1px rgba(255,255,255,0.04),
         inset 0 1px 0 rgba(255,255,255,0.08);
       position: relative;
@@ -292,13 +292,13 @@
     .phone-notch {
       width: 80px;
       height: 24px;
-      background: var(--navy);
+      background: #080f1e;
       border-radius: 12px;
       margin: 0 auto 16px;
     }
 
     .phone-screen {
-      background: var(--navy-2);
+      background: #0d1628;
       border-radius: 28px;
       padding: 20px 16px;
       min-height: 460px;
@@ -308,43 +308,43 @@
       font-family: 'DM Mono', monospace;
       font-size: 0.5rem;
       letter-spacing: 0.2em;
-      color: var(--gold);
+      color: #c9a84c;
       margin-bottom: 4px;
     }
 
     .phone-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.4rem;
-      color: var(--text-1);
+      color: #f0e8d6;
       margin-bottom: 16px;
     }
 
     .phone-card {
-      background: var(--navy-3);
+      background: #111e35;
       border-radius: 12px;
       padding: 14px;
       margin-bottom: 10px;
-      border: 1px solid var(--border-2);
+      border: 1px solid rgba(255,255,255,0.06);
     }
 
     .phone-card-label {
       font-size: 0.55rem;
       font-family: 'DM Mono', monospace;
       letter-spacing: 0.15em;
-      color: var(--text-3);
+      color: #6b7a94;
       margin-bottom: 4px;
     }
 
     .phone-card-value {
       font-family: 'DM Mono', monospace;
       font-size: 1.1rem;
-      color: var(--gold);
+      color: #c9a84c;
       font-weight: 500;
     }
 
     .phone-card-sub {
       font-size: 0.6rem;
-      color: var(--text-3);
+      color: #6b7a94;
       margin-top: 2px;
     }
 
@@ -353,20 +353,20 @@
       justify-content: space-between;
       align-items: center;
       padding: 6px 0;
-      border-bottom: 1px solid var(--border-2);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
     .phone-row:last-child { border-bottom: none; }
 
     .phone-row-label {
       font-size: 0.6rem;
-      color: var(--text-3);
+      color: #6b7a94;
     }
 
     .phone-row-value {
       font-family: 'DM Mono', monospace;
       font-size: 0.65rem;
-      color: var(--text-2);
+      color: #b8a98a;
     }
 
     .phone-verdict {
@@ -377,7 +377,7 @@
       padding: 8px 12px;
       text-align: center;
       font-size: 0.65rem;
-      color: var(--gold);
+      color: #c9a84c;
       font-family: 'DM Mono', monospace;
       letter-spacing: 0.08em;
     }
@@ -529,7 +529,7 @@
       left: calc(16.67% + 16px);
       right: calc(16.67% + 16px);
       height: 1px;
-      background: linear-gradient(90deg, var(--gold-dim), var(--blue-dim), var(--gold-dim));
+      background: linear-gradient(90deg, var(--gold), var(--blue), var(--gold));
     }
 
     .how-step {
@@ -600,12 +600,12 @@
 
     .screenshot-phone {
       width: 260px;
-      background: var(--navy-3);
+      background: #111e35;
       border-radius: 40px;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(201,168,76,0.15);
       padding: 12px;
       box-shadow:
-        0 40px 80px rgba(0,0,0,0.6),
+        0 40px 80px rgba(0,0,0,0.35),
         0 0 0 1px rgba(255,255,255,0.04),
         inset 0 1px 0 rgba(255,255,255,0.08);
     }
@@ -613,7 +613,7 @@
     .screenshot-notch {
       width: 70px;
       height: 20px;
-      background: var(--navy);
+      background: #080f1e;
       border-radius: 10px;
       margin: 0 auto 10px;
     }
@@ -704,7 +704,7 @@
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
       width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(138,109,47,0.05) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -1166,7 +1166,7 @@
       transition: transform 0.2s, box-shadow 0.2s;
     }
     #cv-chat-btn:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(201,168,76,0.5); }
-    #cv-chat-btn svg { width: 26px; height: 26px; fill: #1a1200; }
+    #cv-chat-btn svg { width: 26px; height: 26px; fill: #f5f0e8; }
 
     #cv-chat-window {
       position: fixed;
@@ -1200,7 +1200,7 @@
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 700; font-size: 0.9rem; color: #1a1200;
+      font-weight: 700; font-size: 0.9rem; color: #f5f0e8;
     }
     #cv-chat-title { font-size: 0.9rem; font-weight: 600; color: var(--text-1); }
     #cv-chat-subtitle { font-size: 0.7rem; color: var(--text-3); }
@@ -1292,7 +1292,7 @@
       flex-shrink: 0;
     }
     #cv-chat-send:hover { opacity: 0.85; }
-    #cv-chat-send svg { width: 16px; height: 16px; fill: #1a1200; }
+    #cv-chat-send svg { width: 16px; height: 16px; fill: #f5f0e8; }
 
     @media (max-width: 420px) {
       #cv-chat-window { width: calc(100vw - 32px); right: 16px; }
@@ -1301,9 +1301,10 @@
 
   <!-- Chat button -->
   <button id="cv-chat-btn" aria-label="Open CV Calculator Assistant">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:#0d1628">
       <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l4.93-1.37A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
     </svg>
+    <span id="cv-chat-btn-label">Ask CV Assistant</span>
   </button>
 
   <!-- Chat window -->
@@ -1329,7 +1330,7 @@
     <div id="cv-chat-input-row">
       <input id="cv-chat-input" type="text" placeholder="Ask a question…" autocomplete="off" />
       <button id="cv-chat-send" aria-label="Send">
-        <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        <svg viewBox="0 0 24 24" style="fill:#f5f0e8"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
       </button>
     </div>
   </div>
