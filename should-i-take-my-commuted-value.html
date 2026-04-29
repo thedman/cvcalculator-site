@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Should I Take My Commuted Value? — CVCalculator</title>
+  <meta name="description" content="Taking your commuted value or keeping your defined benefit pension is one of the biggest financial decisions you'll make. Here's how to think through it." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cvcalculator.ca/should-i-take-my-commuted-value" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #f5f0e8; --navy-2: #ede8df; --navy-3: #e4ddd2;
+      --gold: #8a6d2f; --gold-light: #a07d35; --gold-dim: #c9a84c;
+      --text-1: #0d1628; --text-2: #2d3d56; --text-3: #6b7a94;
+      --border: rgba(138,109,47,0.2); --border-2: rgba(0,0,0,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--navy); color: var(--text-1); font-family: 'Outfit', sans-serif; font-weight: 400; line-height: 1.7; }
+
+    nav { position: sticky; top: 0; z-index: 100; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; background: rgba(245,240,232,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-2); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1rem; color: #f5f0e8; }
+    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.1rem; color: var(--text-1); }
+    .nav-back { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .nav-back:hover { color: #6b5320; }
+
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    .page-hero { padding: 64px 0 48px; border-bottom: 1px solid var(--border-2); }
+    .eyebrow { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6b5320; margin-bottom: 12px; }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--text-1); line-height: 1.15; margin-bottom: 16px; }
+    .page-hero .intro { font-size: 1.05rem; color: var(--text-2); line-height: 1.8; max-width: 640px; }
+    .page-hero .meta { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--text-3); margin-top: 16px; }
+
+    .article-body { padding: 48px 0 80px; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--text-1); margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border-2); }
+    .article-body h2:first-child { margin-top: 0; }
+    .article-body p { font-size: 0.95rem; color: var(--text-2); line-height: 1.85; margin-bottom: 16px; }
+    .article-body ul { list-style: none; padding: 0; margin: 12px 0 20px; }
+    .article-body ul li { font-size: 0.95rem; color: var(--text-2); line-height: 1.7; padding: 7px 0 7px 20px; position: relative; border-bottom: 1px solid var(--border-2); }
+    .article-body ul li:last-child { border-bottom: none; }
+    .article-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold-dim); }
+    .article-body a { color: #6b5320; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(107,83,32,0.3); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: #6b5320; }
+    .article-body strong { color: var(--text-1); font-weight: 600; }
+
+    .callout { background: var(--navy-2); border: 1.5px solid var(--border-2); border-left: 3px solid var(--gold-dim); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
+    .callout p { margin: 0; font-size: 0.9rem; }
+
+    .factor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0 28px; }
+    .factor-card { background: var(--navy-2); border: 1.5px solid var(--border-2); border-radius: 12px; padding: 18px 20px; }
+    .factor-card-label { font-family: 'DM Mono', monospace; font-size: 0.52rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; }
+    .factor-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-1); margin-bottom: 6px; }
+    .factor-card p { font-size: 0.82rem; color: var(--text-2); line-height: 1.65; margin: 0; }
+    .factor-card.favour-cv { border-top: 2px solid var(--gold-dim); }
+    .factor-card.favour-pension { border-top: 2px solid #1e3a5f; }
+
+    .cta-box { background: linear-gradient(135deg, var(--navy-2), var(--navy-3)); border: 1.5px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+    .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--text-1); margin-bottom: 10px; }
+    .cta-box p { font-size: 0.88rem; color: var(--text-2); margin-bottom: 20px; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #f5f0e8; font-weight: 600; font-size: 0.88rem; border-radius: 28px; text-decoration: none; border: none; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 16px rgba(138,109,47,0.2); }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .related { background: var(--navy-2); border-top: 1px solid var(--border-2); padding: 40px 0; }
+    .related-label { font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link { font-size: 0.9rem; color: #6b5320; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(107,83,32,0.2); padding-bottom: 10px; transition: border-color 0.2s; }
+    .related-link:hover { border-color: #6b5320; }
+
+    footer { padding: 32px 0; border-top: 1px solid var(--border-2); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-left { font-size: 0.8rem; color: var(--text-3); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #6b5320; }
+
+    @media (max-width: 640px) {
+      .factor-grid { grid-template-columns: 1fr; }
+      .container { padding: 0 16px; }
+      nav { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-icon">CV</div>
+    <span class="nav-logo-text">CVCalculator</span>
+  </a>
+  <a href="/" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Pension Decisions</div>
+    <h1>Should I take my commuted value or keep my defined benefit pension?</h1>
+    <p class="intro">This is one of the most significant financial decisions a Canadian employee can face — and there's no universal right answer. Here's how to think through it clearly.</p>
+    <div class="meta">By CVCalculator · Updated April 2026 · 6 min read</div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container">
+
+    <h2>What you're actually deciding</h2>
+    <p>When you leave an employer with a defined benefit pension, you typically have a choice: stay in the plan and receive a monthly pension at retirement, or take the <strong>commuted value</strong> — a lump sum representing the present value of those future payments — and invest it yourself.</p>
+    <p>The commuted value is calculated by your pension administrator using the CIA §3500 actuarial standard, which prescribes specific interest rates and mortality tables. It represents what your future pension stream is worth in today's dollars.</p>
+    <p>This isn't a small decision. For someone with a meaningful defined benefit pension, the commuted value is often the largest single financial asset they'll ever receive — commonly between $300,000 and $800,000 or more.</p>
+
+    <h2>The case for taking the commuted value</h2>
+    <p>Taking the lump sum gives you control, flexibility, and the ability to benefit from investment returns above the discount rate baked into your pension calculation. Several factors tend to favour taking the CV:</p>
+    <ul>
+      <li><strong>Younger age at termination</strong> — the longer the money has to compound before retirement, the more a lump sum can grow relative to the fixed pension</li>
+      <li><strong>Good investment discipline</strong> — if you have a history of consistent, long-term investing and won't panic in downturns</li>
+      <li><strong>Health concerns</strong> — a pension pays for life, but only your life; a CV can be passed to heirs</li>
+      <li><strong>High current interest rates</strong> — paradoxically, high rates reduce your CV, but they also mean your LIRA can earn more going forward</li>
+      <li><strong>No survivor benefit needed</strong> — if you're single or your spouse has their own pension income</li>
+    </ul>
+
+    <h2>The case for keeping the pension</h2>
+    <p>A defined benefit pension is one of the last guaranteed income streams available to most Canadians. Keeping it eliminates longevity risk — the risk of outliving your money — entirely. Factors that favour staying in the plan:</p>
+    <ul>
+      <li><strong>Longevity in your family</strong> — if people in your family routinely live into their late 80s or 90s, the pension math often favours staying in</li>
+      <li><strong>Low risk tolerance</strong> — a pension removes all investment risk from your retirement income base</li>
+      <li><strong>Indexation</strong> — if your pension is indexed to inflation, that guarantee is extremely valuable and hard to replicate with a lump sum</li>
+      <li><strong>Older age at termination</strong> — the closer you are to retirement, the less time a CV has to compound</li>
+      <li><strong>Survivor benefit</strong> — if your spouse depends on your income and your pension includes a survivor benefit</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>The break-even question:</strong> At what age do the accumulated returns from investing your CV equal what you would have received in pension payments? This is the most useful framing — and it depends entirely on what return rate you can realistically achieve.</p>
+    </div>
+
+    <h2>Key factors to weigh</h2>
+    <div class="factor-grid">
+      <div class="factor-card favour-cv">
+        <div class="factor-card-label">Favours taking the CV</div>
+        <h3>Investment return</h3>
+        <p>If you can consistently earn above the discount rate used to calculate your CV, the lump sum wins over time.</p>
+      </div>
+      <div class="factor-card favour-pension">
+        <div class="factor-card-label">Favours keeping the pension</div>
+        <h3>Longevity</h3>
+        <p>A pension pays until you die. If you live past the break-even age, the pension almost always wins.</p>
+      </div>
+      <div class="factor-card favour-cv">
+        <div class="factor-card-label">Favours taking the CV</div>
+        <h3>Estate planning</h3>
+        <p>A LIRA becomes part of your estate. A pension typically ends at death (or your spouse's death with a survivor benefit).</p>
+      </div>
+      <div class="factor-card favour-pension">
+        <div class="factor-card-label">Favours keeping the pension</div>
+        <h3>Inflation protection</h3>
+        <p>Indexed pensions are rare and valuable. They protect your purchasing power in a way a fixed CV cannot guarantee.</p>
+      </div>
+    </div>
+
+    <h2>How to calculate your break-even age</h2>
+    <p>The break-even age is the point at which the value of accumulated pension payments surpasses the value of investing your commuted value. It depends on three variables: your CV amount, your annual pension, and the return rate you assume on the invested lump sum.</p>
+    <p>CVCalculator's break-even analysis models this across five return rate scenarios — from conservative (4%) to optimistic (10%) — showing you exactly when the pension overtakes the invested CV under each assumption. Most people find this framing changes how they think about the decision entirely.</p>
+    <p>For example, at a 6% return, a typical break-even age falls between 79 and 84. At 8%, the CV often outlasts the pension entirely. At 4%, the pension may win as early as age 76.</p>
+
+    <h2>What about the LIRA transfer limit?</h2>
+    <p>When you take your commuted value, it doesn't all go to you tax-free. Under <strong>Income Tax Act Section 8517</strong>, only a portion can be transferred directly into a Locked-In Retirement Account (LIRA) on a tax-sheltered basis. The remainder is paid out as taxable cash in the year of termination — potentially triggering a large tax bill.</p>
+    <p>Understanding your LIRA transfer limit before you make your decision is essential. CVCalculator calculates this split automatically based on your accrued pension and age.</p>
+
+    <div class="cta-box">
+      <h3>See your commuted value and break-even age</h3>
+      <p>CVCalculator uses the same CIA §3500 actuarial standard your pension administrator uses — so you walk into that conversation with your own numbers.</p>
+      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank">↓ Download CVCalculator — Free on iOS</a>
+    </div>
+
+    <h2>Should you speak to a financial advisor?</h2>
+    <p>Yes — always. The commuted value decision involves tax planning, estate planning, longevity assumptions, and investment strategy simultaneously. A fee-only financial advisor who specializes in pension decisions can model your specific situation and help you weigh factors that a calculator alone cannot capture.</p>
+    <p>CVCalculator gives you the quantitative framework. A qualified advisor gives you the personalized recommendation. <a href="https://www.fpcanada.ca/findaplanner" target="_blank" rel="noopener">Find a fee-only advisor near you →</a></p>
+
+  </div>
+</div>
+
+<div class="related">
+  <div class="container">
+    <div class="related-label">Related articles</div>
+    <div class="related-links">
+      <a href="/how-cia-3500-interest-rates-affect-commuted-value" class="related-link">How CIA §3500 interest rates affect your commuted value →</a>
+      <a href="/#faq" class="related-link">Frequently asked questions about commuted values →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">Built in Canada · CIA §3500 · CPM2014</div>
+      <div class="footer-links">
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" target="_blank">App Store</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#features">Features</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
