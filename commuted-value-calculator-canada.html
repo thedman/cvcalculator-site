@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commuted Value Calculator Canada — How It Works & What You Need — CVCalculator</title>
+  <meta name="description" content="A Canadian commuted value calculator uses CIA §3500 actuarial standards to estimate your DB pension lump sum. Here's exactly what goes in, what comes out, and how to get an accurate number." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cvcalculator.ca/commuted-value-calculator-canada" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a commuted value calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A commuted value calculator estimates the lump sum present value of your defined benefit pension using the CIA §3500 actuarial standard. It takes your pension details — accrued pension, date of birth, termination date, and EURD — and applies prescribed interest rates and Canadian mortality tables to calculate what your future pension stream is worth today."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What inputs do I need for a commuted value calculation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You need: your annual accrued pension at termination, your date of birth, your termination date, your earliest unreduced retirement date (EURD), and whether your plan includes a survivor benefit or CPP bridge. These are all found on your pension statement or termination package."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is a commuted value calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A calculator using the correct CIA §3500 methodology — including the two-tier interest rate structure, CPM2014 mortality tables with CPM-B improvement scale, and proper blending between EURD and optimal retirement date — will produce results very close to your plan administrator's official figure. Small differences may arise from survivor benefit assumptions or plan-specific features."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the LIRA transfer limit in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under Income Tax Act Section 8517, only a portion of your commuted value can be transferred into a Locked-In Retirement Account (LIRA) on a tax-sheltered basis. The limit equals your accrued pension multiplied by a prescribed factor based on your age at termination. Any CV exceeding this limit is paid as taxable cash in the year of termination."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does my commuted value change each month?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Canadian Institute of Actuaries publishes new i₁ and i₂ interest rates monthly. Your commuted value moves inversely with these rates — when rates rise, your CV falls; when rates fall, your CV rises. The i₂ rate, which applies beyond 10 years, has the largest impact."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #f5f0e8; --navy-2: #ede8df; --navy-3: #e4ddd2;
+      --gold: #8a6d2f; --gold-light: #a07d35; --gold-dim: #c9a84c;
+      --text-1: #0d1628; --text-2: #2d3d56; --text-3: #6b7a94;
+      --border: rgba(138,109,47,0.2); --border-2: rgba(0,0,0,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--navy); color: var(--text-1); font-family: 'Outfit', sans-serif; font-weight: 400; line-height: 1.7; }
+
+    nav { position: sticky; top: 0; z-index: 100; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; background: rgba(245,240,232,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-2); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1rem; color: #f5f0e8; }
+    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.1rem; color: var(--text-1); }
+    .nav-back { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .nav-back:hover { color: #6b5320; }
+
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    .page-hero { padding: 64px 0 48px; border-bottom: 1px solid var(--border-2); }
+    .eyebrow { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6b5320; margin-bottom: 12px; }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--text-1); line-height: 1.15; margin-bottom: 16px; }
+    .page-hero .intro { font-size: 1.05rem; color: var(--text-2); line-height: 1.8; max-width: 640px; }
+    .page-hero .meta { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--text-3); margin-top: 16px; }
+
+    .article-body { padding: 48px 0 80px; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--text-1); margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border-2); }
+    .article-body h2:first-child { margin-top: 0; }
+    .article-body p { font-size: 0.95rem; color: var(--text-2); line-height: 1.85; margin-bottom: 16px; }
+    .article-body ul { list-style: none; padding: 0; margin: 12px 0 20px; }
+    .article-body ul li { font-size: 0.95rem; color: var(--text-2); line-height: 1.7; padding: 7px 0 7px 20px; position: relative; border-bottom: 1px solid var(--border-2); }
+    .article-body ul li:last-child { border-bottom: none; }
+    .article-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold-dim); }
+    .article-body a { color: #6b5320; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(107,83,32,0.3); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: #6b5320; }
+    .article-body strong { color: var(--text-1); font-weight: 600; }
+
+    .callout { background: var(--navy-2); border: 1.5px solid var(--border-2); border-left: 3px solid var(--gold-dim); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
+    .callout p { margin: 0; font-size: 0.9rem; }
+
+    .input-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 0.88rem; }
+    .input-table th { background: var(--navy-3); font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); font-weight: 400; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border-2); }
+    .input-table td { padding: 12px 14px; color: var(--text-2); border-bottom: 1px solid var(--border-2); vertical-align: top; }
+    .input-table td:first-child { font-weight: 600; color: var(--text-1); white-space: nowrap; }
+    .input-table tr:last-child td { border-bottom: none; }
+
+    .output-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0 28px; }
+    .output-card { background: var(--navy-2); border: 1.5px solid var(--border-2); border-radius: 12px; padding: 18px 20px; }
+    .output-card-label { font-family: 'DM Mono', monospace; font-size: 0.52rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; }
+    .output-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-1); margin-bottom: 6px; }
+    .output-card p { font-size: 0.82rem; color: var(--text-2); line-height: 1.65; margin: 0; }
+    .output-card.primary { border-top: 2px solid var(--gold-dim); }
+
+    .step-list { counter-reset: steps; list-style: none; padding: 0; margin: 12px 0 24px; }
+    .step-list li { counter-increment: steps; font-size: 0.95rem; color: var(--text-2); line-height: 1.7; padding: 14px 0 14px 48px; position: relative; border-bottom: 1px solid var(--border-2); }
+    .step-list li:last-child { border-bottom: none; }
+    .step-list li::before { content: counter(steps); position: absolute; left: 0; top: 14px; width: 28px; height: 28px; background: var(--navy-3); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1rem; color: var(--gold); text-align: center; line-height: 28px; }
+
+    .cta-box { background: linear-gradient(135deg, var(--navy-2), var(--navy-3)); border: 1.5px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+    .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--text-1); margin-bottom: 10px; }
+    .cta-box p { font-size: 0.88rem; color: var(--text-2); margin-bottom: 20px; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #f5f0e8; font-weight: 600; font-size: 0.88rem; border-radius: 28px; text-decoration: none; border: none; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 16px rgba(138,109,47,0.2); }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .faq-section { margin: 40px 0 0; }
+    .faq-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--text-1); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border-2); }
+    .faq-item { border-bottom: 1px solid var(--border-2); padding: 18px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h3 { font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--text-1); margin-bottom: 8px; }
+    .faq-item p { font-size: 0.9rem; color: var(--text-2); line-height: 1.8; margin: 0; }
+
+    .related { background: var(--navy-2); border-top: 1px solid var(--border-2); padding: 40px 0; }
+    .related-label { font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link { font-size: 0.9rem; color: #6b5320; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(107,83,32,0.2); padding-bottom: 10px; transition: border-color 0.2s; }
+    .related-link:hover { border-color: #6b5320; }
+
+    footer { padding: 32px 0; border-top: 1px solid var(--border-2); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-left { font-size: 0.8rem; color: var(--text-3); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #6b5320; }
+
+    @media (max-width: 640px) {
+      .output-grid { grid-template-columns: 1fr; }
+      .container { padding: 0 16px; }
+      nav { padding: 12px 16px; }
+      .input-table { font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-icon">CV</div>
+    <span class="nav-logo-text">CVCalculator</span>
+  </a>
+  <a href="/" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Commuted Value Calculator · Canada</div>
+    <h1>How a commuted value calculator works in Canada — and what to do with the result</h1>
+    <p class="intro">If you're leaving a defined benefit pension, calculating your commuted value is the first step. Here's what goes into the calculation, what the outputs actually mean, and how to get a number you can trust before you sign anything.</p>
+    <div class="meta">By CVCalculator · Updated April 2026 · 8 min read</div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container">
+
+    <h2>What a commuted value calculator does</h2>
+    <p>A <strong>commuted value calculator</strong> estimates the lump sum present value of your defined benefit pension — the amount of money you'd receive today instead of collecting monthly payments for the rest of your life.</p>
+    <p>The calculation isn't a simple formula. It uses a two-tier interest rate structure, Canadian mortality tables, and a blending methodology between two retirement dates — all prescribed by the <strong>Canadian Institute of Actuaries (CIA) under standard §3500</strong>. Any calculator that doesn't implement this standard will produce inaccurate results.</p>
+    <p>Your pension administrator uses the same standard. A well-built commuted value calculator lets you run your own estimate before your official termination package arrives — so you're not negotiating blind.</p>
+
+    <div class="callout">
+      <p><strong>Why this matters:</strong> The commuted value for a mid-career Canadian with a meaningful DB pension often falls between $300,000 and $900,000. Getting an independent estimate before you sign puts you in a fundamentally different position at the table.</p>
+    </div>
+
+    <h2>What you need before you calculate</h2>
+    <p>Most of this information appears on your annual pension statement or in your termination package. If you haven't received one yet, your HR or pension administrator is required to provide it.</p>
+
+    <table class="input-table">
+      <thead>
+        <tr>
+          <th>Input</th>
+          <th>What it is</th>
+          <th>Where to find it</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Accrued annual pension</td>
+          <td>Your earned pension at the date of termination, expressed as an annual dollar amount before any bridge or indexing</td>
+          <td>Pension statement or termination letter</td>
+        </tr>
+        <tr>
+          <td>Date of birth</td>
+          <td>Used with mortality tables to estimate expected pension duration</td>
+          <td>Your personal records</td>
+        </tr>
+        <tr>
+          <td>Termination date</td>
+          <td>The date you leave your employer — determines which month's CIA rates apply</td>
+          <td>HR documentation</td>
+        </tr>
+        <tr>
+          <td>Earliest Unreduced Retirement Date (EURD)</td>
+          <td>The earliest date you can collect your full pension without reduction — a key variable in the CIA blending formula</td>
+          <td>Pension statement</td>
+        </tr>
+        <tr>
+          <td>Survivor benefit</td>
+          <td>Whether your plan pays a reduced pension to your spouse after your death, and at what percentage</td>
+          <td>Plan documents or HR</td>
+        </tr>
+        <tr>
+          <td>CPP bridge benefit</td>
+          <td>Some DB plans pay an additional bridge benefit until age 65 to supplement CPP; this increases CV</td>
+          <td>Plan documents</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>The CIA §3500 calculation — what actually happens</h2>
+    <p>The commuted value is calculated as the present value of your future pension payments, discounted using interest rates and adjusted for the probability that you will be alive to receive each payment. The CIA §3500 standard prescribes exactly how this is done.</p>
+    <p><strong>The two-tier interest rate structure:</strong> The CIA publishes two rates monthly — i₁ and i₂. The i₁ rate applies to pension payments in the first 10 years after the calculation date. The i₂ rate applies to payments beyond 10 years. Because most of a pension's value lies in payments 10+ years out, i₂ is the dominant driver of your commuted value. When i₂ rises, your CV falls. When it drops, your CV rises.</p>
+    <p><strong>Mortality tables:</strong> The calculation uses CPM2014 mortality tables with the CPM-B improvement scale — the standard for Canadian pensioners. These tables reflect current Canadian life expectancy with projected future improvements, which is why a Canadian-specific calculator produces different results than a generic present-value formula.</p>
+    <p><strong>Blending between EURD and optimal retirement date:</strong> The CIA §3500 standard requires blending between two valuation dates — your EURD and a calculated optimal retirement date. This blending, introduced in the December 2020 standard update, is one of the more complex parts of the calculation and is often omitted by simplified online tools.</p>
+
+    <div class="cta-box">
+      <h3>Run your own commuted value estimate</h3>
+      <p>CVCalculator implements the full CIA §3500 standard — two-tier rates, CPM2014 mortality, December 2020 blending — the same methodology your pension administrator uses.</p>
+      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank">↓ Download CVCalculator — Free on iOS</a>
+    </div>
+
+    <h2>What the calculator outputs — and what each means</h2>
+    <p>A properly built commuted value calculator doesn't just return a single number. The outputs that matter are:</p>
+
+    <div class="output-grid">
+      <div class="output-card primary">
+        <div class="output-card-label">Primary output</div>
+        <h3>Commuted Value</h3>
+        <p>The total present value of your pension. This is the starting point — but not all of it is immediately available to you tax-free.</p>
+      </div>
+      <div class="output-card primary">
+        <div class="output-card-label">Tax-sheltered portion</div>
+        <h3>LIRA Transfer Amount</h3>
+        <p>The portion of your CV that can move into a Locked-In Retirement Account tax-free under ITA §8517. Locked in until retirement age.</p>
+      </div>
+      <div class="output-card">
+        <div class="output-card-label">Taxable portion</div>
+        <h3>Taxable Cash</h3>
+        <p>CV exceeding your LIRA transfer limit is paid as cash and taxed as income in the year of termination. This can be a significant tax bill.</p>
+      </div>
+      <div class="output-card">
+        <div class="output-card-label">Decision tool</div>
+        <h3>Break-Even Age</h3>
+        <p>The age at which accumulated pension payments overtake the invested CV. The most useful frame for comparing lump sum vs. pension.</p>
+      </div>
+    </div>
+
+    <h2>How to use CVCalculator — step by step</h2>
+    <ol class="step-list">
+      <li><strong>Download the app</strong> — CVCalculator is free on iOS. The core commuted value calculation is always free; break-even and sensitivity analysis are premium features.</li>
+      <li><strong>Enter your pension details</strong> — input your date of birth, termination date, accrued annual pension, and EURD. If you have a bridge benefit or survivor benefit, toggle those on and enter the amounts. If you don't have exact figures yet, the built-in estimator can generate a reasonable starting estimate.</li>
+      <li><strong>Review your CV and split</strong> — the app calculates your commuted value in real time as you type. You'll see your total CV, LIRA transfer limit, and taxable cash split immediately.</li>
+      <li><strong>Explore the Analysis tab</strong> — this is where the decision-making tools live. Break-even analysis shows the age at which the pension catches your invested CV under five different return scenarios. The 12-month history shows how your CV has shifted as CIA rates have changed month to month.</li>
+      <li><strong>Check the optimal month</strong> — CIA rates change monthly, and so does your CV. The history view shows which month in the past year produced the highest commuted value — useful if you have flexibility in your termination date.</li>
+    </ol>
+
+    <h2>Why monthly CIA rates matter for timing</h2>
+    <p>The CIA publishes new i₁ and i₂ rates at the start of each month, and your commuted value is calculated using the rates in effect at your termination date. This means <strong>the month you leave your employer directly affects your CV</strong> — sometimes by tens of thousands of dollars.</p>
+    <p>In a rising rate environment, your CV will generally fall month over month. In a falling rate environment, waiting can meaningfully increase your lump sum. CVCalculator's 12-month history view plots your CV across each of the past 12 months using the corresponding CIA rates, so you can see the range and identify the optimal window.</p>
+    <p>This is not a reason to delay a departure unnecessarily — but if you have discretion over your exact termination date within a quarter, it's worth checking which month produces the highest CV before you commit to a date.</p>
+
+    <h2>Common mistakes when calculating commuted value</h2>
+    <ul>
+      <li><strong>Using the wrong interest rates</strong> — some generic calculators use a single discount rate rather than the two-tier CIA structure. This produces materially wrong results, often overstating the CV.</li>
+      <li><strong>Ignoring the LIRA transfer limit</strong> — the total CV sounds better than it is if you don't account for the taxable cash component. Always calculate the split before making your decision.</li>
+      <li><strong>Forgetting the bridge benefit</strong> — if your plan includes a CPP bridge benefit, excluding it can significantly understate your CV.</li>
+      <li><strong>Using your pension at retirement rather than at termination</strong> — your accrued pension for the CV calculation is the amount earned up to your termination date, not the projected pension you would have received at retirement had you stayed.</li>
+      <li><strong>Treating your CV estimate as final</strong> — a calculator gives you a strong estimate, but the official commuted value must be calculated by a qualified actuary retained by your plan. Use your estimate to verify, not to negotiate the exact figure.</li>
+    </ul>
+
+    <h2>Commuted value vs. deferred pension — the actual comparison</h2>
+    <p>When you leave a DB pension, you're not choosing between the commuted value and zero — you're choosing between the commuted value and a <strong>deferred pension</strong> that pays out starting at your earliest retirement date.</p>
+    <p>The deferred pension is the alternative. If you don't take the CV, your accrued pension sits in the plan until you reach your EURD (or normal retirement age) and starts paying monthly at that point. Your break-even age tells you how long you need to live for the deferred pension to pay out more in total than you would have received by investing the CV.</p>
+    <p>This framing — deferred pension vs. invested CV — is more useful than comparing the lump sum amount to your annual pension payment, which most people find misleading because it ignores the time value of money and investment returns.</p>
+
+    <div class="callout">
+      <p><strong>The honest bottom line:</strong> A commuted value calculator gives you the numbers. The decision of whether to take the CV or keep the deferred pension depends on factors no calculator can model for you — your health, your spouse's situation, your investment discipline, and your risk tolerance. Use the calculator to understand the quantitative picture, then discuss it with a qualified financial advisor before deciding.</p>
+    </div>
+
+    <div class="faq-section">
+      <h2>Frequently asked questions</h2>
+
+      <div class="faq-item">
+        <h3>What is a commuted value calculator?</h3>
+        <p>A commuted value calculator estimates the lump sum present value of your defined benefit pension using the CIA §3500 actuarial standard. It takes your pension details — accrued pension, date of birth, termination date, and EURD — and applies prescribed interest rates and Canadian mortality tables to calculate what your future pension stream is worth today.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What inputs do I need for a commuted value calculation?</h3>
+        <p>You need your annual accrued pension at termination, your date of birth, your termination date, your earliest unreduced retirement date (EURD), and whether your plan includes a survivor benefit or CPP bridge. All of this information appears on your pension statement or termination package.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How accurate is a commuted value calculator?</h3>
+        <p>A calculator that correctly implements CIA §3500 — including the two-tier interest rate structure, CPM2014 mortality tables with CPM-B improvement, and December 2020 blending methodology — will produce results very close to your plan administrator's official figure. Small differences may arise from plan-specific features like early retirement factors or indexation provisions.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the LIRA transfer limit?</h3>
+        <p>Under Income Tax Act Section 8517, only a portion of your commuted value can be transferred into a Locked-In Retirement Account (LIRA) tax-free. The limit equals your accrued pension multiplied by a prescribed factor based on your age at termination. Any CV exceeding this limit is paid as taxable cash in the year of termination.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Why does my commuted value change each month?</h3>
+        <p>The CIA publishes new i₁ and i₂ interest rates monthly. Your commuted value moves inversely with these rates — when rates rise, your CV falls; when rates fall, your CV rises. The i₂ rate, which applies beyond 10 years, has the largest single impact on your commuted value.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="related">
+  <div class="container">
+    <div class="related-label">Related articles</div>
+    <div class="related-links">
+      <a href="/should-i-take-my-commuted-value.html" class="related-link">Should I take my commuted value or keep my defined benefit pension? →</a>
+      <a href="/how-cia-3500-interest-rates-affect-commuted-value.html" class="related-link">How CIA §3500 interest rates affect your commuted value →</a>
+      <a href="/commuted-value-lira-transfer-limit-explained.html" class="related-link">The commuted value LIRA transfer limit explained →</a>
+      <a href="/what-happens-to-db-pension-when-you-leave-employer-canada.html" class="related-link">What happens to your DB pension when you leave your employer? →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">Built in Canada · CIA §3500 · CPM2014</div>
+      <div class="footer-links">
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" target="_blank">App Store</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#features">Features</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
