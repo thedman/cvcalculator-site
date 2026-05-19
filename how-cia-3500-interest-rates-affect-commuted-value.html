@@ -82,6 +82,15 @@
     .footer-links a { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: #6b5320; }
 
+    .rate-history { margin: 28px 0; overflow-x: auto; }
+    .rate-history table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .rate-history th { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--border-2); }
+    .rate-history td { padding: 9px 14px; border-bottom: 1px solid var(--border-2); color: var(--text-2); font-family: 'DM Mono', monospace; font-size: 0.82rem; }
+    .rate-history tr:last-child td { border-bottom: none; font-weight: 500; color: var(--text-1); }
+    .rate-history td.highlight-low { color: #3a7a3a; font-weight: 600; }
+    .rate-history td.highlight-high { color: #8b3a3a; font-weight: 600; }
+    .rate-history .table-note { font-size: 0.75rem; color: var(--text-3); margin-top: 10px; font-style: italic; }
+
     @media (max-width: 640px) {
       .rate-explainer { grid-template-columns: 1fr; }
       .container { padding: 0 16px; }
@@ -90,7 +99,7 @@
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"Article","headline":"How CIA §3500 Interest Rates Affect Your Commuted Value","description":"CIA §3500 uses two rates — i₁ and i₂ — to calculate your commuted value. When rates fall, your CV rises. See how the rates work and track yours monthly.","author":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca"},"publisher":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca","logo":{"@type":"ImageObject","url":"https://cvcalculator.ca/favicon-192x192.png"}},"datePublished":"2026-04-01","dateModified":"2026-05-01","url":"https://cvcalculator.ca/how-cia-3500-interest-rates-affect-commuted-value","mainEntityOfPage":"https://cvcalculator.ca/how-cia-3500-interest-rates-affect-commuted-value"},
+    {"@type":"Article","headline":"How CIA §3500 Interest Rates Affect Your Commuted Value","description":"CIA §3500 uses two rates — i₁ and i₂ — to calculate your commuted value. When rates fall, your CV rises. See how the rates work and track yours monthly.","author":{"@type":"Person","name":"David McCrory","url":"https://cvcalculator.ca","sameAs":"https://apps.apple.com/us/app/commuted-value-calculator/id6759869222"},"publisher":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca","logo":{"@type":"ImageObject","url":"https://cvcalculator.ca/favicon-192x192.png"}},"datePublished":"2026-04-01","dateModified":"2026-05-19","url":"https://cvcalculator.ca/how-cia-3500-interest-rates-affect-commuted-value","mainEntityOfPage":"https://cvcalculator.ca/how-cia-3500-interest-rates-affect-commuted-value"},
     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CVCalculator","item":"https://cvcalculator.ca"},{"@type":"ListItem","position":2,"name":"How CIA §3500 Interest Rates Affect Your Commuted Value","item":"https://cvcalculator.ca/how-cia-3500-interest-rates-affect-commuted-value"}]},
     {"@type":"FAQPage","mainEntity":[
       {"@type":"Question","name":"Why does my commuted value change every month?","acceptedAnswer":{"@type":"Answer","text":"The CIA publishes new i₁ and i₂ interest rates on the first business day of each month. Your commuted value moves inversely with these rates — when rates rise, your CV falls; when rates fall, your CV rises. A 0.25% change in i₂ can move a typical CV by 3–6%."}},
@@ -116,7 +125,7 @@
     <div class="eyebrow">Understanding Your CV</div>
     <h1>How CIA §3500 interest rates affect your commuted value</h1>
     <p class="intro">Your commuted value changes every month — sometimes by tens of thousands of dollars — because of two interest rates published by the Canadian Institute of Actuaries. Here's exactly how they work and how to use them strategically.</p>
-    <div class="meta">By CVCalculator · Updated May 2026 · 5 min read</div>
+    <div class="meta">By David McCrory · Updated May 2026 · 8 min read</div>
   </div>
 </div>
 
@@ -154,6 +163,40 @@
       <p><strong>The inverse relationship:</strong> When interest rates rise, commuted values fall — and vice versa. This is because higher discount rates make future pension payments worth less in today's dollars. In a falling rate environment, commuted values increase.</p>
     </div>
 
+    <h2>Recent CIA rate history: March 2025 – February 2026</h2>
+    <p>The table below shows the official CIA §3500 i₁ and i₂ rates for the 12 months ending February 2026, sourced directly from the CVCalculator app's rate database. Green values represent the most favourable rates for commuted values (lowest i₂); red values represent the least favourable.</p>
+
+    <div class="rate-history">
+      <table>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>i₁ (0–10 yr)</th>
+            <th>i₂ (10+ yr)</th>
+            <th>CV impact vs. Mar 2025</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Mar 2025</td><td class="highlight-low">3.6%</td><td class="highlight-low">4.5%</td><td class="highlight-low">Baseline (CV peak)</td></tr>
+          <tr><td>Apr 2025</td><td>3.7%</td><td>4.8%</td><td>↓ ~4%</td></tr>
+          <tr><td>May 2025</td><td>3.6%</td><td>4.9%</td><td>↓ ~6%</td></tr>
+          <tr><td>Jun 2025</td><td>3.7%</td><td>4.9%</td><td>↓ ~6%</td></tr>
+          <tr><td>Jul 2025</td><td>3.8%</td><td>5.0%</td><td>↓ ~8%</td></tr>
+          <tr><td>Aug 2025</td><td>3.9%</td><td>5.1%</td><td>↓ ~10%</td></tr>
+          <tr><td>Sep 2025</td><td>3.8%</td><td>5.3%</td><td>↓ ~12%</td></tr>
+          <tr><td>Oct 2025</td><td>3.5%</td><td>5.1%</td><td>↓ ~10%</td></tr>
+          <tr><td>Nov 2025</td><td>3.6%</td><td>5.2%</td><td>↓ ~11%</td></tr>
+          <tr><td>Dec 2025</td><td>3.7%</td><td>5.3%</td><td>↓ ~12%</td></tr>
+          <tr><td>Jan 2026</td><td>3.8%</td><td class="highlight-high">5.4%</td><td class="highlight-high">↓ ~14% (CV trough)</td></tr>
+          <tr><td>Feb 2026</td><td>3.7%</td><td>5.3%</td><td>↓ ~12%</td></tr>
+        </tbody>
+      </table>
+      <p class="table-note">Source: CIA §3500 / FTSE Russell. CV impact estimates assume a $500,000 baseline CV with payments weighted toward the long-term tier. Rounded to nearest 1%. Updated monthly — download CVCalculator for the current month's rate.</p>
+    </div>
+
+    <p>The trend over this period is significant: <strong>i₂ climbed from 4.5% in March 2025 to a peak of 5.4% in January 2026</strong> — a 0.9 percentage point increase that reduced a typical $500,000 commuted value by approximately $50,000–$70,000 from its early-2025 high. Members who had flexibility and terminated in the first quarter of 2025 captured a materially better outcome than those who left in late 2025 or early 2026.</p>
+    <p>Note that i₁ has remained comparatively stable throughout this period (3.5–3.9%), confirming that the dominant driver of CV movement has been the long-term rate — exactly as the two-tier structure predicts.</p>
+
     <h2>How the blending works</h2>
     <p>Your commuted value isn't simply calculated at your EURD. The CIA §3500 December 2020 standard uses a <strong>blended approach</strong> between two dates:</p>
     <ul>
@@ -170,9 +213,16 @@
       <p>This is why the timing of your departure date can be as financially meaningful as many years of salary negotiation.</p>
     </div>
 
+    <div class="example-box" style="margin-top:28px;">
+      <div class="example-box-label">Second example — member close to EURD</div>
+      <p>Now consider a member who is only <strong>3 years away from their EURD</strong> at age 60, with an accrued pension of $25,000 per year. Because most of their expected pension payments fall <em>within</em> the 10-year window, i₁ — not i₂ — is the dominant rate in their calculation.</p>
+      <p>In a month when i₁ is 3.5% (October 2025), their commuted value might be approximately <strong>$310,000</strong>. If i₁ rises to 4.0%, the same pension could produce closer to <strong>$290,000</strong> — a $20,000 swing, still meaningful but far smaller than the i₂-driven example above.</p>
+      <p><strong>The takeaway:</strong> the further you are from your EURD, the more your CV is driven by i₂. The closer you are, the more i₁ matters. Both rates are published monthly and both are tracked in CVCalculator.</p>
+    </div>
+
     <h2>Should you try to time the rates?</h2>
     <p>It's tempting to try to time your departure around favourable CIA rates — and in some cases it's worth considering if you have flexibility. CVCalculator's 12-month CV history feature shows how your commuted value has shifted with the rates over the past year, helping you understand the magnitude of the rate effect on your specific situation.</p>
-    <p>However, timing the rates perfectly is impossible, and the decision to leave an employer involves far more than maximizing your CV in a single month. Job satisfaction, career trajectory, health benefits, and the overall pension decision itself all matter more than capturing a rate cycle.</p>
+    <p>However, timing the rates perfectly is impossible, and <a href="/should-i-take-my-commuted-value">the decision to take your commuted value</a> involves far more than maximizing your CV in a single month. Job satisfaction, career trajectory, health benefits, and the tax impact of a large lump sum all matter — <a href="/what-happens-to-db-pension-when-you-leave-employer-canada">understanding all your options when you leave</a> is the essential first step before rate-timing enters the conversation.</p>
     <p>That said, if you're within a few months of your planned departure and rates are moving significantly, it's worth running the numbers both ways before committing to a specific termination date.</p>
 
     <h2>How CVCalculator uses CIA §3500</h2>
@@ -181,7 +231,7 @@
       <li>The two-tier i₁ and i₂ rate structure</li>
       <li>CPM2014 mortality tables with CPM-B improvement scale</li>
       <li>The blended EURD and Optimal Retirement Date methodology</li>
-      <li>ITA §8517 LIRA transfer limit calculation</li>
+      <li><a href="/commuted-value-lira-transfer-limit-explained">ITA §8517 LIRA transfer limit calculation</a></li>
       <li>Survivor and bridge benefit adjustments</li>
     </ul>
     <p>The 12-month CV history feature updates automatically each month as the CIA publishes new rates, showing you how your commuted value has moved over the past year and which month was optimal.</p>
@@ -219,7 +269,9 @@
     <div class="related-label">Related articles</div>
     <div class="related-links">
       <a href="/should-i-take-my-commuted-value" class="related-link">Should I take my commuted value or keep my defined benefit pension? →</a>
-      <a href="/#faq" class="related-link">Frequently asked questions about commuted values →</a>
+      <a href="/commuted-value-lira-transfer-limit-explained" class="related-link">LIRA transfer limit explained — how ITA §8517 splits your commuted value →</a>
+      <a href="/what-happens-to-db-pension-when-you-leave-employer-canada" class="related-link">What happens to your DB pension when you leave an employer in Canada? →</a>
+      <a href="/commuted-value-calculator-canada" class="related-link">Commuted value calculator Canada — free CIA §3500 estimate →</a>
     </div>
   </div>
 </div>
