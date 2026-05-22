@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEBYFNTP7N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WEBYFNTP7N');
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('[data-ga-event]');
+      if (!el || typeof gtag !== 'function') return;
+      var params = { event_category: 'engagement' };
+      ['location', 'label'].forEach(function(key) {
+        var val = el.getAttribute('data-ga-' + key);
+        if (val) params[key] = val;
+      });
+      gtag('event', el.getAttribute('data-ga-event'), params);
+    });
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Should I Take My Commuted Value? DB Pension vs. Lump Sum Guide (Canada 2026)</title>
@@ -245,7 +263,7 @@
     <div class="cta-box">
       <h3>See your commuted value and break-even age</h3>
       <p>CVCalculator uses the same CIA §3500 actuarial standard your pension administrator uses — so you walk into that conversation with your own numbers.</p>
-      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank">↓ Download CVCalculator — Free on iOS</a>
+      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="article_cta">↓ Download CVCalculator — Free on iOS</a>
     </div>
 
     <h2>Should you speak to a financial advisor?</h2>
@@ -292,7 +310,7 @@
     <div class="footer-inner">
       <div class="footer-left">Built in Canada · CIA §3500 · CPM2014</div>
       <div class="footer-links">
-        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" target="_blank">App Store</a>
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" target="_blank" data-ga-event="app_store_click" data-ga-location="footer">App Store</a>
         <a href="/#faq">FAQ</a>
         <a href="/#features">Features</a>
         <a href="https://renewaliq.ca" target="_blank" rel="noopener">RenewalIQ</a>
