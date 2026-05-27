@@ -1246,6 +1246,9 @@
   </section>
   <script>
     function cvSubscribed() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'subscribe', { event_category: 'engagement', event_label: 'cv_rate_updates' });
+      }
       setTimeout(() => {
         document.getElementById('cv-subscribe-form').style.display = 'none';
         document.getElementById('cv-subscribe-thanks').style.display = 'block';
