@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEBYFNTP7N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WEBYFNTP7N');
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('[data-ga-event]');
+      if (!el || typeof gtag !== 'function') return;
+      var params = { event_category: 'engagement' };
+      ['location', 'label'].forEach(function(key) {
+        var val = el.getAttribute('data-ga-' + key);
+        if (val) params[key] = val;
+      });
+      gtag('event', el.getAttribute('data-ga-event'), params);
+    });
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commuted Value and Taxes in Canada: What You'll Owe on the Taxable Cash Portion (2026)</title>
+  <meta name="description" content="The tax hit on commuted value catches many Canadians off guard. Learn how the taxable cash portion is calculated, what withholding rates apply, and four legal strategies to reduce what you owe." />
+  <meta name="keywords" content="commuted value tax Canada, commuted value taxable income, tax on commuted value, commuted value RRSP, taxable cash commuted value, commuted value withholding tax Canada, commuted value tax implications" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cvcalculator.ca/commuted-value-taxes-canada" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #f5f0e8; --navy-2: #ede8df; --navy-3: #e4ddd2;
+      --gold: #8a6d2f; --gold-light: #a07d35; --gold-dim: #c9a84c;
+      --text-1: #0d1628; --text-2: #2d3d56; --text-3: #6b7a94;
+      --border: rgba(138,109,47,0.2); --border-2: rgba(0,0,0,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--navy); color: var(--text-1); font-family: 'Outfit', sans-serif; font-weight: 400; line-height: 1.7; }
+
+    nav { position: sticky; top: 0; z-index: 100; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; background: rgba(245,240,232,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-2); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1rem; color: #f5f0e8; }
+    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.1rem; color: var(--text-1); }
+    .nav-back { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .nav-back:hover { color: #6b5320; }
+
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    .page-hero { padding: 64px 0 48px; border-bottom: 1px solid var(--border-2); }
+    .eyebrow { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6b5320; margin-bottom: 12px; }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--text-1); line-height: 1.15; margin-bottom: 16px; }
+    .page-hero .intro { font-size: 1.05rem; color: var(--text-2); line-height: 1.8; max-width: 640px; }
+    .page-hero .meta { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--text-3); margin-top: 16px; }
+
+    .article-body { padding: 48px 0 80px; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--text-1); margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border-2); }
+    .article-body h2:first-child { margin-top: 0; }
+    .article-body p { font-size: 0.95rem; color: var(--text-2); line-height: 1.85; margin-bottom: 16px; }
+    .article-body ul { list-style: none; padding: 0; margin: 12px 0 20px; }
+    .article-body ul li { font-size: 0.95rem; color: var(--text-2); line-height: 1.7; padding: 7px 0 7px 20px; position: relative; border-bottom: 1px solid var(--border-2); }
+    .article-body ul li:last-child { border-bottom: none; }
+    .article-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold-dim); }
+    .article-body a { color: #6b5320; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(107,83,32,0.3); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: #6b5320; }
+    .article-body strong { color: var(--text-1); font-weight: 600; }
+
+    .callout { background: var(--navy-2); border: 1.5px solid var(--border-2); border-left: 3px solid var(--gold-dim); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
+    .callout p { margin: 0; font-size: 0.9rem; }
+    .callout p + p { margin-top: 10px; }
+
+    .tax-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 0.88rem; }
+    .tax-table th { background: var(--navy-3); font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); padding: 10px 14px; text-align: left; font-weight: 400; border-bottom: 2px solid var(--border-2); }
+    .tax-table td { padding: 10px 14px; color: var(--text-2); border-bottom: 1px solid var(--border-2); }
+    .tax-table tr:last-child td { border-bottom: none; }
+    .tax-table tr:hover td { background: var(--navy-2); }
+
+    .strategy-list { counter-reset: strategy-counter; list-style: none; padding: 0; margin: 16px 0 28px; }
+    .strategy-list li { counter-increment: strategy-counter; padding: 18px 20px 18px 60px; position: relative; background: var(--navy-2); border: 1.5px solid var(--border-2); border-radius: 12px; margin-bottom: 12px; }
+    .strategy-list li::before { content: counter(strategy-counter); position: absolute; left: 18px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius: 50%; color: #f5f0e8; font-family: 'DM Mono', monospace; font-size: 0.75rem; font-weight: 500; display: flex; align-items: center; justify-content: center; line-height: 1; }
+    .strategy-list li strong { display: block; font-size: 0.92rem; color: var(--text-1); margin-bottom: 6px; }
+    .strategy-list li span { font-size: 0.88rem; color: var(--text-2); line-height: 1.7; }
+
+    .cta-box { background: linear-gradient(135deg, var(--navy-2), var(--navy-3)); border: 1.5px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+    .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--text-1); margin-bottom: 10px; }
+    .cta-box p { font-size: 0.88rem; color: var(--text-2); margin-bottom: 20px; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #f5f0e8; font-weight: 600; font-size: 0.88rem; border-radius: 28px; text-decoration: none; border: none; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 16px rgba(138,109,47,0.2); }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .related { background: var(--navy-2); border-top: 1px solid var(--border-2); padding: 40px 0; }
+    .related-label { font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link { font-size: 0.9rem; color: #6b5320; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(107,83,32,0.2); padding-bottom: 10px; transition: border-color 0.2s; }
+    .related-link:hover { border-color: #6b5320; }
+
+    footer { padding: 32px 0; border-top: 1px solid var(--border-2); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-left { font-size: 0.8rem; color: var(--text-3); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #6b5320; }
+
+    @media (max-width: 640px) {
+      .container { padding: 0 16px; }
+      nav { padding: 12px 16px; }
+      .tax-table { font-size: 0.8rem; }
+      .tax-table th, .tax-table td { padding: 8px 10px; }
+      .strategy-list li { padding: 16px 16px 16px 56px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"Commuted Value and Taxes in Canada: What You'll Owe on the Taxable Cash Portion (2026)","description":"The tax hit on commuted value catches many Canadians off guard. Learn how the taxable cash portion is calculated, what withholding rates apply, and four legal strategies to reduce what you owe.","author":{"@type":"Person","name":"David McCrory","url":"https://cvcalculator.ca","sameAs":"https://apps.apple.com/us/app/commuted-value-calculator/id6759869222"},"publisher":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca","logo":{"@type":"ImageObject","url":"https://cvcalculator.ca/favicon-192x192.png"}},"datePublished":"2026-05-27","dateModified":"2026-05-27","url":"https://cvcalculator.ca/commuted-value-taxes-canada","mainEntityOfPage":"https://cvcalculator.ca/commuted-value-taxes-canada"},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CVCalculator","item":"https://cvcalculator.ca"},{"@type":"ListItem","position":2,"name":"Commuted Value Taxes Canada","item":"https://cvcalculator.ca/commuted-value-taxes-canada"}]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Is my commuted value taxable in Canada?","acceptedAnswer":{"@type":"Answer","text":"Partially. The portion of your commuted value that fits within the ITA §8517 LIRA transfer limit is transferred tax-free into a Locked-In Retirement Account. Any amount above that limit is paid as taxable cash and added to your income in the year of termination, taxed at your marginal rate."}},
+      {"@type":"Question","name":"How much tax do I pay on the taxable cash portion of my commuted value?","acceptedAnswer":{"@type":"Answer","text":"The taxable cash is added to your other income for the year and taxed at your marginal rate. For most Canadians receiving a significant commuted value, this pushes total income well above $100,000, meaning the marginal rate on the taxable cash is typically 43–53% depending on province. Your pension administrator withholds 30% at source on amounts over $15,000, but the final tax owing at filing time may be higher."}},
+      {"@type":"Question","name":"Can I use my RRSP to reduce tax on my commuted value?","acceptedAnswer":{"@type":"Answer","text":"Yes — if you have unused RRSP contribution room from prior years, you can contribute some or all of the taxable cash to your RRSP and deduct it against the income. This is the most effective tax mitigation strategy available. Note that taking a commuted value does not create new RRSP room; only pre-existing unused room can be used."}},
+      {"@type":"Question","name":"What is the withholding tax rate on commuted value in Canada?","acceptedAnswer":{"@type":"Answer","text":"Your pension administrator is required to withhold tax at source on the taxable cash portion. The withholding rate is 10% on amounts up to $5,000, 20% on $5,001–$15,000, and 30% on amounts over $15,000. For most commuted value recipients the taxable cash exceeds $15,000, so 30% is withheld. This is a down payment on your tax, not the final amount — your actual marginal rate may be higher."}},
+      {"@type":"Question","name":"Is the LIRA portion of my commuted value ever taxed?","acceptedAnswer":{"@type":"Answer","text":"Yes — eventually. The LIRA itself is a tax-deferred account, not a tax-free one. When you convert your LIRA to a Life Income Fund (LIF) at retirement and make withdrawals, those withdrawals are taxed as ordinary income. The advantage is that withdrawals happen over many years at (typically) lower retirement-income tax rates, rather than all at once at your peak working-year marginal rate."}}
+    ]}
+  ]}
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-icon">CV</div>
+    <span class="nav-logo-text">CVCalculator</span>
+  </a>
+  <a href="/" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Tax Planning</div>
+    <h1>Commuted value and taxes in Canada: what you'll owe on the taxable cash portion</h1>
+    <p class="intro">The tax hit on commuted value catches many Canadians off guard. Understanding how the split works — and how to plan around it — can save tens of thousands of dollars.</p>
+    <div class="meta">By David McCrory · Updated May 2026 · 9 min read</div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container">
+
+    <h2>Why part of your commuted value is taxable</h2>
+    <p>When you take your commuted value, it doesn't flow entirely into a tax-sheltered account. Under <strong>Income Tax Act Section 8517</strong>, only a portion of your CV — the Maximum Transfer Value (MTV), also called the LIRA transfer limit — can be moved into a Locked-In Retirement Account on a tax-deferred basis. Any amount above that limit must be paid out as cash in the year of termination and is treated as ordinary income.</p>
+    <p>This split is not a penalty. It's a structural feature of the pension system designed to limit the amount of tax-sheltered wealth any individual can accumulate through pension arrangements. The LIRA transfer limit is calculated as your accrued annual pension multiplied by a prescribed factor that increases with age. At age 50, that factor is approximately 11.0. At 55, it rises to about 12.0. At 60, it's near 13.0.</p>
+    <p>The practical result: for most mid-career members, the commuted value exceeds the LIRA limit. The gap between the two — the <strong>taxable cash portion</strong> — is where the tax exposure lies. See the full <a href="/commuted-value-lira-transfer-limit-explained">LIRA transfer limit explained</a> for the formula and a detailed breakdown of how ITA §8517 calculates your maximum transfer value.</p>
+
+    <div class="callout">
+      <p><strong>The key formula:</strong> LIRA Transfer Limit = Annual accrued pension × Prescribed factor (age-dependent)</p>
+      <p>Taxable cash = Commuted value − LIRA transfer limit</p>
+    </div>
+
+    <h2>How the taxable cash is taxed</h2>
+    <p>The taxable cash portion is added to all your other income for the year — employment income, investment income, any other pension or RRSP withdrawals — and taxed at your marginal rate. For most people receiving a meaningful commuted value, this pushes total income well above $100,000 in the termination year, meaning the marginal rate on the taxable cash portion is typically between <strong>43% and 53%</strong> depending on province.</p>
+    <p>Ontario residents at $150,000+ combined income face a combined federal + provincial marginal rate of approximately 53.5%. British Columbia and Alberta are slightly lower. Quebec is similar to Ontario. This is why a $120,000 taxable cash amount can generate a tax bill of $55,000–$65,000 — more than many people expect.</p>
+
+    <h2>Withholding tax: what your pension administrator deducts at source</h2>
+    <p>Your pension administrator is legally required to withhold income tax at source on the taxable cash before paying it to you. The withholding rates under CRA rules are:</p>
+
+    <table class="tax-table">
+      <thead>
+        <tr>
+          <th>Taxable cash amount</th>
+          <th>Withholding rate (outside Quebec)</th>
+          <th>Withholding rate (Quebec)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Up to $5,000</td>
+          <td>10%</td>
+          <td>21%</td>
+        </tr>
+        <tr>
+          <td>$5,001 – $15,000</td>
+          <td>20%</td>
+          <td>26%</td>
+        </tr>
+        <tr>
+          <td>Over $15,000</td>
+          <td>30%</td>
+          <td>35%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>For most commuted value recipients, the taxable cash far exceeds $15,000, so 30% is withheld at source. This is a <strong>down payment on your tax bill — not the final amount</strong>. If your marginal rate is 50%, you'll owe an additional 20% (on the taxable cash) when you file your return. Failing to set aside the difference is one of the most common and costly mistakes people make.</p>
+    <p>The T4A slip issued by your pension plan will report the taxable cash as "other income." It appears on line 13000 of your T1 return.</p>
+
+    <h2>A worked example — Mark, age 52, Ontario</h2>
+    <div class="callout" style="background:var(--navy-3);border-left-color:var(--gold);">
+      <p style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:10px;">Illustrative scenario — Mark, age 52, Ontario</p>
+      <p>Mark leaves an Ontario employer at age 52 with an accrued pension of <strong>$38,000/year</strong>. His pension administrator quotes a commuted value of <strong>$580,000</strong> under current CIA §3500 rates.</p>
+      <p><strong>Step 1 — Calculate the LIRA transfer limit (ITA §8517):</strong><br>
+      Prescribed factor at age 52 ≈ 11.5<br>
+      LIRA limit = $38,000 × 11.5 = <strong>$437,000</strong></p>
+      <p><strong>Step 2 — Identify the taxable cash:</strong><br>
+      $580,000 − $437,000 = <strong>$143,000 taxable cash</strong><br>
+      Withheld at source: $143,000 × 30% = <strong>$42,900</strong><br>
+      Net cash received: $143,000 − $42,900 = <strong>$100,100</strong></p>
+      <p><strong>Step 3 — Calculate the actual tax owing:</strong><br>
+      Mark's employment income in his final year: $90,000<br>
+      Combined income: $90,000 + $143,000 = $233,000<br>
+      Most of the $143,000 falls in the Ontario 53.5% combined bracket<br>
+      Estimated tax on taxable cash: <strong>~$73,000</strong><br>
+      Already withheld: $42,900<br>
+      <strong>Balance owing at tax time: ~$30,100</strong></p>
+      <p><strong>Step 4 — RRSP mitigation:</strong><br>
+      Mark has $95,000 in unused RRSP contribution room from prior years.<br>
+      He contributes $95,000 to his RRSP, generating a deduction worth ~$50,800 in tax savings.<br>
+      Net tax on the taxable cash after RRSP: <strong>~$22,200</strong><br>
+      Effective rate on the cash portion after RRSP: ~15.5%</p>
+      <p style="margin-top:10px;font-size:0.85rem;color:var(--text-3);">The RRSP strategy reduced Mark's tax on the taxable cash by over $50,000. Without it, his tax bill on this portion alone would have been ~$73,000. Planning in advance made the difference.</p>
+    </div>
+
+    <h2>Four strategies to reduce the tax hit</h2>
+    <p>The taxable cash is unavoidable — but how much tax you pay on it is not fixed. These four strategies are used by Canadians to legally reduce the bill:</p>
+
+    <ul class="strategy-list">
+      <li>
+        <strong>Use existing RRSP contribution room</strong>
+        <span>If you have unused RRSP room accumulated from prior years, contributing some or all of the taxable cash shelters it from tax. At a 50% marginal rate, $80,000 of RRSP room is worth $40,000 in tax savings. Check your Notice of Assessment or CRA My Account for your current room. Remember: taking a commuted value does not create new RRSP room — only accumulated prior-year room applies.</span>
+      </li>
+      <li>
+        <strong>Direct some to a spousal RRSP</strong>
+        <span>You can use your own RRSP contribution room to contribute to a spousal RRSP. The money is then in your spouse's name and will be withdrawn at their marginal rate in retirement — often lower than yours. This is an effective income-splitting strategy if your retirement income is expected to be significantly higher than your spouse's.</span>
+      </li>
+      <li>
+        <strong>Time your termination year carefully</strong>
+        <span>Terminating early in a calendar year means the taxable cash arrives in a year with less other employment income — potentially a lower marginal rate. Terminating in January vs. December can mean thousands of dollars in tax savings on identical numbers. If you have any flexibility in your departure date, model both scenarios before you elect.</span>
+      </li>
+      <li>
+        <strong>Take a low-income year if possible</strong>
+        <span>If you're taking a leave of absence, sabbatical, or early retirement year with reduced income before your official termination, timing the CV election to coincide with that low-income year reduces the combined marginal rate applied to the taxable cash. This requires advance planning with your plan administrator about the election window, but it can reduce your effective rate by 10–15 percentage points.</span>
+      </li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>One strategy that does not work:</strong> The taxable cash cannot be contributed to a TFSA as a lump sum to offset the income. TFSA room accumulates at $7,000/year — it doesn't shelter a large one-time receipt. RRSP room is the primary vehicle for sheltering the taxable cash.</p>
+    </div>
+
+    <div class="cta-box">
+      <h3>Know your LIRA split before you elect</h3>
+      <p>CVCalculator calculates your exact LIRA transfer limit and taxable cash amount under current CIA §3500 rates — so you go into the tax planning conversation with your own numbers.</p>
+      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="article_cta">↓ Download CVCalculator — Free on iOS</a>
+    </div>
+
+    <h2>What about the LIRA — is it ever taxed?</h2>
+    <p>Yes — eventually. The LIRA is a <strong>tax-deferred</strong> account, not a tax-free one. The funds grow sheltered from tax, but withdrawals are taxed as ordinary income when you take them. At a set age (typically 71, or earlier by election), you must convert your LIRA to a Life Income Fund (LIF) and begin drawing minimum annual payments.</p>
+    <p>The advantage of the LIRA is timing: withdrawals happen gradually over your retirement years, typically at a lower marginal rate than your peak earning years. A $437,000 LIRA transferred at age 52 might generate $30,000–$40,000 per year in LIF income starting at retirement — taxed modestly rather than all at once at 50%+.</p>
+    <p>This is why the commuted value decision isn't simply about "taxable vs. not taxable." It's about <em>when</em> you pay the tax and at <em>what rate</em>. The <a href="/should-i-take-my-commuted-value">full CV decision guide</a> walks through how to weigh the LIRA compounding advantage against the guaranteed pension income you're giving up.</p>
+
+    <h2>How current interest rates affect the taxable cash amount</h2>
+    <p>The size of your commuted value — and therefore the size of the taxable cash — changes every month as the CIA publishes new i₁ and i₂ interest rates. Higher rates reduce your CV; lower rates increase it. But your LIRA transfer limit (calculated from your pension amount and prescribed factor) is fixed.</p>
+    <p>This means the <strong>taxable cash amount fluctuates with interest rates</strong>. When rates are low and your CV is high, the gap between CV and LIRA limit widens — more taxable cash, more tax exposure. When rates are higher and your CV is lower, the gap narrows.</p>
+    <p>Between March 2025 and January 2026, i₂ rose from 4.5% to 5.4%. For a member with a $38,000 pension and a fixed LIRA limit of $437,000, a CV that was $600,000 in early 2025 might have fallen to $550,000 by early 2026 — reducing the taxable cash from $163,000 to $113,000 and the tax bill by roughly $25,000. See <a href="/how-cia-3500-interest-rates-affect-commuted-value">how CIA §3500 rates affect your commuted value</a> for the full rate history and calculation mechanics.</p>
+
+    <h2>Common mistakes people make</h2>
+    <ul>
+      <li><strong>Assuming the 30% withholding covers the full tax bill</strong> — it often doesn't. Set aside an additional 15–25% of the taxable cash for the balance owing at filing time, depending on your province and income level</li>
+      <li><strong>Not checking RRSP room in advance</strong> — RRSP room cannot be created retroactively. If you've been maximizing contributions for years, you may have little room left. Check CRA My Account before you elect, not after</li>
+      <li><strong>Electing without modelling the termination year</strong> — resigning in December vs. January of the following year is a decision that affects the marginal rate on your taxable cash. Model both before you act</li>
+      <li><strong>Overlooking the T4A filing requirement</strong> — the taxable cash is reported on a T4A from your pension plan. If you don't receive it by late February, contact your plan administrator. It's not optional and CRA will already know about it</li>
+      <li><strong>Confusing RRSP room with RRSP contribution limit</strong> — your contribution room accumulates over years based on earned income. The pension adjustment on your T4 reduces it annually while you're an active plan member. Your current room may be significantly less than you think</li>
+    </ul>
+
+    <div class="callout" style="margin-top:40px;">
+      <p style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:8px;">Also by the same developer</p>
+      <p><strong>Leaving your employer often coincides with a mortgage renewal.</strong> If you're refinancing at the same time as you're electing your commuted value, the decisions interact — cash flow, lump sum deployment, and rate timing all overlap. <a href="https://renewaliq.ca" target="_blank" rel="noopener">RenewalIQ</a> models your renewal options with the same private, no-referral approach as CVCalculator.</p>
+    </div>
+
+  </div>
+</div>
+
+<div style="padding:56px 0;background:var(--navy);border-top:1px solid var(--border-2);border-bottom:1px solid var(--border-2);">
+  <div class="container" style="max-width:560px;text-align:center;">
+    <div class="eyebrow">Stay Informed</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--text-1);margin:12px 0 14px;">Get notified when CIA rates change</h2>
+    <p style="font-size:0.9rem;color:var(--text-2);line-height:1.8;margin-bottom:24px;">CIA i₁ and i₂ rates move monthly and directly affect your commuted value and taxable cash split. We'll let you know when they shift.</p>
+    <iframe name="cv-sub-frame-tax" style="display:none;" aria-hidden="true"></iframe>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSejxIu58kd7tUVoyC499FC9feEe0N4MV7ZYc2tLftR60Fyu_g/formResponse" method="POST" target="cv-sub-frame-tax" onsubmit="setTimeout(()=>{this.style.display='none';document.getElementById('cv-sub-ty-tax').style.display='block'},500)" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+      <input type="email" name="entry.1094318951" placeholder="your@email.com" required style="flex:1;min-width:220px;max-width:300px;padding:12px 18px;border:1.5px solid rgba(0,0,0,0.15);border-radius:28px;background:var(--navy-2);color:var(--text-1);font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;" />
+      <button type="submit" style="padding:12px 26px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#f5f0e8;font-family:'Outfit',sans-serif;font-weight:600;font-size:0.9rem;border:none;border-radius:28px;cursor:pointer;">Subscribe</button>
+    </form>
+    <p id="cv-sub-ty-tax" style="display:none;font-size:0.9rem;color:#6b5320;font-weight:600;margin-top:16px;">✓ You're subscribed. We'll be in touch when rates move.</p>
+    <p style="font-size:0.72rem;color:var(--text-3);margin-top:14px;">No spam. Unsubscribe any time.</p>
+  </div>
+</div>
+
+<div class="related">
+  <div class="container">
+    <div class="related-label">Related articles</div>
+    <div class="related-links">
+      <a href="/should-i-take-my-commuted-value" class="related-link">Should I take my commuted value? Full decision guide with break-even analysis →</a>
+      <a href="/commuted-value-lira-transfer-limit-explained" class="related-link">LIRA transfer limit explained — how ITA §8517 splits your commuted value →</a>
+      <a href="/how-cia-3500-interest-rates-affect-commuted-value" class="related-link">How CIA §3500 interest rates affect your commuted value →</a>
+      <a href="/what-happens-to-db-pension-when-you-leave-employer-canada" class="related-link">What happens to your DB pension when you leave an employer in Canada? →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">Built in Canada · CIA §3500 · CPM2014</div>
+      <div class="footer-links">
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" target="_blank" data-ga-event="app_store_click" data-ga-location="footer">App Store</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#features">Features</a>
+        <a href="https://renewaliq.ca" target="_blank" rel="noopener">RenewalIQ</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
