@@ -1,5 +1,21 @@
 # Changelog
 
+## [Monthly CIA Rate Update] — 2026-06-01
+
+### Rates not available — no changes to article
+
+The CIA website (cia-ica.ca) returned HTTP 403 Forbidden for all fetch attempts today, and no confirmed June 2026 i₁/i₂ values were found via web search. Rates may not yet be publicly indexed on the first business day, or the site is temporarily blocking automated access.
+
+**No changes were made to `how-cia-3500-interest-rates-affect-commuted-value.html`.** The article continues to display the most recent rates from the prior monthly update.
+
+### Action required
+- Manually visit https://www.cia-ica.ca/publications/222176e/ to retrieve the June 2026 i₁ and i₂ rates once accessible.
+- Re-run this update once rates are confirmed, inserting or updating the `.example-box` rates block in the article and bumping `dateModified` to 2026-06-01.
+
+### Check in Google Search Console
+- Has the freshness update from last month triggered a re-crawl? (Check Coverage report)
+- Are impressions growing for CIA rate queries?
+
 ## 2026-05-25 — Week 2 quality-check pass
 
 ### Verified (no changes needed)
