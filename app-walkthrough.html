@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEBYFNTP7N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WEBYFNTP7N');
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('[data-ga-event]');
+      if (!el || typeof gtag !== 'function') return;
+      var params = { event_category: 'engagement' };
+      ['location','label'].forEach(function(key) {
+        var val = el.getAttribute('data-ga-' + key);
+        if (val) params[key] = val;
+      });
+      gtag('event', el.getAttribute('data-ga-event'), params);
+    });
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CVCalculator Walkthrough — See the App in Action | CVCalculator</title>
+  <meta name="description" content="Watch how CVCalculator calculates your commuted value step by step. Five short videos covering data entry, results, break-even analysis, and rate scenarios. Free to try on iOS." />
+  <meta property="og:title" content="CVCalculator Walkthrough — See the App in Action" />
+  <meta property="og:description" content="Five short videos showing exactly how CVCalculator works — from entering your pension details to reading your CV, LIRA split, and break-even analysis." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cvcalculator.ca/app-walkthrough" />
+  <meta property="og:image" content="https://cvcalculator.ca/videos/thumbs/cv-calculator-intro.jpg" />
+  <link rel="canonical" href="https://cvcalculator.ca/app-walkthrough" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="robots" content="index, follow" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"CVCalculator","item":"https://cvcalculator.ca"},
+          {"@type":"ListItem","position":2,"name":"App Walkthrough","item":"https://cvcalculator.ca/app-walkthrough"}
+        ]
+      },
+      {
+        "@type": "VideoObject",
+        "name": "CVCalculator Introduction — What Is a Commuted Value?",
+        "description": "A short overview of CVCalculator: what it does, who it's for, and why knowing your commuted value matters before you leave a defined benefit pension plan.",
+        "thumbnailUrl": "https://cvcalculator.ca/videos/thumbs/cv-calculator-intro.jpg",
+        "uploadDate": "2026-06-02",
+        "duration": "PT20S",
+        "contentUrl": "https://cvcalculator.ca/videos/cv-calculator-intro.mp4"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "CVCalculator — Entering Your Pension Details",
+        "description": "A walkthrough of every input field in CVCalculator: date of birth, termination date, accrued annual pension, earliest unreduced retirement date, bridge benefit, and survivor benefit.",
+        "thumbnailUrl": "https://cvcalculator.ca/videos/thumbs/cv-calculator-data-entry.jpg",
+        "uploadDate": "2026-06-02",
+        "duration": "PT1M17S",
+        "contentUrl": "https://cvcalculator.ca/videos/cv-calculator-data-entry.mp4"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "CVCalculator — Reading Your Commuted Value Results",
+        "description": "How to interpret your CVCalculator output: total commuted value, LIRA transfer limit under ITA §8517, taxable cash split, and what each number means for your decision.",
+        "thumbnailUrl": "https://cvcalculator.ca/videos/thumbs/cv-calculator-results.jpg",
+        "uploadDate": "2026-06-02",
+        "duration": "PT16S",
+        "contentUrl": "https://cvcalculator.ca/videos/cv-calculator-results.mp4"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "CVCalculator — The Analysis Tab: Break-Even and Rate History",
+        "description": "A tour of CVCalculator's Analysis tab: break-even age across return rate scenarios, 12-month CV history as CIA rates have moved, and rate sensitivity tools.",
+        "thumbnailUrl": "https://cvcalculator.ca/videos/thumbs/cv-calculator-analysis.jpg",
+        "uploadDate": "2026-06-02",
+        "duration": "PT14S",
+        "contentUrl": "https://cvcalculator.ca/videos/cv-calculator-analysis.mp4"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "CVCalculator — Rate Scenarios and Sensitivity Analysis",
+        "description": "How changing CIA i₁ and i₂ interest rates affects your commuted value, and how to use CVCalculator's scenario analysis to understand your exposure before your termination date.",
+        "thumbnailUrl": "https://cvcalculator.ca/videos/thumbs/cv-calculator-scenarios.jpg",
+        "uploadDate": "2026-06-02",
+        "duration": "PT21S",
+        "contentUrl": "https://cvcalculator.ca/videos/cv-calculator-scenarios.mp4"
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #f5f0e8;
+      --navy-2:     #ede8df;
+      --navy-3:     #e4ddd2;
+      --navy-4:     #d9d0c3;
+      --gold:       #8a6d2f;
+      --gold-light: #a07d35;
+      --gold-dim:   #c9a84c;
+      --blue:       #1e3a5f;
+      --blue-dim:   #cdd8e8;
+      --text-1:     #0d1628;
+      --text-2:     #2d3d56;
+      --text-3:     #6b7a94;
+      --border:     rgba(138,109,47,0.2);
+      --border-2:   rgba(0,0,0,0.08);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--navy);
+      color: var(--text-1);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #6b5320;
+    }
+
+    h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    section { position: relative; z-index: 1; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-2);
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+
+    .nav-logo-icon {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700; font-size: 1rem; color: #f5f0e8;
+    }
+
+    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.1rem; color: var(--text-1); }
+
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 20px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #f5f0e8; font-weight: 600; font-size: 0.8rem;
+      border-radius: 24px; text-decoration: none; transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      padding: 120px 0 64px;
+      background: var(--navy);
+      border-bottom: 1px solid var(--border-2);
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      color: var(--text-1);
+      margin: 12px 0 20px;
+    }
+
+    .page-header p {
+      font-size: 1rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--text-3);
+      letter-spacing: 0.08em;
+    }
+
+    .breadcrumb a { color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #6b5320; }
+
+    /* ── VIDEO SECTIONS ── */
+    .walkthrough {
+      padding: 80px 0;
+      background: var(--navy);
+    }
+
+    .video-block {
+      margin-bottom: 80px;
+      padding-bottom: 80px;
+      border-bottom: 1px solid var(--border-2);
+    }
+
+    .video-block:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .video-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .video-step {
+      width: 40px; height: 40px;
+      background: var(--navy-3);
+      border: 1.5px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700; font-size: 1.1rem; color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .video-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: #6b5320; }
+
+    .video-block h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--text-1);
+      margin-bottom: 12px;
+    }
+
+    .video-block p {
+      font-size: 0.95rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 28px;
+      max-width: 680px;
+    }
+
+    .video-duration {
+      display: inline-block;
+      margin-left: 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      color: var(--text-3);
+      vertical-align: middle;
+    }
+
+    .video-player-wrap {
+      background: #111e35;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(201,168,76,0.12);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.03);
+    }
+
+    .video-player-wrap video {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      padding: 80px 0;
+      text-align: center;
+      background: var(--navy-2);
+      border-top: 1px solid var(--border-2);
+    }
+
+    .cta-section h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--text-1);
+      margin: 12px 0 16px;
+    }
+
+    .cta-section p {
+      font-size: 0.95rem;
+      color: var(--text-2);
+      max-width: 480px;
+      margin: 0 auto 36px;
+      line-height: 1.8;
+    }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #f5f0e8; font-weight: 600; font-size: 0.95rem;
+      border-radius: 32px; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 32px rgba(138,109,47,0.2);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(138,109,47,0.3); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border-2);
+      background: var(--navy);
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+
+    .footer-left { font-size: 0.8rem; color: var(--text-3); }
+
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #6b5320; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav { padding: 12px 16px; }
+      .container { padding: 0 16px; }
+      .page-header { padding: 100px 0 48px; }
+      .video-block { margin-bottom: 56px; padding-bottom: 56px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">CV</div>
+      <span class="nav-logo-text">CVCalculator</span>
+    </a>
+    <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="nav-cta" target="_blank" data-ga-event="app_store_click" data-ga-location="nav">
+      &#9654; Download Free
+    </a>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">CVCalculator</a>
+        <span>›</span>
+        <span>App Walkthrough</span>
+      </div>
+      <div class="eyebrow">Video Walkthrough</div>
+      <h1>See how the app works — before you download</h1>
+      <p>Five short videos covering every part of CVCalculator: entering your pension details, reading your results, and using the analysis tools to make a confident decision.</p>
+    </div>
+  </div>
+
+  <!-- WALKTHROUGH VIDEOS -->
+  <section class="walkthrough">
+    <div class="container">
+
+      <!-- VIDEO 1: INTRO -->
+      <div class="video-block reveal">
+        <div class="video-meta">
+          <div class="video-step">1</div>
+          <span class="video-eyebrow">Introduction · <span style="font-style:normal;">0:20</span></span>
+        </div>
+        <h2>What is CVCalculator?</h2>
+        <p>A quick overview of what CVCalculator does, who it's built for, and why knowing your commuted value matters before you walk away from a defined benefit pension plan.</p>
+        <div class="video-player-wrap">
+          <video controls preload="metadata" playsinline poster="/videos/thumbs/cv-calculator-intro.jpg" data-ga-event="video_play" data-ga-location="intro">
+            <source src="/videos/cv-calculator-intro.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </div>
+
+      <!-- VIDEO 2: DATA ENTRY -->
+      <div class="video-block reveal">
+        <div class="video-meta">
+          <div class="video-step">2</div>
+          <span class="video-eyebrow">Data Entry · <span style="font-style:normal;">1:17</span></span>
+        </div>
+        <h2>Entering your pension details</h2>
+        <p>A full walkthrough of every input field — date of birth, termination date, accrued annual pension, earliest unreduced retirement date (EURD), bridge benefit, and survivor benefit. If you don't have exact figures yet, the built-in estimator gives you a reasonable starting point.</p>
+        <div class="video-player-wrap">
+          <video controls preload="metadata" playsinline poster="/videos/thumbs/cv-calculator-data-entry.jpg" data-ga-event="video_play" data-ga-location="data_entry">
+            <source src="/videos/cv-calculator-data-entry.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </div>
+
+      <!-- VIDEO 3: RESULTS -->
+      <div class="video-block reveal">
+        <div class="video-meta">
+          <div class="video-step">3</div>
+          <span class="video-eyebrow">Results · <span style="font-style:normal;">0:16</span></span>
+        </div>
+        <h2>Reading your commuted value results</h2>
+        <p>How to interpret the output: your total commuted value, the LIRA transfer amount under ITA §8517, and the taxable cash portion. Understanding the split is critical — the taxable cash triggers withholding tax in the year of termination, regardless of how large your RRSP room is.</p>
+        <div class="video-player-wrap">
+          <video controls preload="metadata" playsinline poster="/videos/thumbs/cv-calculator-results.jpg" data-ga-event="video_play" data-ga-location="results">
+            <source src="/videos/cv-calculator-results.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </div>
+
+      <!-- VIDEO 4: ANALYSIS -->
+      <div class="video-block reveal">
+        <div class="video-meta">
+          <div class="video-step">4</div>
+          <span class="video-eyebrow">Analysis · <span style="font-style:normal;">0:14</span></span>
+        </div>
+        <h2>The Analysis tab — break-even and rate history</h2>
+        <p>A tour of the CV Pro analysis layer: break-even age across five return rate scenarios, 12-month CV history as CIA rates have moved month to month, and the tools that turn a raw number into a real decision framework.</p>
+        <div class="video-player-wrap">
+          <video controls preload="metadata" playsinline poster="/videos/thumbs/cv-calculator-analysis.jpg" data-ga-event="video_play" data-ga-location="analysis">
+            <source src="/videos/cv-calculator-analysis.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </div>
+
+      <!-- VIDEO 5: SCENARIOS -->
+      <div class="video-block reveal">
+        <div class="video-meta">
+          <div class="video-step">5</div>
+          <span class="video-eyebrow">Scenarios · <span style="font-style:normal;">0:21</span></span>
+        </div>
+        <h2>Rate scenarios and sensitivity analysis</h2>
+        <p>CIA i₁ and i₂ rates change monthly — and your CV moves with them. This video shows how the scenario analysis tool lets you see what your commuted value would be under different rate environments, so you understand your timing exposure before your termination date is set.</p>
+        <div class="video-player-wrap">
+          <video controls preload="metadata" playsinline poster="/videos/thumbs/cv-calculator-scenarios.jpg" data-ga-event="video_play" data-ga-location="scenarios">
+            <source src="/videos/cv-calculator-scenarios.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">Available now on iOS</div>
+        <h2>Ready to run your own numbers?</h2>
+        <p>Free to download. Explore a high-level estimate at no cost. Exact CV and full analysis with CV Pro.</p>
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="btn-primary" target="_blank" data-ga-event="app_store_click" data-ga-location="walkthrough_cta">
+          &#8595; Download on the App Store
+        </a>
+        <div style="margin-top:36px; padding-top:36px; border-top:1px solid var(--border-2);">
+          <div class="eyebrow" style="margin-bottom:20px;">Keep learning</div>
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px;">
+            <a href="/should-i-take-my-commuted-value" style="font-size:0.85rem; font-weight:600; color:#6b5320; text-decoration:none;">Should I take my CV? →</a>
+            <a href="/commuted-value-lira-transfer-limit-explained" style="font-size:0.85rem; font-weight:600; color:#6b5320; text-decoration:none;">LIRA transfer limit explained →</a>
+            <a href="/commuted-value-taxes-canada" style="font-size:0.85rem; font-weight:600; color:#6b5320; text-decoration:none;">CV and taxes in Canada →</a>
+            <a href="/how-cia-3500-interest-rates-affect-commuted-value" style="font-size:0.85rem; font-weight:600; color:#6b5320; text-decoration:none;">How CIA rates affect your CV →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">Built in Canada · CIA §3500 · CPM2014</div>
+        <div class="footer-links">
+          <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" target="_blank" data-ga-event="app_store_click" data-ga-location="footer">App Store</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/#features">Features</a>
+          <a href="/#resources">Resources</a>
+          <a href="https://renewaliq.ca" target="_blank" rel="noopener">RenewalIQ</a>
+          <a href="/privacy">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 100);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
