@@ -92,6 +92,8 @@
     .cta-box p { font-size: 0.88rem; color: var(--text-2); margin-bottom: 20px; }
     .cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #f5f0e8; font-weight: 600; font-size: 0.88rem; border-radius: 28px; text-decoration: none; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 16px rgba(138,109,47,0.2); }
     .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .cta-btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: transparent; color: #6b5320; font-weight: 600; font-size: 0.88rem; border-radius: 28px; border: 1.5px solid rgba(138,109,47,0.45); cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+    .cta-btn-outline:hover { background: rgba(138,109,47,0.08); border-color: rgba(138,109,47,0.65); }
 
     .related { background: var(--navy-2); border-top: 1px solid var(--border-2); padding: 40px 0; }
     .related-label { font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
@@ -244,7 +246,7 @@
       <h3>Calculate your commuted value before you decide</h3>
       <p>Know your number before your termination package arrives. CVCalculator uses the same CIA §3500 standard your pension administrator uses and shows the LIRA transfer limit, taxable cash, and break-even age.</p>
       <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="article_cta">↓ Download CVCalculator — Free on iOS</a>
-      <button type="button" class="cta-btn" data-ga-event="android_interest_clicked" data-ga-platform="android" data-ga-destination_type="android_coming_soon" data-ga-page_type="article" data-ga-cta_id="article_android_interest" data-ga-entry_point="article_cta" data-ga-event_property_id="cvcalculator">Android App Coming Soon</button>
+      <button type="button" class="cta-btn-outline" data-ga-event="android_interest_clicked" data-ga-platform="android" data-ga-destination_type="android_coming_soon" data-ga-page_type="article" data-ga-cta_id="article_android_interest" data-ga-entry_point="article_cta" data-ga-event_property_id="cvcalculator">Android App Coming Soon</button>
     </div>
 
     <h2>Getting professional advice</h2>

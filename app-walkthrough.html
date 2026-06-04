@@ -193,6 +193,20 @@
     }
     .nav-cta:hover { opacity: 0.85; }
 
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px;
+      border: 1.5px solid rgba(138,109,47,0.45);
+      background: transparent;
+      color: #6b5320;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600; font-size: 0.95rem;
+      border-radius: 32px;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-outline:hover { background: rgba(138,109,47,0.08); border-color: rgba(138,109,47,0.65); }
+
     /* ── PAGE HEADER ── */
     .page-header {
       padding: 120px 0 64px;
@@ -507,7 +521,7 @@
         <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="btn-primary" target="_blank" data-ga-event="app_store_click" data-ga-location="walkthrough_cta">
           &#8595; Download on the App Store
         </a>
-        <button type="button" class="btn-primary" data-ga-event="android_interest_clicked" data-ga-platform="android" data-ga-destination_type="android_coming_soon" data-ga-page_type="walkthrough" data-ga-cta_id="walkthrough_android_interest" data-ga-entry_point="walkthrough" data-ga-event_property_id="cvcalculator" style="border:0; cursor:pointer; margin-left:12px;">
+        <button type="button" class="btn-outline" data-ga-event="android_interest_clicked" data-ga-platform="android" data-ga-destination_type="android_coming_soon" data-ga-page_type="walkthrough" data-ga-cta_id="walkthrough_android_interest" data-ga-entry_point="walkthrough" data-ga-event_property_id="cvcalculator">
           Android App Coming Soon
         </button>
         <div style="margin-top:36px; padding-top:36px; border-top:1px solid var(--border-2);">

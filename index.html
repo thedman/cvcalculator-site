@@ -794,19 +794,40 @@
       align-items: center;
       justify-content: center;
       padding: 14px 28px;
-      border-radius: 12px;
-      border: 1.5px solid rgba(107,83,32,0.28);
-      background: rgba(255,255,255,0.72);
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 0.95rem;
+      border-radius: 32px;
+      border: 1.5px solid rgba(138,109,47,0.45);
+      background: transparent;
+      color: #6b5320;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
       cursor: pointer;
-      transition: opacity 0.2s, transform 0.2s;
+      transition: background 0.2s, border-color 0.2s;
+      line-height: 1;
     }
 
     .android-interest-btn:hover {
-      opacity: 0.88;
-      transform: translateY(-2px);
+      background: rgba(138,109,47,0.08);
+      border-color: rgba(138,109,47,0.65);
+    }
+
+    /* Footer variant — slim text link, no pill */
+    .footer-links .android-interest-btn {
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      background: transparent;
+      color: var(--text-3);
+      font-size: 0.8rem;
+      font-weight: 400;
+      line-height: inherit;
+      transition: color 0.2s;
+    }
+
+    .footer-links .android-interest-btn:hover {
+      background: transparent;
+      border-color: transparent;
+      color: #6b5320;
     }
 
     .app-store-badge img {
