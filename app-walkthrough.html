@@ -11,8 +11,8 @@
     document.addEventListener('click', function(e) {
       var el = e.target.closest('[data-ga-event]');
       if (!el || typeof gtag !== 'function') return;
-      var params = { event_category: 'engagement' };
-      ['location','label'].forEach(function(key) {
+      var params = { event_category: 'engagement', page_path: window.location.pathname };
+      ['location', 'label', 'platform', 'destination_type', 'page_type', 'cta_id', 'entry_point', 'event_property_id', 'page_path'].forEach(function(key) {
         var val = el.getAttribute('data-ga-' + key);
         if (val) params[key] = val;
       });
@@ -507,6 +507,9 @@
         <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="btn-primary" target="_blank" data-ga-event="app_store_click" data-ga-location="walkthrough_cta">
           &#8595; Download on the App Store
         </a>
+        <button type="button" class="btn-primary" data-ga-event="android_interest_clicked" data-ga-platform="android" data-ga-destination_type="android_coming_soon" data-ga-page_type="walkthrough" data-ga-cta_id="walkthrough_android_interest" data-ga-entry_point="walkthrough" data-ga-event_property_id="cvcalculator" style="border:0; cursor:pointer; margin-left:12px;">
+          Android App Coming Soon
+        </button>
         <div style="margin-top:36px; padding-top:36px; border-top:1px solid var(--border-2);">
           <div class="eyebrow" style="margin-bottom:20px;">Keep learning</div>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px;">
