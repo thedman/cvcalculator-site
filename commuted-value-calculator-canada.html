@@ -138,6 +138,7 @@
     .cta-box { background: linear-gradient(135deg, var(--navy-2), var(--navy-3)); border: 1.5px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
     .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--text-1); margin-bottom: 10px; }
     .cta-box p { font-size: 0.88rem; color: var(--text-2); margin-bottom: 20px; }
+    .cta-actions { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
     .cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #f5f0e8; font-weight: 600; font-size: 0.88rem; border-radius: 28px; text-decoration: none; border: none; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 16px rgba(138,109,47,0.2); }
     .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
     .cta-btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: transparent; color: #6b5320; font-weight: 600; font-size: 0.88rem; border-radius: 28px; border: 1.5px solid rgba(138,109,47,0.45); cursor: pointer; transition: background 0.2s, border-color 0.2s; }
@@ -262,8 +263,10 @@
     <div class="cta-box">
       <h3>Run your own commuted value of pension estimate</h3>
       <p>CVCalculator implements the full CIA §3500 standard — two-tier rates, CPM2014 mortality, December 2020 blending — and shows the LIRA transfer limit and break-even age alongside the estimated lump sum.</p>
-      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="article_cta">↓ Download CVCalculator — Free on iOS</a>
-      <button type="button" class="cta-btn-outline" data-ga-event="android_interest_clicked" data-ga-platform="android" data-ga-destination_type="android_coming_soon" data-ga-page_type="article" data-ga-cta_id="article_android_interest" data-ga-entry_point="article_cta" data-ga-event_property_id="cvcalculator">Android App Coming Soon</button>
+      <div class="cta-actions">
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="article_cta">↓ Download CVCalculator — Free on iOS</a>
+        <button type="button" class="cta-btn-outline" data-ga-event="android_interest_clicked" data-ga-platform="android" data-ga-destination_type="android_coming_soon" data-ga-page_type="article" data-ga-cta_id="article_android_interest" data-ga-entry_point="article_cta" data-ga-event_property_id="cvcalculator">Android App Coming Soon</button>
+      </div>
     </div>
 
     <h2>What the calculator outputs — and what each means</h2>

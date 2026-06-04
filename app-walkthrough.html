@@ -344,6 +344,14 @@
       line-height: 1.8;
     }
 
+    .cta-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
     .btn-primary {
       display: inline-flex; align-items: center; gap: 10px;
       padding: 14px 28px;
@@ -518,12 +526,14 @@
         <div class="eyebrow">Available now on iOS</div>
         <h2>Ready to run your own numbers?</h2>
         <p>Free to download. Explore a high-level estimate at no cost. Exact CV and full analysis with CV Pro.</p>
-        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="btn-primary" target="_blank" data-ga-event="app_store_click" data-ga-location="walkthrough_cta">
-          &#8595; Download on the App Store
-        </a>
-        <button type="button" class="btn-outline" data-ga-event="android_interest_clicked" data-ga-platform="android" data-ga-destination_type="android_coming_soon" data-ga-page_type="walkthrough" data-ga-cta_id="walkthrough_android_interest" data-ga-entry_point="walkthrough" data-ga-event_property_id="cvcalculator">
-          Android App Coming Soon
-        </button>
+        <div class="cta-actions">
+          <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="btn-primary" target="_blank" data-ga-event="app_store_click" data-ga-location="walkthrough_cta">
+            &#8595; Download on the App Store
+          </a>
+          <button type="button" class="btn-outline" data-ga-event="android_interest_clicked" data-ga-platform="android" data-ga-destination_type="android_coming_soon" data-ga-page_type="walkthrough" data-ga-cta_id="walkthrough_android_interest" data-ga-entry_point="walkthrough" data-ga-event_property_id="cvcalculator">
+            Android App Coming Soon
+          </button>
+        </div>
         <div style="margin-top:36px; padding-top:36px; border-top:1px solid var(--border-2);">
           <div class="eyebrow" style="margin-bottom:20px;">Keep learning</div>
           <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px;">
