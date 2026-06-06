@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEBYFNTP7N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WEBYFNTP7N');
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('[data-ga-event]');
+      if (!el || typeof gtag !== 'function') return;
+      var params = { event_category: 'engagement', page_path: window.location.pathname };
+      ['location', 'label', 'platform', 'destination_type', 'page_type', 'cta_id', 'entry_point', 'event_property_id', 'page_path'].forEach(function(key) {
+        var val = el.getAttribute('data-ga-' + key);
+        if (val) params[key] = val;
+      });
+      gtag('event', el.getAttribute('data-ga-event'), params);
+    });
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMERS Commuted Value — Guide for Members Leaving an OMERS Employer (Canada 2026)</title>
+  <meta name="description" content="Leaving an OMERS employer? Understand how your commuted value is calculated, the 90-day election window, the LIRA transfer split, and how to weigh the lump sum against an OMERS deferred pension." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cvcalculator.ca/omers-commuted-value" />
+  <meta property="og:title" content="OMERS Commuted Value — Guide for Members Leaving an OMERS Employer" />
+  <meta property="og:description" content="How OMERS commuted values are calculated, the election window, the LIRA split, and how to think about deferred pension vs. lump sum." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://cvcalculator.ca/omers-commuted-value" />
+  <meta property="og:image" content="https://cvcalculator.ca/favicon-192x192.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OMERS Commuted Value — A Guide for OMERS Members" />
+  <meta name="twitter:description" content="What OMERS members need to know about commuted value, the 90-day election, LIRA limits, and the deferred-pension trade-off." />
+  <meta name="twitter:image" content="https://cvcalculator.ca/favicon-192x192.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #f5f0e8; --navy-2: #ede8df; --navy-3: #e4ddd2;
+      --gold: #8a6d2f; --gold-light: #a07d35; --gold-dim: #c9a84c;
+      --text-1: #0d1628; --text-2: #2d3d56; --text-3: #6b7a94;
+      --border: rgba(138,109,47,0.2); --border-2: rgba(0,0,0,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--navy); color: var(--text-1); font-family: 'Outfit', sans-serif; font-weight: 400; line-height: 1.7; }
+
+    nav { position: sticky; top: 0; z-index: 100; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; background: rgba(245,240,232,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-2); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1rem; color: #f5f0e8; }
+    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.1rem; color: var(--text-1); }
+    .nav-back { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .nav-back:hover { color: #6b5320; }
+
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    .page-hero { padding: 64px 0 48px; border-bottom: 1px solid var(--border-2); }
+    .eyebrow { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6b5320; margin-bottom: 12px; }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--text-1); line-height: 1.15; margin-bottom: 16px; }
+    .page-hero .intro { font-size: 1.05rem; color: var(--text-2); line-height: 1.8; max-width: 640px; }
+    .page-hero .meta { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--text-3); margin-top: 16px; }
+
+    .article-body { padding: 48px 0 80px; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--text-1); margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border-2); }
+    .article-body h2:first-child { margin-top: 0; }
+    .article-body p { font-size: 0.95rem; color: var(--text-2); line-height: 1.85; margin-bottom: 16px; }
+    .article-body ul { list-style: none; padding: 0; margin: 12px 0 20px; }
+    .article-body ul li { font-size: 0.95rem; color: var(--text-2); line-height: 1.7; padding: 7px 0 7px 20px; position: relative; border-bottom: 1px solid var(--border-2); }
+    .article-body ul li:last-child { border-bottom: none; }
+    .article-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold-dim); }
+    .article-body a { color: #6b5320; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(107,83,32,0.3); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: #6b5320; }
+    .article-body strong { color: var(--text-1); font-weight: 600; }
+
+    .callout { background: var(--navy-2); border: 1.5px solid var(--border-2); border-left: 3px solid var(--gold-dim); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
+    .callout p { margin: 0; font-size: 0.9rem; }
+
+    .factor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0 28px; }
+    .factor-card { background: var(--navy-2); border: 1.5px solid var(--border-2); border-radius: 12px; padding: 18px 20px; }
+    .factor-card-label { font-family: 'DM Mono', monospace; font-size: 0.52rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; }
+    .factor-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-1); margin-bottom: 6px; }
+    .factor-card p { font-size: 0.82rem; color: var(--text-2); line-height: 1.65; margin: 0; }
+    .factor-card.favour-cv { border-top: 2px solid var(--gold-dim); }
+    .factor-card.favour-pension { border-top: 2px solid #1e3a5f; }
+
+    .cta-box { background: linear-gradient(135deg, var(--navy-2), var(--navy-3)); border: 1.5px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+    .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--text-1); margin-bottom: 10px; }
+    .cta-box p { font-size: 0.88rem; color: var(--text-2); margin-bottom: 20px; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #f5f0e8; font-weight: 600; font-size: 0.88rem; border-radius: 28px; text-decoration: none; border: none; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 16px rgba(138,109,47,0.2); }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .hero-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #f5f0e8; font-weight: 600; font-size: 0.88rem; border-radius: 28px; text-decoration: none; margin-top: 24px; box-shadow: 0 4px 16px rgba(138,109,47,0.2); transition: opacity 0.2s, transform 0.2s; }
+    .hero-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .related { background: var(--navy-2); border-top: 1px solid var(--border-2); padding: 40px 0; }
+    .related-label { font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link { font-size: 0.9rem; color: #6b5320; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(107,83,32,0.2); padding-bottom: 10px; transition: border-color 0.2s; }
+    .related-link:hover { border-color: #6b5320; }
+    .faq-item { border-bottom: 1px solid var(--border-2); padding: 18px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h3 { font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--text-1); margin-bottom: 8px; }
+    .faq-item p { font-size: 0.9rem; color: var(--text-2); line-height: 1.8; margin: 0; }
+
+    footer { padding: 32px 0; border-top: 1px solid var(--border-2); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-left { font-size: 0.8rem; color: var(--text-3); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #6b5320; }
+
+    @media (max-width: 640px) {
+      .factor-grid { grid-template-columns: 1fr; }
+      .container { padding: 0 16px; }
+      nav { padding: 12px 16px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"OMERS Commuted Value — What It Is and How to Decide","description":"How OMERS commuted values are calculated, the 90-day election window, the LIRA transfer split, and how OMERS members should think about deferred pension vs. lump sum.","author":{"@type":"Person","name":"David McCrory","url":"https://cvcalculator.ca","sameAs":"https://apps.apple.com/us/app/commuted-value-calculator/id6759869222"},"publisher":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca","logo":{"@type":"ImageObject","url":"https://cvcalculator.ca/favicon-192x192.png"}},"datePublished":"2026-06-06","dateModified":"2026-06-06","url":"https://cvcalculator.ca/omers-commuted-value","mainEntityOfPage":"https://cvcalculator.ca/omers-commuted-value"},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CVCalculator","item":"https://cvcalculator.ca"},{"@type":"ListItem","position":2,"name":"Pension Plan Guides","item":"https://cvcalculator.ca/#resources"},{"@type":"ListItem","position":3,"name":"OMERS Commuted Value","item":"https://cvcalculator.ca/omers-commuted-value"}]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"How is the OMERS commuted value calculated?","acceptedAnswer":{"@type":"Answer","text":"Like every Canadian defined benefit plan, OMERS calculates commuted values under the CIA §3500 actuarial standard. The calculation uses your accrued annual pension at termination, your age, and the CIA's monthly i₁ and i₂ interest rates blended with CPM2014 mortality tables. OMERS' plan-specific assumptions about future indexation are also factored in, which is why OMERS values can differ from a generic CIA §3500 estimate."}},
+      {"@type":"Question","name":"Is OMERS a federal or provincial pension?","acceptedAnswer":{"@type":"Answer","text":"OMERS is an Ontario-regulated, jointly sponsored, multi-employer defined benefit plan covering municipal employees across Ontario. It is governed by the Ontario Pension Benefits Act, not the federal Pension Benefits Standards Act. This affects locked-in rules, unlocking provisions, and the regulator you escalate to if there is a dispute."}},
+      {"@type":"Question","name":"What is the OMERS election window when I leave an employer?","acceptedAnswer":{"@type":"Answer","text":"Under Ontario rules and OMERS administrative practice, you generally have a defined window from the date you receive your written options package to choose between a deferred OMERS pension and a commuted value transfer. The window is typically about 90 days but can vary. Missing it usually defaults you into a deferred pension. Confirm the exact deadline on your OMERS option statement."}},
+      {"@type":"Question","name":"Does OMERS provide indexation on a deferred pension?","acceptedAnswer":{"@type":"Answer","text":"OMERS has historically applied cost-of-living adjustments to pensions in pay and to deferred pensions, but the level and conditionality of future indexation is set by the OMERS Sponsors Corporation and can change. For the most current indexation policy, always check OMERS' published plan provisions. When weighing commuted value vs. deferred pension, treat future indexation as an assumption, not a guarantee — and model it explicitly."}},
+      {"@type":"Question","name":"Can I transfer my OMERS pension to my new employer's plan?","acceptedAnswer":{"@type":"Answer","text":"OMERS has reciprocal transfer agreements with several other Ontario and Canadian DB plans, including PSPP, OPTrust, HOOPP, CAAT, and the federal Public Service Pension Plan among others. A reciprocal transfer moves service credit directly between plans and may produce a materially different outcome than electing a commuted value. Ask both administrators for a written transfer quote before choosing."}},
+      {"@type":"Question","name":"How much of my OMERS commuted value can go into a LIRA tax-free?","acceptedAnswer":{"@type":"Answer","text":"The Income Tax Act §8517 Maximum Transfer Value formula applies to OMERS commuted values the same way it applies to every Canadian DB plan: your accrued annual pension is multiplied by an age-based prescribed factor. Anything within that limit can move into a LIRA on a tax-sheltered basis. Anything above the limit is paid out as taxable cash in the year of termination."}},
+      {"@type":"Question","name":"Should I take my OMERS commuted value or stay in the plan?","acceptedAnswer":{"@type":"Answer","text":"There is no universal answer. OMERS members closer to retirement, with strong family longevity, or who place a high value on the OMERS indexation track record often lean toward the deferred pension. Younger members with long compounding horizons, unused RRSP room to absorb the taxable cash, or specific estate-planning goals often lean toward the commuted value. The break-even age framework — modelled at realistic return rates — is the most useful way to compare the two."}}
+    ]}
+  ]}
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-icon">CV</div>
+    <span class="nav-logo-text">CVCalculator</span>
+  </a>
+  <a href="/" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Pension Plan Guide · OMERS</div>
+    <h1>OMERS commuted value — what it is and how to decide</h1>
+    <p class="intro">If you are leaving an OMERS employer, your commuted value is one of the largest single financial choices of your career. This guide explains how OMERS calculates it, what your options are, and how to think about the deferred pension vs. lump sum trade-off — without telling you which to pick.</p>
+    <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="hero-cta" target="_blank" data-ga-event="app_store_click" data-ga-location="omers_hero">↓ Estimate your OMERS CV on iOS — Free</a>
+    <div class="meta">By David McCrory · Updated June 2026 · 9 min read</div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container">
+
+    <div class="callout" style="margin-bottom:32px;">
+      <p><strong>Who this guide is for.</strong> Vested OMERS Primary Plan members who are leaving an OMERS employer through resignation, layoff, contract end, or early retirement, and who are weighing a deferred OMERS pension against taking the commuted value. If you are continuing service with another OMERS employer, you generally stay in the plan and no CV decision is required.</p>
+    </div>
+
+    <h2>What OMERS members should know first</h2>
+    <p>OMERS is Ontario's municipal defined benefit pension plan — a jointly sponsored, multi-employer plan covering municipalities, school board non-teaching staff, police and fire services, electricity utilities, and a long list of other Ontario public-sector employers. It is regulated under the Ontario Pension Benefits Act, administered by the OMERS Administration Corporation, and sponsored by the OMERS Sponsors Corporation. Federal pension rules do not apply.</p>
+    <p>What this means in practice when you leave: your options, your election deadlines, your LIRA locking rules, and your unlocking rights all flow from Ontario legislation — not federal rules and not OMERS internal preferences. If you take the commuted value, the LIRA you transfer to must be an Ontario LIRA, and Ontario unlocking provisions (financial hardship, small-amount, shortened life expectancy, non-resident) are what apply.</p>
+
+    <h2>How OMERS calculates your commuted value</h2>
+    <p>Every Canadian DB plan, including OMERS, calculates commuted values under the <a href="/how-cia-3500-interest-rates-affect-commuted-value">CIA §3500 actuarial standard</a>. The standard prescribes a two-tier interest rate structure — i₁ for the first ten years, i₂ thereafter — blended through CPM2014 mortality tables. The CIA publishes new rates on the first business day of every month, which is why your CV moves month to month even when nothing about your service has changed.</p>
+    <p>Where OMERS differs from a generic estimate is in the plan-specific assumptions baked into its calculation — most notably how future indexation is reflected. OMERS' published CV quote will use OMERS' own assumption set. A third-party estimator using only the published CIA rates will give you a directionally accurate number for decision-making, but not the exact figure on your option statement. Use the estimate to <em>think</em>; use the official statement to <em>elect</em>.</p>
+    <div class="callout">
+      <p><strong>Why the timing matters.</strong> Between any two consecutive monthly CIA rate sets, a typical mid-career CV can move by several percent. If you have flexibility on your termination date — even a two- or three-month window — running the numbers at recent CIA rate sets before committing is worth the effort.</p>
+    </div>
+
+    <h2>Your two main options at termination</h2>
+    <p>When a vested OMERS member leaves an OMERS employer without continuing service elsewhere in OMERS, the options package generally offers two paths:</p>
+    <ul>
+      <li><strong>Deferred OMERS pension</strong> — your accrued pension stays in the plan and is paid as a monthly income starting at normal retirement age (or earlier, with applicable reductions). The dollar amount of your accrued pension is locked in at termination; the value proposition over time depends on the indexation OMERS applies to deferred pensions, which is set by the OMERS Sponsors Corporation and can change.</li>
+      <li><strong>Commuted value transfer</strong> — your accrued pension is converted to a lump sum present value calculated under CIA §3500 with OMERS' assumptions. The portion within the <a href="/commuted-value-lira-transfer-limit-explained">ITA §8517 maximum transfer value</a> moves into a LIRA on a tax-sheltered basis. Any excess is paid as taxable cash, added to your income in the year of termination. See <a href="/commuted-value-taxes-canada">how the taxable cash is taxed</a> for the withholding details and RRSP-offset strategy.</li>
+    </ul>
+    <p>A third path exists in some cases: a reciprocal transfer to another DB plan. OMERS maintains transfer agreements with several Ontario and federal plans (PSPP, OPTrust, HOOPP, CAAT, federal Public Service Pension Plan among others). If your new employer participates in one of these, it is worth requesting a transfer quote alongside your CV quote before electing.</p>
+
+    <h2>The OMERS election window</h2>
+    <p>Ontario's pension legislation and OMERS' administrative practice give you a defined window — typically around 90 days from the date you receive your written option statement — to make your election. Read the deadline on your own statement; do not assume.</p>
+    <p>Practically, the timeline is compressed. You receive an option statement that lists a CV quote calculated using a specific month's CIA rates and a specific calculation date. By the time you have read it, modelled the alternatives, consulted an advisor, and chosen, weeks are gone. Two suggestions:</p>
+    <ul>
+      <li><strong>Estimate before the statement arrives.</strong> You do not need to wait. Knowing your approximate CV in advance lets you skip the first two weeks of decision paralysis.</li>
+      <li><strong>Book the advisor early.</strong> Fee-only planners with pension experience get busy in summer (when many people leave employers); a four-week wait for an appointment burns most of your window.</li>
+    </ul>
+
+    <h2>The LIRA transfer split for OMERS members</h2>
+    <p>The <a href="/commuted-value-lira-transfer-limit-explained">ITA §8517 maximum transfer value</a> is a federal Income Tax Act rule, not an OMERS rule — it applies identically across every Canadian DB plan. Your accrued annual pension is multiplied by an age-based prescribed factor; the product is the most that can flow into a LIRA on a tax-sheltered basis. Anything above the limit becomes taxable cash.</p>
+    <p>For OMERS members specifically, two things are worth flagging. First, the LIRA must be an Ontario-jurisdiction LIRA, which carries Ontario's locking and unlocking rules. Second, the taxable cash portion lands in the same tax year as your final OMERS pay and any severance — which can push you into a higher marginal bracket than you might expect.</p>
+
+    <h2>Worked example — mid-career OMERS member</h2>
+    <div class="callout" style="background:var(--navy-3);border-left-color:var(--gold);">
+      <p style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:10px;">Illustrative scenario — Maria, age 45, paramedic</p>
+      <p>Maria has been a paramedic with an OMERS-participating employer for 17 years. She accepts a senior role at a private clinic that does not participate in OMERS. She is fully vested, with an accrued OMERS pension of <strong>$28,500/year</strong>, payable from age 65 (with reductions available earlier). Her OMERS option statement quotes a commuted value of <strong>$465,000</strong>.</p>
+      <p style="margin-top:10px;"><strong>The LIRA split:</strong><br>
+      Age-45 prescribed factor under ITA §8517 is roughly 10.4 (illustrative).<br>
+      Maximum transfer value ≈ $28,500 × 10.4 = <strong>~$296,000</strong> (to her Ontario LIRA, tax-sheltered)<br>
+      Taxable cash = $465,000 − $296,000 = <strong>~$169,000</strong> (added to income this year)<br>
+      Maria has $52,000 of unused RRSP room from prior years, which she contributes to offset part of the taxable amount. At a ~46% marginal rate on the remainder, her estimated tax on the cash portion is ~<strong>$54,000</strong>.</p>
+      <p style="margin-top:10px;"><strong>Her decision factors:</strong> Maria is 20 years from age 65 — long compounding horizon. Her family has average longevity. Her spouse has his own pension. She values flexibility and estate transferability. She also recognizes that OMERS' historical indexation track record is a real asset she is giving up if she takes the CV.<br>
+      <strong>Her process:</strong> she models the break-even age at 5%, 6%, and 7% returns with and without OMERS indexation assumptions. The deferred pension wins at low returns plus full indexation; the CV wins at moderate returns or under reduced indexation. She uses the spread between those scenarios — not a single number — to decide.</p>
+    </div>
+
+    <div class="cta-box">
+      <h3>Model your own OMERS scenario</h3>
+      <p>Estimate your commuted value, see the LIRA split, and run break-even ages across return rates. The same CIA §3500 standard your option statement uses.</p>
+      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="omers_midpage">↓ Download CVCalculator — Free on iOS</a>
+    </div>
+
+    <h2>OMERS indexation and why it matters for the decision</h2>
+    <p>The single most plan-specific variable in the OMERS CV decision is indexation. The OMERS Sponsors Corporation sets the level and conditionality of cost-of-living adjustments applied to pensions in pay and to deferred pensions. That policy can change — and has changed in the past. For current OMERS indexation rules, always check the OMERS plan provisions or your option statement directly.</p>
+    <p>The reason this matters for your decision is straightforward: a deferred pension's real value over a long retirement depends almost entirely on whether and how it is indexed. A fully indexed deferred pension is worth materially more in real terms than a flat one. A conditionally indexed pension sits somewhere in between, with the value depending on what you assume the conditions will produce.</p>
+    <p>The right way to handle this is not to guess and pick a single number. It is to model the decision under a range of indexation scenarios — full indexation, partial, none — and see how robust your conclusion is across them. If the deferred pension only wins under one assumption set, that is a sign the decision is fragile. <a href="/should-i-take-my-commuted-value">The full decision framework</a> walks through how to do this.</p>
+
+    <h2>Decision factors — OMERS specifics</h2>
+    <div class="factor-grid">
+      <div class="factor-card favour-pension">
+        <div class="factor-card-label">Favours deferred OMERS pension</div>
+        <h3>You value indexation</h3>
+        <p>OMERS has a meaningful indexation history. If you weight that highly, the deferred pension's real value over a long retirement is hard to replicate with a LIRA.</p>
+      </div>
+      <div class="factor-card favour-cv">
+        <div class="factor-card-label">Favours OMERS commuted value</div>
+        <h3>Long compounding horizon</h3>
+        <p>Younger members have more time for the LIRA to compound — and more chance to outperform the discount rate baked into the CV.</p>
+      </div>
+      <div class="factor-card favour-pension">
+        <div class="factor-card-label">Favours deferred OMERS pension</div>
+        <h3>Family longevity</h3>
+        <p>OMERS pays for life. If people in your family routinely live past 85, the lifetime income guarantee almost always pulls ahead.</p>
+      </div>
+      <div class="factor-card favour-cv">
+        <div class="factor-card-label">Favours OMERS commuted value</div>
+        <h3>Estate transferability</h3>
+        <p>A LIRA passes to your estate. A deferred OMERS pension typically ends at death (or your spouse's death, with a survivor benefit).</p>
+      </div>
+    </div>
+
+    <h2>Reciprocal transfers — the third option many OMERS members miss</h2>
+    <p>If your next employer participates in a plan that has a reciprocal transfer agreement with OMERS — for example PSPP, OPTrust, HOOPP, CAAT, or the federal Public Service Pension Plan — you may be able to transfer service credit directly between plans instead of electing a CV. The outcome can be materially different. Sometimes it is meaningfully better; sometimes meaningfully worse; you cannot tell without a written quote from the receiving plan.</p>
+    <p>Two practical notes: reciprocal transfers have their own deadlines, often shorter than the CV election window. And the quote process can take weeks. If a reciprocal transfer is even potentially relevant, start it the day you receive your option statement.</p>
+
+    <h2>Decision checklist — OMERS members</h2>
+    <p>This is not a scoring system. It is a way to surface what actually matters in your situation before you sit down with an advisor.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0 28px;">
+      <div style="background:var(--navy-2);border:1.5px solid rgba(58,122,58,0.25);border-radius:12px;padding:20px;">
+        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:#3a7a3a;margin-bottom:12px;">Lean toward the OMERS commuted value if…</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You are well under 55</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You have a long compounding runway</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You have a steady investment track record</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You have unused RRSP room to absorb taxable cash</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ Estate transferability matters to you</li>
+          <li style="padding:6px 0;font-size:0.88rem;color:var(--text-2);">☐ You are not relying on a survivor benefit</li>
+        </ul>
+      </div>
+      <div style="background:var(--navy-2);border:1.5px solid rgba(138,109,47,0.25);border-radius:12px;padding:20px;">
+        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:#8a6d2f;margin-bottom:12px;">Lean toward the deferred OMERS pension if…</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You are within 10 years of retirement</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ Family longevity is well above average</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You place high value on OMERS' indexation history</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ A spouse depends on a survivor benefit</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ Investment volatility tolerance is low</li>
+          <li style="padding:6px 0;font-size:0.88rem;color:var(--text-2);">☐ You have no RRSP room to offset taxable cash</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:0.82rem;color:var(--text-3);">A clean split is itself a signal. Genuinely close decisions are where a fee-only advisor with pension experience adds the most value.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>How is the OMERS commuted value calculated?</h3>
+      <p>Under the CIA §3500 actuarial standard using monthly i₁ and i₂ interest rates and CPM2014 mortality tables, with OMERS plan-specific assumptions about future indexation factored in. The official figure on your option statement uses OMERS' assumption set; a third-party estimate using only the published CIA rates will be directionally accurate but not exact.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is OMERS a federal or provincial pension?</h3>
+      <p>OMERS is Ontario-regulated. It is governed by the Ontario Pension Benefits Act, not the federal Pension Benefits Standards Act. This matters for locking rules, unlocking provisions, and the regulator overseeing the plan.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the OMERS election window?</h3>
+      <p>Typically around 90 days from the date you receive your written option statement, but read the exact deadline on your statement. Missing the window generally defaults you into a deferred pension.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does OMERS provide indexation on a deferred pension?</h3>
+      <p>OMERS has historically applied cost-of-living adjustments, but indexation policy is set by the OMERS Sponsors Corporation and can change. Always check the current OMERS plan provisions, and model your decision under multiple indexation scenarios rather than assuming any single outcome.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I transfer my OMERS pension to my new employer's plan?</h3>
+      <p>Possibly. OMERS has reciprocal transfer agreements with PSPP, OPTrust, HOOPP, CAAT, the federal Public Service Pension Plan, and others. A reciprocal transfer can produce a materially different outcome than a CV election. Request a written transfer quote from both administrators before deciding.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How much of my OMERS commuted value can go into a LIRA tax-free?</h3>
+      <p>The ITA §8517 limit applies the same way as for every Canadian DB plan: your accrued annual pension times an age-based prescribed factor. Anything above that limit becomes taxable cash in the year of termination.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Should I take my OMERS commuted value or stay in the plan?</h3>
+      <p>No universal answer. Younger members with long horizons and unused RRSP room often lean toward the CV; older members close to retirement, with strong family longevity, or who place high value on indexation often lean toward the deferred pension. Use the break-even age framework across a range of return rate and indexation assumptions to test how robust your conclusion is.</p>
+    </div>
+
+    <div class="cta-box">
+      <h3>Walk into your OMERS election conversation with your own numbers</h3>
+      <p>CVCalculator uses the same CIA §3500 standard your OMERS option statement uses. Estimate your CV, see the LIRA split, and model break-even age across return rates.</p>
+      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="omers_article_cta">↓ Download CVCalculator — Free on iOS</a>
+    </div>
+
+    <h2>Get qualified advice</h2>
+    <p>The OMERS commuted value decision touches pension legislation, tax planning, longevity assumptions, and investment strategy at the same time. A fee-only financial advisor who specializes in Ontario pension decisions can review your option statement, model the tax impact, and help you weigh factors a calculator alone cannot capture. <a href="https://www.fpcanada.ca/findaplanner" target="_blank" rel="noopener">Find a fee-only advisor in Canada →</a></p>
+    <p style="font-size:0.82rem;color:var(--text-3);margin-top:24px;">CVCalculator is not affiliated with OMERS or the OMERS Administration Corporation. "OMERS" is used here in its descriptive sense to identify the plan; all calculation, election, and tax outcomes are governed by your official OMERS option statement and applicable legislation.</p>
+
+  </div>
+</div>
+
+<div class="related">
+  <div class="container">
+    <div class="related-label">Related articles</div>
+    <div class="related-links">
+      <a href="/should-i-take-my-commuted-value" class="related-link">Should I take my commuted value? The full decision framework →</a>
+      <a href="/what-happens-to-db-pension-when-you-leave-employer-canada" class="related-link">What happens to your DB pension when you leave an employer in Canada →</a>
+      <a href="/commuted-value-lira-transfer-limit-explained" class="related-link">LIRA transfer limit explained — ITA §8517 →</a>
+      <a href="/commuted-value-taxes-canada" class="related-link">Commuted value and taxes in Canada — the cash portion →</a>
+      <a href="/how-cia-3500-interest-rates-affect-commuted-value" class="related-link">How CIA §3500 rates move your commuted value month to month →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">Built in Canada · CIA §3500 · CPM2014</div>
+      <div class="footer-links">
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" target="_blank" data-ga-event="app_store_click" data-ga-location="footer">App Store</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#features">Features</a>
+        <a href="https://renewaliq.ca" target="_blank" rel="noopener">RenewalIQ</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
