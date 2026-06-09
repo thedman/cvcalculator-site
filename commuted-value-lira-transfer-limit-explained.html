@@ -21,8 +21,8 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LIRA Transfer Limit & Maximum Transfer Value (ITA §8517) Explained — CVCalculator</title>
-  <meta name="description" content="Not all of your commuted value goes into your LIRA tax-free. ITA §8517 sets a strict limit — the rest is taxable cash. See how the split is calculated and what you'll owe." />
+  <title>LIRA Transfer Limits: How Much of Your Pension Can You Transfer? | CVCalculator</title>
+  <meta name="description" content="Only part of your commuted value can transfer to a LIRA tax-free. Canada's ITA §8517 sets the limit based on your pension and age — the excess is taxable cash. See the formula, a worked example, and estimate your own split." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://cvcalculator.ca/commuted-value-lira-transfer-limit-explained" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -65,6 +65,11 @@
     .article-body a { color: #6b5320; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(107,83,32,0.3); transition: border-color 0.2s; }
     .article-body a:hover { border-color: #6b5320; }
     .article-body strong { color: var(--text-1); font-weight: 600; }
+    .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--text-1); margin: 28px 0 10px; }
+    .answer-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.88rem; }
+    .answer-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--border); color: var(--text-3); font-family: 'DM Mono', monospace; font-size: 0.52rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+    .answer-table td { padding: 10px; border-bottom: 1px solid var(--border-2); color: var(--text-2); font-size: 0.9rem; }
+    .answer-table tr:last-child td { border-bottom: none; }
 
     .callout { background: var(--navy-2); border: 1.5px solid var(--border-2); border-left: 3px solid var(--gold-dim); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
     .callout p { margin: 0; font-size: 0.9rem; }
@@ -117,13 +122,18 @@
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"Article","headline":"LIRA Transfer Limit & Maximum Transfer Value (ITA §8517) Explained","description":"Not all of your commuted value goes into your LIRA tax-free. ITA §8517 sets a strict limit — the rest is taxable cash. See how the split is calculated and what you'll owe.","author":{"@type":"Person","name":"David McCrory","url":"https://cvcalculator.ca","sameAs":"https://apps.apple.com/us/app/commuted-value-calculator/id6759869222"},"publisher":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca","logo":{"@type":"ImageObject","url":"https://cvcalculator.ca/favicon-192x192.png"}},"datePublished":"2026-04-01","dateModified":"2026-05-19","url":"https://cvcalculator.ca/commuted-value-lira-transfer-limit-explained","mainEntityOfPage":"https://cvcalculator.ca/commuted-value-lira-transfer-limit-explained"},
+    {"@type":"Article","headline":"LIRA Transfer Limit & Maximum Transfer Value (ITA §8517) Explained","description":"Not all of your commuted value goes into your LIRA tax-free. ITA §8517 sets a strict limit — the rest is taxable cash. See how the split is calculated and what you'll owe.","author":{"@type":"Person","name":"David McCrory","url":"https://cvcalculator.ca","sameAs":"https://apps.apple.com/us/app/commuted-value-calculator/id6759869222"},"publisher":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca","logo":{"@type":"ImageObject","url":"https://cvcalculator.ca/favicon-192x192.png"}},"datePublished":"2026-04-01","dateModified":"2026-06-09","url":"https://cvcalculator.ca/commuted-value-lira-transfer-limit-explained","mainEntityOfPage":"https://cvcalculator.ca/commuted-value-lira-transfer-limit-explained"},
     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CVCalculator","item":"https://cvcalculator.ca"},{"@type":"ListItem","position":2,"name":"LIRA Transfer Limit & Maximum Transfer Value Explained","item":"https://cvcalculator.ca/commuted-value-lira-transfer-limit-explained"}]},
     {"@type":"FAQPage","mainEntity":[
       {"@type":"Question","name":"What is the LIRA transfer limit for a commuted value in Canada?","acceptedAnswer":{"@type":"Answer","text":"Under ITA §8517, only a portion of your commuted value can transfer into a Locked-In Retirement Account tax-free. This Maximum Transfer Value equals your annual accrued pension multiplied by a prescribed factor based on your age at termination. Any CV above this limit is paid as taxable cash."}},
       {"@type":"Question","name":"How is the ITA §8517 Maximum Transfer Value calculated?","acceptedAnswer":{"@type":"Answer","text":"The formula is: LIRA Transfer Limit = Annual Accrued Pension × Prescribed Factor. The prescribed factor ranges from approximately 9.0 at age 30 to over 13.0 at age 60, set by federal regulations. CVCalculator calculates this automatically based on your inputs."}},
       {"@type":"Question","name":"Can I put the taxable cash portion of my commuted value into an RRSP?","acceptedAnswer":{"@type":"Answer","text":"The taxable cash portion cannot be contributed to an RRSP using the pension transfer rules — it is excluded from RRSP contribution room by pension adjustment rules. However, if you have existing unused RRSP room from prior years, you can contribute the taxable cash to your RRSP and deduct it against the income."}},
-      {"@type":"Question","name":"What is a Life Income Fund (LIF) in Canada?","acceptedAnswer":{"@type":"Answer","text":"A Life Income Fund is what a LIRA converts to at retirement (typically between age 55 and 71). It provides a regulated annual income with both minimum and maximum withdrawal limits. Unlike an RRSP, a LIF has withdrawal caps to ensure the funds last throughout retirement."}}
+      {"@type":"Question","name":"What is a Life Income Fund (LIF) in Canada?","acceptedAnswer":{"@type":"Answer","text":"A Life Income Fund is what a LIRA converts to at retirement (typically between age 55 and 71). It provides a regulated annual income with both minimum and maximum withdrawal limits. Unlike an RRSP, a LIF has withdrawal caps to ensure the funds last throughout retirement."}},
+      {"@type":"Question","name":"Can I transfer my entire commuted value to a LIRA?","acceptedAnswer":{"@type":"Answer","text":"No. The Income Tax Act (§8517) caps the tax-sheltered transfer at your annual accrued pension multiplied by a prescribed factor based on your age at termination. Any commuted value above this limit cannot go into your LIRA — it is paid as taxable cash."}},
+      {"@type":"Question","name":"What happens to the amount above the transfer limit?","acceptedAnswer":{"@type":"Answer","text":"The excess is paid directly to you as a cash payout. It is added to your employment income in the year of termination. Withholding tax is deducted at source, but you may owe additional tax — or receive a refund — when you file your return, depending on your total income for the year."}},
+      {"@type":"Question","name":"Is the excess commuted value taxable?","acceptedAnswer":{"@type":"Answer","text":"Yes — fully. The amount above the §8517 transfer limit is treated as ordinary income in the year you receive it. If the excess is large, it can push you into the top marginal tax bracket for that year, which is why timing and any available RRSP room matter before you elect."}},
+      {"@type":"Question","name":"How is the transfer limit determined?","acceptedAnswer":{"@type":"Answer","text":"Your transfer limit equals your annual accrued pension multiplied by a prescribed factor from the federal Income Tax Regulations. The factor depends on your age at termination — approximately 9.0 at age 30, rising to over 13.0 at age 60. Your pension administrator calculates this and includes it in your termination package as the Maximum Transfer Value (MTV)."}},
+      {"@type":"Question","name":"Can I estimate my commuted value before receiving my package?","acceptedAnswer":{"@type":"Answer","text":"Yes. CVCalculator estimates your commuted value using CIA §3500 actuarial standards and calculates your ITA §8517 transfer limit automatically. You will see the estimated LIRA transfer amount and taxable cash amount alongside your commuted value — so you can model the decision before your official quote arrives."}}
     ]}
   ]}
   </script>
@@ -141,7 +151,7 @@
 <div class="page-hero">
   <div class="container">
     <div class="eyebrow">LIRA & Tax Planning</div>
-    <h1>The LIRA transfer limit explained — ITA §8517</h1>
+    <h1>LIRA Transfer Limits: How Much of Your Commuted Value Can Be Transferred?</h1>
     <p class="intro">When you take your commuted value, not all of it flows into your LIRA tax-free. The Income Tax Act sets a strict limit on how much can be transferred. Here's how it works — and what happens to the rest.</p>
     <div class="meta">By David McCrory · Updated May 2026 · 7 min read</div>
   </div>
@@ -149,6 +159,41 @@
 
 <div class="article-body">
   <div class="container">
+
+    <div class="example-box" style="margin-top: 0; margin-bottom: 32px;">
+      <div class="example-box-label">Quick answer</div>
+      <p><strong>No — you cannot transfer your full commuted value to a LIRA.</strong> The Income Tax Act (§8517) sets a limit on how much can move into a Locked-In Retirement Account tax-free. The rest is paid to you as taxable cash.</p>
+      <table class="answer-table">
+        <thead>
+          <tr>
+            <th>Portion</th>
+            <th>Destination</th>
+            <th>Tax Treatment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Up to transfer limit</td>
+            <td>LIRA</td>
+            <td>Tax sheltered</td>
+          </tr>
+          <tr>
+            <td>Above transfer limit</td>
+            <td>Cash payment</td>
+            <td>Taxable income</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Simple example</strong> — age 45, $20,000 annual pension, $300,000 commuted value:</p>
+      <p>At age 45 the prescribed factor is approximately 11.0.<br>
+      Transfer limit: $20,000 × 11.0 = <strong>$220,000 → into your LIRA tax-sheltered</strong><br>
+      Excess: $300,000 − $220,000 = <strong>$80,000 → paid as taxable cash</strong><br>
+      <span style="font-size: 0.82rem; color: var(--text-3);">Actual tax on the excess depends on your province and total income in the year of termination.</span></p>
+    </div>
+
+    <div class="callout" style="margin-bottom: 40px;">
+      <p><strong>Want to estimate your own split?</strong> Enter your pension details and CVCalculator shows your commuted value, your LIRA transfer amount, and your taxable cash — before you receive your official package. <a href="/" data-ga-event="cta_clicked" data-ga-cta_id="answer_first_inline" data-ga-page_type="article" data-ga-destination_type="internal" data-ga-event_property_id="cvcalculator">Use the calculator →</a></p>
+    </div>
 
     <h2>The Maximum Transfer Value (MTV) — what it means</h2>
     <p>Your pension termination package will likely use one of two terms for the same thing: <strong>Maximum Transfer Value (MTV)</strong> or the <strong>ITA §8517 transfer limit</strong>. They are identical — just different names for the regulated ceiling on how much of your commuted value can move into a Locked-In Retirement Account tax-free.</p>
@@ -199,6 +244,10 @@
       <p>This is why understanding the split <em>before</em> you elect is essential to financial planning.</p>
     </div>
 
+    <div class="callout" style="margin: 0 0 32px;">
+      <p><strong>Estimate your own commuted value and LIRA split.</strong> CVCalculator calculates your transfer limit based on your pension and age — so you can model your decision before your package arrives. <a href="/" data-ga-event="cta_clicked" data-ga-cta_id="mid_article_lira" data-ga-page_type="article" data-ga-destination_type="internal" data-ga-event_property_id="cvcalculator">Use the calculator →</a></p>
+    </div>
+
     <div class="callout">
       <p><strong>The taxable cash portion cannot be contributed to an RRSP</strong> to defer the tax — it is specifically excluded from RRSP contribution room by the pension adjustment rules. What you can do is use any existing RRSP room you may have from prior years to offset some of the tax impact. Speak to a tax advisor before your termination date.</p>
     </div>
@@ -228,12 +277,29 @@
     <p>CVCalculator calculates your ITA §8517 transfer limit automatically as part of every <a href="/commuted-value-calculator-canada">commuted value calculation</a>. You'll see your estimated LIRA transfer amount and taxable cash amount alongside your commuted value — so you understand the full financial picture before you make any decision.</p>
     <p>This is one of the most practically useful outputs of the calculator, because it's the number that determines your actual after-tax proceeds from taking the commuted value.</p>
 
+    <h2>Frequently asked questions</h2>
+
+    <h3>Can I transfer my entire commuted value to a LIRA?</h3>
+    <p>No. The Income Tax Act (§8517) caps the tax-sheltered transfer at your annual accrued pension multiplied by a prescribed factor based on your age at termination. Any commuted value above this limit cannot go into your LIRA — it is paid as taxable cash.</p>
+
+    <h3>What happens to the amount above the transfer limit?</h3>
+    <p>The excess is paid directly to you as a cash payout and added to your employment income in the year of termination. Withholding tax is deducted at source, but you may owe additional tax — or receive a refund — when you file your return, depending on your total income for the year.</p>
+
+    <h3>Is the excess commuted value taxable?</h3>
+    <p>Yes — fully. The amount above the §8517 transfer limit is treated as ordinary income in the year you receive it. If the excess is large, it can push you into the top marginal tax bracket for that year, which is why timing and any available RRSP room matter before you elect.</p>
+
+    <h3>How is the transfer limit determined?</h3>
+    <p>Your transfer limit equals your annual accrued pension multiplied by a prescribed factor from the federal Income Tax Regulations. The factor depends on your age at termination — approximately 9.0 at age 30, rising to over 13.0 at age 60. Your pension administrator calculates this and includes it in your termination package as the Maximum Transfer Value (MTV).</p>
+
+    <h3>Can I estimate my commuted value before receiving my package?</h3>
+    <p>Yes. CVCalculator estimates your commuted value using CIA §3500 actuarial standards and calculates your ITA §8517 transfer limit automatically. You'll see the estimated LIRA transfer amount and taxable cash amount alongside your commuted value — so you can model the decision before your official quote arrives.</p>
+
     <div class="cta-box">
-      <h3>See your LIRA transfer and taxable cash split instantly</h3>
-      <p>CVCalculator calculates your ITA §8517 limit automatically — so you know your full picture before you elect.</p>
+      <h3>Estimate your commuted value, LIRA transfer, and taxable cash</h3>
+      <p>CVCalculator estimates your commuted value, calculates your LIRA transfer amount, and shows your taxable cash — so you know the full picture before you elect.</p>
       <div class="cta-actions">
-        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="article_cta">↓ Download CVCalculator — Free on iOS</a>
-        <button type="button" class="cta-btn-outline" data-ga-event="android_interest_clicked" data-ga-platform="android" data-ga-destination_type="android_coming_soon" data-ga-page_type="article" data-ga-cta_id="article_android_interest" data-ga-entry_point="article_cta" data-ga-event_property_id="cvcalculator">Android App Coming Soon</button>
+        <a href="/" class="cta-btn" data-ga-event="cta_clicked" data-ga-cta_id="article_end_web" data-ga-page_type="article" data-ga-destination_type="internal" data-ga-event_property_id="cvcalculator">Use the Calculator →</a>
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn-outline" target="_blank" data-ga-event="app_store_click" data-ga-location="article_cta">↓ Download on iOS</a>
       </div>
     </div>
 
