@@ -812,6 +812,59 @@
       border-color: rgba(30,58,95,0.75);
     }
 
+    .crosspromo-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .crosspromo-app-store-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 32px;
+      border: 1.5px solid rgba(138,109,47,0.45);
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #f5f0e8;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      line-height: 1;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .crosspromo-app-store-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .crosspromo-android-interest-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-radius: 32px;
+      border: 1.5px solid rgba(138,109,47,0.45);
+      background: transparent;
+      color: #6b5320;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      line-height: 1;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .crosspromo-android-interest-btn:hover {
+      background: rgba(138,109,47,0.08);
+      border-color: rgba(138,109,47,0.65);
+    }
+
     /* Footer variant — slim text link, no pill */
     .footer-links .android-interest-btn {
       padding: 0;
@@ -1285,9 +1338,14 @@
             <span style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:0.85rem;font-weight:600;color:#6b5320;">Visit RenewalIQ.ca →</span>
           </div>
         </a>
-        <a href="https://play.google.com/store/apps/details?id=com.dmccrory.cv_calculator" class="android-interest-btn" target="_blank" rel="noopener noreferrer" data-ga-event="google_play_download_clicked" data-ga-platform="android" data-ga-destination_type="google_play" data-ga-page_type="homepage" data-ga-cta_id="crosspromo_android_interest" data-ga-entry_point="crosspromo" data-ga-event_property_id="cvcalculator" style="margin-top:22px;">
-          Get it on Google Play
-        </a>
+        <div class="crosspromo-actions">
+          <a href="https://apps.apple.com/ca/app/renewaliq/id6766287238" class="crosspromo-app-store-btn" target="_blank" rel="noopener noreferrer" data-ga-event="app_store_click" data-ga-platform="ios" data-ga-destination_type="app_store_ios" data-ga-page_type="homepage" data-ga-cta_id="crosspromo_renewaliq_ios_download" data-ga-entry_point="crosspromo" data-ga-event_property_id="renewaliq">
+            Download on App Store
+          </a>
+          <button type="button" class="crosspromo-android-interest-btn" data-ga-event="android_interest_clicked" data-ga-platform="android" data-ga-destination_type="android_coming_soon" data-ga-page_type="homepage" data-ga-cta_id="crosspromo_renewaliq_android_interest" data-ga-entry_point="crosspromo" data-ga-event_property_id="renewaliq">
+            Android App Coming Soon
+          </button>
+        </div>
       </div>
     </div>
   </section>
