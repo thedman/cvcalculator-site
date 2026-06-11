@@ -796,9 +796,9 @@
       text-decoration: none;
       padding: 14px 28px;
       border-radius: 32px;
-      border: 1.5px solid rgba(138,109,47,0.45);
-      background: transparent;
-      color: #6b5320;
+      border: 1.5px solid rgba(30,58,95,0.55);
+      background: linear-gradient(135deg, #1e3a5f, #2d4f79);
+      color: #f5f0e8;
       font-family: 'Outfit', sans-serif;
       font-weight: 600;
       font-size: 0.9rem;
@@ -808,8 +808,8 @@
     }
 
     .android-interest-btn:hover {
-      background: rgba(138,109,47,0.08);
-      border-color: rgba(138,109,47,0.65);
+      background: linear-gradient(135deg, #263f63, #365d8b);
+      border-color: rgba(30,58,95,0.75);
     }
 
     /* Footer variant — slim text link, no pill */
@@ -930,7 +930,7 @@
       <div class="nav-logo-icon">CV</div>
       <span class="nav-logo-text">CVCalculator</span>
     </div>
-    <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="nav-cta" target="_blank" data-ga-event="app_store_click" data-ga-location="nav">
+    <a href="#download" class="nav-cta" data-ga-event="cta_clicked" data-ga-cta_id="nav_download" data-ga-page_type="homepage" data-ga-destination_type="internal" data-ga-entry_point="nav" data-ga-event_property_id="cvcalculator">
       &#9654; Download Free
     </a>
   </nav>
@@ -1322,10 +1322,10 @@
   </script>
 
   <!-- CTA -->
-  <section class="cta-section">
+  <section id="download" class="cta-section">
     <div class="container">
       <div class="reveal">
-        <div class="eyebrow">Available now on iOS</div>
+        <div class="eyebrow">Available now on iOS and Android</div>
         <h2>Make the most important financial decision of your career with confidence.</h2>
         <p>Free to download. Explore a high-level estimate at no cost. Exact CV and full analysis with CV Pro.</p>
         <div style="display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;">

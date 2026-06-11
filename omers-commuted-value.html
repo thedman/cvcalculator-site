@@ -89,10 +89,13 @@
     .cta-box { background: linear-gradient(135deg, var(--navy-2), var(--navy-3)); border: 1.5px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
     .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--text-1); margin-bottom: 10px; }
     .cta-box p { font-size: 0.88rem; color: var(--text-2); margin-bottom: 20px; }
+    .cta-actions { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
     .cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #f5f0e8; font-weight: 600; font-size: 0.88rem; border-radius: 28px; text-decoration: none; border: none; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 16px rgba(138,109,47,0.2); }
     .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
 
+    .hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
     .hero-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #f5f0e8; font-weight: 600; font-size: 0.88rem; border-radius: 28px; text-decoration: none; margin-top: 24px; box-shadow: 0 4px 16px rgba(138,109,47,0.2); transition: opacity 0.2s, transform 0.2s; }
+    .hero-actions .hero-cta { margin-top: 0; }
     .hero-cta:hover { opacity: 0.88; transform: translateY(-1px); }
 
     .related { background: var(--navy-2); border-top: 1px solid var(--border-2); padding: 40px 0; }
@@ -149,7 +152,10 @@
     <div class="eyebrow">Pension Plan Guide · OMERS</div>
     <h1>OMERS commuted value — what it is and how to decide</h1>
     <p class="intro">If you are leaving an OMERS employer, your commuted value is one of the largest single financial choices of your career. This guide explains how OMERS calculates it, what your options are, and how to think about the deferred pension vs. lump sum trade-off — without telling you which to pick.</p>
-    <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="hero-cta" target="_blank" data-ga-event="app_store_click" data-ga-location="omers_hero">↓ Estimate your OMERS CV on iOS — Free</a>
+    <div class="hero-actions">
+      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="hero-cta" target="_blank" data-ga-event="app_store_click" data-ga-location="omers_hero">↓ Estimate your OMERS CV on iOS — Free</a>
+      <a href="https://play.google.com/store/apps/details?id=com.dmccrory.cv_calculator" class="hero-cta" target="_blank" rel="noopener noreferrer" data-ga-event="google_play_download_clicked" data-ga-platform="android" data-ga-destination_type="google_play" data-ga-page_type="article" data-ga-cta_id="omers_hero_android_download" data-ga-entry_point="omers_hero" data-ga-event_property_id="cvcalculator">Get it on Google Play</a>
+    </div>
     <div class="meta">By David McCrory · Updated June 2026 · 9 min read</div>
   </div>
 </div>
@@ -208,7 +214,10 @@
     <div class="cta-box">
       <h3>Model your own OMERS scenario</h3>
       <p>Estimate your commuted value, see the LIRA split, and run break-even ages across return rates. The same CIA §3500 standard your option statement uses.</p>
-      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="omers_midpage">↓ Download CVCalculator — Free on iOS</a>
+      <div class="cta-actions">
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="omers_midpage">↓ Download CVCalculator — Free on iOS</a>
+        <a href="https://play.google.com/store/apps/details?id=com.dmccrory.cv_calculator" class="cta-btn" target="_blank" rel="noopener noreferrer" data-ga-event="google_play_download_clicked" data-ga-platform="android" data-ga-destination_type="google_play" data-ga-page_type="article" data-ga-cta_id="omers_midpage_android_download" data-ga-entry_point="omers_midpage" data-ga-event_property_id="cvcalculator">Get it on Google Play</a>
+      </div>
     </div>
 
     <h2>OMERS indexation and why it matters for the decision</h2>
@@ -305,7 +314,10 @@
     <div class="cta-box">
       <h3>Walk into your OMERS election conversation with your own numbers</h3>
       <p>CVCalculator uses the same CIA §3500 standard your OMERS option statement uses. Estimate your CV, see the LIRA split, and model break-even age across return rates.</p>
-      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="omers_article_cta">↓ Download CVCalculator — Free on iOS</a>
+      <div class="cta-actions">
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="omers_article_cta">↓ Download CVCalculator — Free on iOS</a>
+        <a href="https://play.google.com/store/apps/details?id=com.dmccrory.cv_calculator" class="cta-btn" target="_blank" rel="noopener noreferrer" data-ga-event="google_play_download_clicked" data-ga-platform="android" data-ga-destination_type="google_play" data-ga-page_type="article" data-ga-cta_id="omers_article_android_download" data-ga-entry_point="omers_article_cta" data-ga-event_property_id="cvcalculator">Get it on Google Play</a>
+      </div>
     </div>
 
     <h2>Get qualified advice</h2>
