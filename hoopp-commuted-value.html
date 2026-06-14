@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEBYFNTP7N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WEBYFNTP7N');
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('[data-ga-event]');
+      if (!el || typeof gtag !== 'function') return;
+      var params = { event_category: 'engagement', page_path: window.location.pathname };
+      ['location', 'label', 'platform', 'destination_type', 'page_type', 'cta_id', 'entry_point', 'event_property_id', 'page_path'].forEach(function(key) {
+        var val = el.getAttribute('data-ga-' + key);
+        if (val) params[key] = val;
+      });
+      gtag('event', el.getAttribute('data-ga-event'), params);
+    });
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOOPP Commuted Value — Guide for Members Leaving a HOOPP Employer (Canada 2026)</title>
+  <meta name="description" content="Leaving a HOOPP employer? Understand how your commuted value is calculated, the election window, the age 55 LIRA restriction, the HOOPP indexation structure, and how to weigh the lump sum against a HOOPP deferred pension." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cvcalculator.ca/hoopp-commuted-value" />
+  <meta property="og:title" content="HOOPP Commuted Value — Guide for Members Leaving a HOOPP Employer" />
+  <meta property="og:description" content="How HOOPP commuted values are calculated, the election window, the age 55 LIRA cutoff, HOOPP's indexation structure, and how to think about deferred pension vs. lump sum." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://cvcalculator.ca/hoopp-commuted-value" />
+  <meta property="og:image" content="https://cvcalculator.ca/favicon-192x192.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HOOPP Commuted Value — A Guide for HOOPP Members" />
+  <meta name="twitter:description" content="What HOOPP members need to know about commuted value, the election window, the age 55 LIRA restriction, HOOPP's two-tier indexation, and the deferred-pension trade-off." />
+  <meta name="twitter:image" content="https://cvcalculator.ca/favicon-192x192.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #f5f0e8; --navy-2: #ede8df; --navy-3: #e4ddd2;
+      --gold: #8a6d2f; --gold-light: #a07d35; --gold-dim: #c9a84c;
+      --text-1: #0d1628; --text-2: #2d3d56; --text-3: #6b7a94;
+      --border: rgba(138,109,47,0.2); --border-2: rgba(0,0,0,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--navy); color: var(--text-1); font-family: 'Outfit', sans-serif; font-weight: 400; line-height: 1.7; }
+
+    nav { position: sticky; top: 0; z-index: 100; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; background: rgba(245,240,232,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-2); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1rem; color: #f5f0e8; }
+    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.1rem; color: var(--text-1); }
+    .nav-back { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .nav-back:hover { color: #6b5320; }
+
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    .page-hero { padding: 64px 0 48px; border-bottom: 1px solid var(--border-2); }
+    .eyebrow { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6b5320; margin-bottom: 12px; }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--text-1); line-height: 1.15; margin-bottom: 16px; }
+    .page-hero .intro { font-size: 1.05rem; color: var(--text-2); line-height: 1.8; max-width: 640px; }
+    .page-hero .meta { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--text-3); margin-top: 16px; }
+
+    .article-body { padding: 48px 0 80px; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--text-1); margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border-2); }
+    .article-body h2:first-child { margin-top: 0; }
+    .article-body p { font-size: 0.95rem; color: var(--text-2); line-height: 1.85; margin-bottom: 16px; }
+    .article-body ul { list-style: none; padding: 0; margin: 12px 0 20px; }
+    .article-body ul li { font-size: 0.95rem; color: var(--text-2); line-height: 1.7; padding: 7px 0 7px 20px; position: relative; border-bottom: 1px solid var(--border-2); }
+    .article-body ul li:last-child { border-bottom: none; }
+    .article-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold-dim); }
+    .article-body a { color: #6b5320; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(107,83,32,0.3); transition: border-color 0.2s; }
+    .article-body a:hover { border-color: #6b5320; }
+    .article-body strong { color: var(--text-1); font-weight: 600; }
+
+    .callout { background: var(--navy-2); border: 1.5px solid var(--border-2); border-left: 3px solid var(--gold-dim); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
+    .callout p { margin: 0; font-size: 0.9rem; }
+
+    .factor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0 28px; }
+    .factor-card { background: var(--navy-2); border: 1.5px solid var(--border-2); border-radius: 12px; padding: 18px 20px; }
+    .factor-card-label { font-family: 'DM Mono', monospace; font-size: 0.52rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; }
+    .factor-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-1); margin-bottom: 6px; }
+    .factor-card p { font-size: 0.82rem; color: var(--text-2); line-height: 1.65; margin: 0; }
+    .factor-card.favour-cv { border-top: 2px solid var(--gold-dim); }
+    .factor-card.favour-pension { border-top: 2px solid #1e3a5f; }
+
+    .cta-box { background: linear-gradient(135deg, var(--navy-2), var(--navy-3)); border: 1.5px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; margin: 48px 0; }
+    .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--text-1); margin-bottom: 10px; }
+    .cta-box p { font-size: 0.88rem; color: var(--text-2); margin-bottom: 20px; }
+    .cta-actions { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #f5f0e8; font-weight: 600; font-size: 0.88rem; border-radius: 28px; text-decoration: none; border: none; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 4px 16px rgba(138,109,47,0.2); }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #f5f0e8; font-weight: 600; font-size: 0.88rem; border-radius: 28px; text-decoration: none; margin-top: 24px; box-shadow: 0 4px 16px rgba(138,109,47,0.2); transition: opacity 0.2s, transform 0.2s; }
+    .hero-actions .hero-cta { margin-top: 0; }
+    .hero-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .related { background: var(--navy-2); border-top: 1px solid var(--border-2); padding: 40px 0; }
+    .related-label { font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link { font-size: 0.9rem; color: #6b5320; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(107,83,32,0.2); padding-bottom: 10px; transition: border-color 0.2s; }
+    .related-link:hover { border-color: #6b5320; }
+    .faq-item { border-bottom: 1px solid var(--border-2); padding: 18px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h3 { font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--text-1); margin-bottom: 8px; }
+    .faq-item p { font-size: 0.9rem; color: var(--text-2); line-height: 1.8; margin: 0; }
+
+    footer { padding: 32px 0; border-top: 1px solid var(--border-2); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-left { font-size: 0.8rem; color: var(--text-3); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #6b5320; }
+
+    @media (max-width: 640px) {
+      .factor-grid { grid-template-columns: 1fr; }
+      .container { padding: 0 16px; }
+      nav { padding: 12px 16px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"HOOPP Commuted Value — What It Is and How to Decide","description":"How HOOPP commuted values are calculated, the election window, the age 55 LIRA restriction, HOOPP's two-tier indexation structure, and how HOOPP members should think about deferred pension vs. lump sum.","author":{"@type":"Person","name":"David McCrory","url":"https://cvcalculator.ca","sameAs":"https://apps.apple.com/us/app/commuted-value-calculator/id6759869222"},"publisher":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca","logo":{"@type":"ImageObject","url":"https://cvcalculator.ca/favicon-192x192.png"}},"datePublished":"2026-06-14","dateModified":"2026-06-14","url":"https://cvcalculator.ca/hoopp-commuted-value","mainEntityOfPage":"https://cvcalculator.ca/hoopp-commuted-value"},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CVCalculator","item":"https://cvcalculator.ca"},{"@type":"ListItem","position":2,"name":"Pension Plan Guides","item":"https://cvcalculator.ca/#resources"},{"@type":"ListItem","position":3,"name":"HOOPP Commuted Value","item":"https://cvcalculator.ca/hoopp-commuted-value"}]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"How is the HOOPP commuted value calculated?","acceptedAnswer":{"@type":"Answer","text":"Like every Canadian defined benefit plan, HOOPP calculates commuted values under the CIA §3500 actuarial standard using monthly i₁ and i₂ interest rates and CPM2014 mortality tables. Importantly, since April 1, 2021, HOOPP's calculation only reflects COLA that the Board of Trustees has actually approved — it no longer assumes future discretionary COLA will be granted. This means HOOPP CVs reflect only guaranteed and already-approved benefit increases, not projected future ones."}},
+      {"@type":"Question","name":"Is HOOPP a federal or provincial pension?","acceptedAnswer":{"@type":"Answer","text":"HOOPP is an Ontario-regulated, jointly sponsored, multi-employer defined benefit plan covering healthcare workers across Ontario. It is governed by the Ontario Pension Benefits Act, not the federal Pension Benefits Standards Act. This affects your LIRA locking rules, unlocking provisions, and which regulator oversees your plan."}},
+      {"@type":"Question","name":"Can I take a commuted value from HOOPP if I am over 55?","acceptedAnswer":{"@type":"Answer","text":"Generally no — if you are 55 or older, you are typically eligible to begin your HOOPP pension immediately and are not usually able to transfer the commuted value to a LIRA. Members under 55 can transfer to a LIRA or, if their new employer offers one, to a defined contribution plan. Members of any age (under 65) may be able to transfer to another employer's defined benefit plan. Always confirm your specific options on your HOOPP option statement."}},
+      {"@type":"Question","name":"What is the election window when I leave a HOOPP employer?","acceptedAnswer":{"@type":"Answer","text":"Under the Ontario Pension Benefits Act, your plan administrator must provide a written option statement within 30 days of your termination date, and the deadline for your election cannot be earlier than 90 days from the date you receive that notice. The exact deadline will appear on your option statement — read it carefully and do not assume."}},
+      {"@type":"Question","name":"Does HOOPP provide indexation on a deferred pension?","acceptedAnswer":{"@type":"Answer","text":"HOOPP provides cost-of-living adjustments (COLA) to deferred and retired members, but the structure differs by service period. For service before 2006, HOOPP guarantees COLA of at least 75% of the CPI change annually, with the Board able to increase it to 100%. For service after 2005, COLA is entirely discretionary — the Board votes annually on whether to grant an adjustment of 0% to 100% of CPI. Since 2002 the Board has approved 100% of CPI every year, but this is not guaranteed. Model your decision under multiple indexation scenarios rather than assuming any single outcome."}},
+      {"@type":"Question","name":"Does HOOPP have reciprocal transfer agreements with other pension plans?","acceptedAnswer":{"@type":"Answer","text":"As of 2023, HOOPP no longer maintains reciprocal transfer agreements with other pension plans. HOOPP exited all existing reciprocal arrangements by the end of 2022 and now processes outbound transfers via commuted value only. If you are moving to an employer with another DB plan, contact that plan's administrator directly to ask whether they can accept an incoming commuted value transfer from HOOPP."}},
+      {"@type":"Question","name":"How much of my HOOPP commuted value can go into a LIRA tax-free?","acceptedAnswer":{"@type":"Answer","text":"The Income Tax Act §8517 maximum transfer value formula applies to HOOPP commuted values the same way it applies to every Canadian DB plan: your accrued annual pension is multiplied by an age-based prescribed factor. Anything within that limit can move into an Ontario LIRA on a tax-sheltered basis. Anything above the limit is paid out as taxable cash in the year of your termination."}},
+      {"@type":"Question","name":"Should I take my HOOPP commuted value or stay in the plan?","acceptedAnswer":{"@type":"Answer","text":"There is no universal answer. HOOPP members who are older, have strong family longevity, value the plan's indexation history, or who are close to their unreduced retirement date (age 60 or 30 years of service) often lean toward the deferred pension. Younger members with long investment horizons, unused RRSP room to absorb the taxable cash, or estate-planning goals often lean toward the commuted value. The break-even age framework — modelled at realistic return rates across a range of HOOPP indexation scenarios — is the most useful way to compare the two."}}
+    ]}
+  ]}
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-icon">CV</div>
+    <span class="nav-logo-text">CVCalculator</span>
+  </a>
+  <a href="/" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Pension Plan Guide · HOOPP</div>
+    <h1>HOOPP commuted value — what it is and how to decide</h1>
+    <p class="intro">If you are leaving a HOOPP employer, your commuted value is one of the largest single financial decisions of your career. This guide explains how HOOPP calculates it, what your options are at termination, and how to think about the deferred pension vs. lump sum trade-off — without telling you which to pick.</p>
+    <div class="hero-actions">
+      <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="hero-cta" target="_blank" data-ga-event="app_store_click" data-ga-location="hoopp_hero">↓ Estimate your HOOPP CV on iOS — Free</a>
+      <a href="https://play.google.com/store/apps/details?id=com.dmccrory.cv_calculator" class="hero-cta" target="_blank" rel="noopener noreferrer" data-ga-event="google_play_download_clicked" data-ga-platform="android" data-ga-destination_type="google_play" data-ga-page_type="article" data-ga-cta_id="hoopp_hero_android_download" data-ga-entry_point="hoopp_hero" data-ga-event_property_id="cvcalculator">Get it on Google Play</a>
+    </div>
+    <div class="meta">By David McCrory · Updated June 2026 · 10 min read</div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container">
+
+    <div class="callout" style="margin-bottom:32px;">
+      <p><strong>Who this guide is for.</strong> Vested HOOPP members who are leaving a HOOPP-participating employer through resignation, layoff, contract end, or early retirement, and who are weighing a deferred HOOPP pension against taking the commuted value. If you are moving directly to another HOOPP-affiliated employer and continuing contributions, you generally stay in the plan and no CV decision is required.</p>
+    </div>
+
+    <h2>What HOOPP members should know first</h2>
+    <p>HOOPP — the Healthcare of Ontario Pension Plan — is Ontario's defined benefit pension plan for healthcare workers. It is a jointly sponsored, multi-employer plan covering more than 870 employers across the province: hospitals, long-term care facilities, community health centres, retirement homes, and related healthcare organizations. HOOPP is regulated under the Ontario Pension Benefits Act, not the federal Pension Benefits Standards Act. Federal pension rules do not apply.</p>
+    <p>This matters in practice when you leave. Your options, your election deadlines, your LIRA locking rules, and your unlocking rights all flow from Ontario legislation. If you take the commuted value, the LIRA you transfer into must be an Ontario-jurisdiction LIRA — and Ontario's unlocking provisions (financial hardship, small-amount, shortened life expectancy, non-resident) are what apply, not federal ones.</p>
+    <p>HOOPP is one of Canada's largest pension plans by assets and membership — surpassing 500,000 members in 2025. Its scale gives it investment advantages that affect the sustainability of its benefit promises, including its cost-of-living adjustment program.</p>
+
+    <h2>How HOOPP calculates your commuted value</h2>
+    <p>Every Canadian DB plan, including HOOPP, calculates commuted values under the <a href="/how-cia-3500-interest-rates-affect-commuted-value">CIA §3500 actuarial standard</a>. The standard prescribes a two-tier interest rate structure — i₁ for the first ten years of projected payments, i₂ thereafter — blended through CPM2014 mortality tables. The CIA publishes new rates monthly, which is why your CV can move meaningfully from one month to the next even when nothing about your service has changed.</p>
+    <p>HOOPP made a significant plan-specific change to its CV calculations effective April 1, 2021: it removed the assumption that future discretionary COLA would be granted. Previously, HOOPP's CV calculation assumed the Board of Trustees would continue approving full cost-of-living adjustments — effectively pre-crediting future indexation that had not yet been voted on. That assumption is now gone. The current HOOPP calculation reflects only COLA the Board has already approved, not projected future adjustments. This change reduced CV amounts for some members but aligns more accurately with what members are actually entitled to at the date of termination.</p>
+    <div class="callout">
+      <p><strong>Estimate vs. official quote.</strong> A third-party CV estimator using only published CIA rates will give you a directionally useful number for planning, but not the exact figure on your HOOPP option statement. HOOPP applies its own plan-specific assumptions in addition to CIA §3500. Use the estimate to think; use the official statement to elect.</p>
+    </div>
+
+    <h2>Your options when you leave a HOOPP employer</h2>
+    <p>When a vested HOOPP member leaves a HOOPP-participating employer without continuing service at another HOOPP employer, the options package generally offers the following paths — with eligibility depending on your age at termination:</p>
+    <ul>
+      <li><strong>Deferred HOOPP pension</strong> — your accrued pension stays in the plan. It can grow with approved COLA adjustments both before and after retirement. You can begin collecting as early as age 55 (with early retirement reductions if before age 60 or before completing 30 years of eligibility service). This option is available at any age.</li>
+      <li><strong>Commuted value transfer to a LIRA or DC plan</strong> — available only if you are <strong>under age 55</strong> at termination. Your accrued pension is converted to a lump sum calculated under CIA §3500 with HOOPP's assumptions. The portion within the <a href="/commuted-value-lira-transfer-limit-explained">ITA §8517 maximum transfer value</a> moves into an Ontario LIRA on a tax-sheltered basis. Any excess is paid as taxable cash.</li>
+      <li><strong>Transfer to another employer's DB plan</strong> — available if you are under age 65. If your new employer participates in a defined benefit plan that can accept an incoming commuted value transfer, this may be an option. HOOPP no longer has reciprocal transfer agreements, so any transfer to another DB plan would proceed via commuted value (see below).</li>
+      <li><strong>Purchase of a deferred annuity</strong> — a less common option that converts your benefit to a locked-in annuity contract with a licensed insurance provider.</li>
+      <li><strong>Small pension lump sum</strong> — if your accrued pension falls below a threshold set under Ontario pension legislation, you may be eligible to receive it as a lump-sum cash payment rather than a monthly income.</li>
+    </ul>
+    <p>At age 55 or older, you are typically eligible to begin your HOOPP pension immediately — which means the commuted value LIRA transfer option is no longer available. This age cutoff is one of the most important HOOPP-specific rules to understand before planning your departure timing.</p>
+
+    <h2>The HOOPP election window</h2>
+    <p>Under the Ontario Pension Benefits Act, your employer must notify HOOPP of your termination, and HOOPP is required to provide a written option statement within 30 days of your termination date. The deadline for your election cannot be earlier than 90 days from the date you receive that statement. The exact deadline will be printed on your option statement — read it carefully and do not assume.</p>
+    <p>In practice, this window goes quickly. Your option statement will contain a CV quote calculated using a specific month's CIA rates and a specific calculation date. By the time you receive it, read it, model your options, consult an advisor, and decide, several weeks will have passed. Two practical suggestions:</p>
+    <ul>
+      <li><strong>Estimate before the statement arrives.</strong> You do not need to wait for the official package to start thinking about the numbers. Running a directional estimate early removes the first two weeks of decision paralysis when the statement lands.</li>
+      <li><strong>Consider whether timing your departure date matters.</strong> The CIA rates used for your CV quote are determined by your termination date. If you have any flexibility on when you formally end employment, the monthly rate movements can be worth reviewing in advance.</li>
+    </ul>
+
+    <h2>The LIRA transfer split for HOOPP members</h2>
+    <p>The <a href="/commuted-value-lira-transfer-limit-explained">ITA §8517 maximum transfer value</a> is a federal Income Tax Act rule that applies identically across every Canadian DB plan. Your accrued annual pension at termination is multiplied by an age-based prescribed factor; the product is the most that can flow into a LIRA on a tax-sheltered basis. Anything above that limit is paid as taxable cash in the year of your termination.</p>
+    <p>For HOOPP members, two things are worth flagging specifically. First, if you elect a CV, the receiving LIRA must be an Ontario-jurisdiction LIRA — not a federally regulated one. Second, the taxable cash portion of your CV lands on a T4A in the same tax year as your termination, alongside your final employment income. If you also have unused RRSP contribution room, you can direct a portion of the taxable cash into your RRSP to offset part of the tax hit. See <a href="/commuted-value-taxes-canada">how the taxable cash from a commuted value is taxed</a> for the full withholding and RRSP offset details.</p>
+
+    <h2>Worked example — mid-career HOOPP member</h2>
+    <div class="callout" style="background:var(--navy-3);border-left-color:var(--gold);">
+      <p style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:10px;">Illustrative scenario — Priya, age 44, registered nurse</p>
+      <p>Priya has worked for an Ontario hospital that participates in HOOPP for 16 years. She accepts a director-level role at a private health technology company that does not participate in HOOPP. She is fully vested. Her best five consecutive years of earnings averaged $92,000/year. At termination, HOOPP calculates her accrued annual pension at approximately <strong>$25,000/year</strong>, payable from age 60 without early retirement adjustment. Her HOOPP option statement quotes a commuted value of <strong>$395,000</strong>.</p>
+      <p style="margin-top:10px;"><strong>The LIRA split (illustrative):</strong><br>
+      Age-44 prescribed factor under ITA §8517: approximately 11.1<br>
+      Maximum transfer value ≈ $25,000 × 11.1 = <strong>~$277,500</strong> (to her Ontario LIRA, tax-sheltered)<br>
+      Taxable cash = $395,000 − $277,500 = <strong>~$117,500</strong> (added to income this year)<br>
+      Priya has $38,000 of unused RRSP room, which she uses to offset part of the taxable amount. At a ~46% marginal rate on the remainder, her estimated tax on the remaining cash is ~<strong>$36,000</strong>.</p>
+      <p style="margin-top:10px;"><strong>Her decision factors:</strong> Priya is 16 years from unreduced retirement at 60 — a meaningful compounding window. Her family has above-average longevity. She values the certainty of a lifetime income but also has a spouse with no DB pension, which raises the value of estate-transferable assets. She recognizes she is giving up HOOPP's track record of 100% CPI indexation since 2002, which is a real and material benefit.<br>
+      <strong>Her process:</strong> she models break-even age at 5%, 6%, and 7% annual returns — with full HOOPP indexation, partial, and none. The deferred pension wins clearly under full indexation at moderate returns; the CV wins if returns exceed approximately 6.5% under reduced indexation assumptions. She uses the range of scenarios — not a single number — to test how confident she needs to be in her investment returns to justify the CV.</p>
+    </div>
+
+    <div class="cta-box">
+      <h3>Model your own HOOPP scenario</h3>
+      <p>Estimate your commuted value, see the LIRA split, and run break-even ages across return rates. The same CIA §3500 standard your option statement uses.</p>
+      <div class="cta-actions">
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="hoopp_midpage">↓ Download CVCalculator — Free on iOS</a>
+        <a href="https://play.google.com/store/apps/details?id=com.dmccrory.cv_calculator" class="cta-btn" target="_blank" rel="noopener noreferrer" data-ga-event="google_play_download_clicked" data-ga-platform="android" data-ga-destination_type="google_play" data-ga-page_type="article" data-ga-cta_id="hoopp_midpage_android_download" data-ga-entry_point="hoopp_midpage" data-ga-event_property_id="cvcalculator">Get it on Google Play</a>
+      </div>
+    </div>
+
+    <h2>HOOPP indexation — why the two-tier structure matters</h2>
+    <p>The single most plan-specific variable in the HOOPP commuted value decision is indexation, and HOOPP's indexation structure has two distinct tiers based on when your service was earned.</p>
+    <p><strong>Service before January 1, 2006:</strong> HOOPP guarantees a minimum annual COLA of 75% of the prior year's CPI change (up to a 10% CPI cap). The Board of Trustees may increase this to 100% of CPI if the plan's funded position allows — but the 75% floor is guaranteed. This guaranteed floor applies to both deferred and retired members.</p>
+    <p><strong>Service after December 31, 2005:</strong> COLA is entirely discretionary. The Board votes annually on whether to grant an adjustment, and on what percentage of CPI to apply (from 0% to 100%). There is no guaranteed floor for post-2005 service. Since 2002, the Board has approved 100% of CPI every year — most recently 2.36% effective April 1, 2026, and 1.83% effective April 1, 2025 — but this track record does not constitute a guarantee of future indexation.</p>
+    <p>This two-tier structure means the value of the HOOPP deferred pension, in real (inflation-adjusted) terms, depends significantly on assumptions about future Board decisions. A member with predominantly post-2005 service is taking on more indexation uncertainty than one with predominantly pre-2006 service. The right approach is to model the decision under multiple indexation scenarios — full, partial, and none — and see how robust your conclusion is across all of them. <a href="/should-i-take-my-commuted-value">The full commuted value decision framework</a> explains how to do this.</p>
+    <div class="callout">
+      <p><strong>How the 2021 CV change relates to indexation.</strong> HOOPP's April 2021 calculation change — removing the assumption of future discretionary COLA — has an important implication: members who take the commuted value receive a lump sum that reflects only approved COLA to date, not projected future indexation. Members who stay in the plan continue to receive whatever COLA the Board approves going forward. This is not inherently good or bad for the CV election, but it is important to understand when comparing the two options.</p>
+    </div>
+
+    <h2>Decision factors — HOOPP specifics</h2>
+    <div class="factor-grid">
+      <div class="factor-card favour-pension">
+        <div class="factor-card-label">Favours deferred HOOPP pension</div>
+        <h3>Long history of full indexation</h3>
+        <p>Since 2002 the HOOPP Board has approved 100% of CPI annually. That track record, if it continues, makes the real value of the deferred pension materially stronger over a long retirement.</p>
+      </div>
+      <div class="factor-card favour-cv">
+        <div class="factor-card-label">Favours HOOPP commuted value</div>
+        <h3>You are under 50 with a long runway</h3>
+        <p>Younger members have more time for the LIRA to compound at returns that could plausibly exceed the discount rate baked into the CV. The break-even math improves significantly over long horizons.</p>
+      </div>
+      <div class="factor-card favour-pension">
+        <div class="factor-card-label">Favours deferred HOOPP pension</div>
+        <h3>You are approaching age 60</h3>
+        <p>At age 60 or 30 years of eligibility service, you reach HOOPP's unreduced retirement threshold. The closer you are to that date, the less time a LIRA has to compound before you need income — and the smaller the CV advantage.</p>
+      </div>
+      <div class="factor-card favour-cv">
+        <div class="factor-card-label">Favours HOOPP commuted value</div>
+        <h3>Estate and flexibility goals</h3>
+        <p>A LIRA passes to your estate on death. A deferred HOOPP pension generally ends at death or your spouse's death (with a survivor benefit). If transferability to heirs is important, the CV preserves it.</p>
+      </div>
+    </div>
+
+    <h2>HOOPP and reciprocal transfers — what changed in 2022</h2>
+    <p>If you were hoping to transfer your HOOPP service directly to a new employer's DB plan via a reciprocal transfer agreement, you should be aware that HOOPP exited all reciprocal transfer arrangements by the end of 2022. HOOPP previously maintained reciprocal agreements with a handful of Ontario plans, but has standardized on commuted value transfers as the method for all outbound transfers.</p>
+    <p>In practice, this means: if you leave HOOPP and your new employer participates in a different DB pension plan, any transfer of benefit value from HOOPP to that plan would proceed via commuted value — not by moving service credits directly. Whether the receiving plan can accept an incoming commuted value transfer depends entirely on that plan's own rules and whether they accept such transfers. Contact the receiving plan's administrator to ask before making your HOOPP election.</p>
+    <p>This is a meaningful difference from some other Ontario plans that still maintain active reciprocal transfer agreements. If a pension-to-pension transfer was part of your planning assumption, confirm the current state of affairs directly with both plan administrators before your election deadline.</p>
+
+    <h2>Decision checklist — HOOPP members</h2>
+    <p>This is not a scoring system. It is a way to surface what actually matters in your situation before you sit down with an advisor.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0 28px;">
+      <div style="background:var(--navy-2);border:1.5px solid rgba(58,122,58,0.25);border-radius:12px;padding:20px;">
+        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:#3a7a3a;margin-bottom:12px;">Lean toward the HOOPP commuted value if…</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You are well under 55 at termination</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You have a long compounding runway ahead</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You have unused RRSP room to absorb taxable cash</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You have a disciplined long-term investment approach</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ Estate transferability is a priority</li>
+          <li style="padding:6px 0;font-size:0.88rem;color:var(--text-2);">☐ Your spouse has their own retirement income</li>
+        </ul>
+      </div>
+      <div style="background:var(--navy-2);border:1.5px solid rgba(138,109,47,0.25);border-radius:12px;padding:20px;">
+        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:#8a6d2f;margin-bottom:12px;">Lean toward the deferred HOOPP pension if…</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You are within 10–12 years of age 60</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ Family longevity is above average</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ You value HOOPP's indexation track record</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ A spouse or partner depends on a survivor benefit</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border-2);font-size:0.88rem;color:var(--text-2);">☐ Investment volatility would cause you to make poor decisions</li>
+          <li style="padding:6px 0;font-size:0.88rem;color:var(--text-2);">☐ You have little or no RRSP room to offset taxable cash</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:0.82rem;color:var(--text-3);">A clean split in either direction is itself a signal. Genuinely close decisions are where a fee-only advisor with Ontario pension experience adds the most value.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>How is the HOOPP commuted value calculated?</h3>
+      <p>Under the CIA §3500 actuarial standard using monthly i₁ and i₂ interest rates and CPM2014 mortality tables, with HOOPP plan-specific assumptions applied. Importantly, since April 2021, HOOPP's calculation only reflects COLA the Board has already approved — not projected future adjustments. The official figure on your option statement uses HOOPP's assumption set; a third-party estimate using only published CIA rates will be directionally accurate for planning, but not exact.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is HOOPP a federal or provincial pension?</h3>
+      <p>HOOPP is Ontario-regulated. It is governed by the Ontario Pension Benefits Act, not the federal Pension Benefits Standards Act. This matters for LIRA jurisdiction, locking rules, unlocking provisions, and which regulator you escalate to if there is a dispute.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I take a commuted value if I am over 55?</h3>
+      <p>Generally no. HOOPP's earliest retirement age is 55, and members who have reached that age are typically eligible to begin their pension immediately rather than elect a commuted value transfer to a LIRA. Under 55, a LIRA or DC plan transfer is available. Over 55 and under 65, a transfer to another employer's DB plan may still be possible. Always confirm your specific situation on your option statement.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the HOOPP election window?</h3>
+      <p>Under the Ontario Pension Benefits Act, your option statement must be provided within 30 days of termination, and the election deadline cannot be earlier than 90 days from the date you receive it. Read the exact deadline on your own statement. Missing it typically defaults you into a deferred pension.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does HOOPP provide indexation on a deferred pension?</h3>
+      <p>HOOPP provides cost-of-living adjustments, but the structure depends on your service period. Pre-2006 service has a guaranteed 75% of CPI floor; post-2005 service is fully discretionary, based on an annual Board vote. The Board has approved 100% of CPI every year since 2002. Model your decision under multiple indexation scenarios — do not rely on a single assumption.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does HOOPP have reciprocal transfer agreements with other plans?</h3>
+      <p>No. HOOPP exited all reciprocal transfer arrangements by the end of 2022. Outbound transfers from HOOPP now proceed via commuted value only. If your new employer participates in another DB plan, contact that plan to ask whether they can accept an incoming commuted value transfer.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How much of my HOOPP commuted value can go into a LIRA tax-free?</h3>
+      <p>The ITA §8517 limit applies the same way as for every Canadian DB plan: your accrued annual pension times an age-based prescribed factor. Anything above that limit becomes taxable cash in the year of termination. The receiving LIRA must be an Ontario-jurisdiction account.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Should I take my HOOPP commuted value or stay in the plan?</h3>
+      <p>No universal answer. Members close to age 60, with strong family longevity, who value HOOPP's indexation track record, or whose spouse depends on a survivor benefit often lean toward the deferred pension. Younger members with long horizons, unused RRSP room, or estate-planning priorities often lean toward the commuted value. Use the break-even age framework at a range of return rates and indexation assumptions — do not reduce this decision to a single number.</p>
+    </div>
+
+    <div class="cta-box">
+      <h3>Walk into your HOOPP election with your own numbers</h3>
+      <p>CVCalculator uses the same CIA §3500 standard your HOOPP option statement uses. Estimate your CV, see the LIRA split, and model break-even age across return rates.</p>
+      <div class="cta-actions">
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" data-ga-event="app_store_click" data-ga-location="hoopp_article_cta">↓ Download CVCalculator — Free on iOS</a>
+        <a href="https://play.google.com/store/apps/details?id=com.dmccrory.cv_calculator" class="cta-btn" target="_blank" rel="noopener noreferrer" data-ga-event="google_play_download_clicked" data-ga-platform="android" data-ga-destination_type="google_play" data-ga-page_type="article" data-ga-cta_id="hoopp_article_android_download" data-ga-entry_point="hoopp_article_cta" data-ga-event_property_id="cvcalculator">Get it on Google Play</a>
+      </div>
+    </div>
+
+    <h2>Get qualified advice</h2>
+    <p>The HOOPP commuted value decision touches Ontario pension legislation, tax planning, longevity assumptions, and investment strategy simultaneously. A fee-only financial advisor who specializes in Ontario DB pension decisions can review your option statement, model the tax impact of the taxable cash, and help you weigh factors a calculator alone cannot capture. <a href="https://www.fpcanada.ca/findaplanner" target="_blank" rel="noopener">Find a fee-only advisor in Canada →</a></p>
+    <p style="font-size:0.82rem;color:var(--text-3);margin-top:24px;">CVCalculator is not affiliated with HOOPP or the Healthcare of Ontario Pension Plan. "HOOPP" is used here in its descriptive sense to identify the plan; all calculation, election, and tax outcomes are governed by your official HOOPP option statement and applicable legislation.</p>
+
+  </div>
+</div>
+
+<div class="related">
+  <div class="container">
+    <div class="related-label">Related articles</div>
+    <div class="related-links">
+      <a href="/should-i-take-my-commuted-value" class="related-link">Should I take my commuted value? The full decision framework →</a>
+      <a href="/what-happens-to-db-pension-when-you-leave-employer-canada" class="related-link">What happens to your DB pension when you leave an employer in Canada →</a>
+      <a href="/commuted-value-lira-transfer-limit-explained" class="related-link">LIRA transfer limit explained — ITA §8517 →</a>
+      <a href="/commuted-value-taxes-canada" class="related-link">Commuted value and taxes in Canada — the cash portion →</a>
+      <a href="/how-cia-3500-interest-rates-affect-commuted-value" class="related-link">How CIA §3500 rates move your commuted value month to month →</a>
+      <a href="/omers-commuted-value" class="related-link">OMERS commuted value — guide for Ontario municipal employees →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">Built in Canada · CIA §3500 · CPM2014</div>
+      <div class="footer-links">
+        <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" target="_blank" data-ga-event="app_store_click" data-ga-location="footer">App Store</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#features">Features</a>
+        <a href="https://renewaliq.ca" target="_blank" rel="noopener">RenewalIQ</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
