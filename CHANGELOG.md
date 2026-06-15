@@ -1,5 +1,16 @@
 # Changelog
 
+## [New Article: Age 55 Deadline] — 2026-06-15
+
+### Published
+- commuted-value-age-55-deadline-canada.html: Targets 'commuted value age 55 deadline Canada' — high intent, near-zero competition
+- Added to homepage Resources section and sitemap.xml
+
+### Check in Google Search Console ~28 days from today
+- Is the new URL indexed? Use URL Inspection tool for https://cvcalculator.ca/commuted-value-age-55-deadline-canada
+- Are impressions appearing for 'commuted value age 55' queries?
+- Submit URL for indexing in Search Console after deployment
+
 ## [Monthly CIA Rate Update] — 2026-06-01
 
 ### Rates not available — no changes to article
