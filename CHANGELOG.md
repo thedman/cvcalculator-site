@@ -34,7 +34,7 @@ The CIA website (cia-ica.ca) returned HTTP 403 Forbidden for all fetch attempts 
 - **LIRA article MTV section**: `commuted-value-lira-transfer-limit-explained.html` has "The Maximum Transfer Value (MTV) — what it means" as its first h2, correctly near the top. ✓
 - **Should-I-take article length and content**: `should-i-take-my-commuted-value.html` is marked 10 min read (~2000+ words), contains a full worked example (Sarah, age 48 scenario) and a two-column decision checklist. ✓
 - **Related-section cross-links**: All six articles have ≥3 links in their related footer section (LIRA: 4, should-I-take: 4, CIA rates: 4, what-happens: 3, CV calculator: 4, index: 5 article cards). ✓
-- **Article schema author type**: All five article pages use `"author":{"@type":"Person","name":"David McCrory"}`. No Organization author found in any Article schema. ✓
+- **Article schema author type**: All article pages use `"author":{"@type":"Organization","name":"CVCalculator"}`. No personal-name author is used in any Article schema. ✓
 - **Sitemap lastmod dates**: All seven URLs in `sitemap.xml` have lastmod ≥ 2026-05-01 (all set to 2026-05-22). ✓
 
 ### Fixed — inline cross-linking gaps

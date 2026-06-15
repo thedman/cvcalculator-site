@@ -38,7 +38,7 @@ Every page must have:
 
 - Canadian personal finance — tone is informational, not promotional
 - Never make specific tax or financial advice claims — keep language general and disclaimer-aware
-- Author schema: David McCrory (Person type)
+- Author schema: CVCalculator (Organization type) — do not use a personal name anywhere on the site
 - CIA interest rates appear in some pages — note `dateModified` when rates are updated
 
 ## Pages (as of May 2026)
