@@ -200,11 +200,11 @@
     <div class="eyebrow">Stay Informed</div>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--text-1);margin:12px 0 14px;">Get notified when CIA rates change</h2>
     <p style="font-size:0.9rem;color:var(--text-2);line-height:1.8;margin-bottom:24px;">CIA i₁ and i₂ rates move monthly and directly affect your commuted value. We'll let you know when they change.</p>
-    <iframe name="cv-sub-frame-6" style="display:none;" aria-hidden="true"></iframe>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSejxIu58kd7tUVoyC499FC9feEe0N4MV7ZYc2tLftR60Fyu_g/formResponse" method="POST" target="cv-sub-frame-6" onsubmit="setTimeout(()=>{this.style.display='none';document.getElementById('cv-sub-ty-6').style.display='block'},500)" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
-      <input type="email" name="entry.1094318951" placeholder="your@email.com" required style="flex:1;min-width:220px;max-width:300px;padding:12px 18px;border:1.5px solid rgba(0,0,0,0.15);border-radius:28px;background:var(--navy-2);color:var(--text-1);font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;" />
+    <form data-lead-capture data-cta-location="article_rate_updates" data-page-type="article" data-cta-id="article_email_capture" data-entry-point="rate_updates_section" data-success-target="cv-sub-ty-6" data-error-target="cv-sub-err-6" novalidate style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+      <input type="email" name="email" placeholder="your@email.com" required style="flex:1;min-width:220px;max-width:300px;padding:12px 18px;border:1.5px solid rgba(0,0,0,0.15);border-radius:28px;background:var(--navy-2);color:var(--text-1);font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;" />
       <button type="submit" style="padding:12px 26px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#f5f0e8;font-family:'Outfit',sans-serif;font-weight:600;font-size:0.9rem;border:none;border-radius:28px;cursor:pointer;">Subscribe</button>
     </form>
+    <p id="cv-sub-err-6" role="alert" aria-live="polite" style="display:none;font-size:0.85rem;color:#b3261e;font-weight:600;margin-top:12px;"></p>
     <p id="cv-sub-ty-6" style="display:none;font-size:0.9rem;color:#6b5320;font-weight:600;margin-top:16px;">✓ You're subscribed. We'll be in touch when rates move.</p>
     <p style="font-size:0.72rem;color:var(--text-3);margin-top:14px;">No spam. Unsubscribe any time.</p>
   </div>
@@ -236,5 +236,6 @@
   </div>
 </footer>
 
+  <script src="/cv-lead-capture.js" defer></script>
 </body>
 </html>
