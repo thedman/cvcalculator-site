@@ -1,5 +1,16 @@
 # Changelog
 
+## [New Article: Deferred Pension vs Commuted Value] — 2026-06-22
+
+### Published
+- deferred-pension-vs-commuted-value-canada.html: Targets 'deferred pension vs commuted value Canada' — independent comparison with worked numbers
+- Added to homepage Resources section and sitemap.xml
+
+### Check in Google Search Console ~28 days from today
+- Is the new URL indexed?
+- Are impressions appearing for 'deferred pension vs commuted value' queries?
+- Are impressions growing across the article cluster overall?
+
 ## [New Article: Age 55 Deadline] — 2026-06-15
 
 ### Published
