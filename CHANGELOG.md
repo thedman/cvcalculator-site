@@ -1,5 +1,27 @@
 # Changelog
 
+## [Homepage Authority Distribution Sprint] - 2026-06-26
+
+### Hypothesis
+A curated homepage "Popular Pension Guides" section will distribute internal authority from the homepage to supporting pension education pages and reduce organic traffic concentration over time.
+
+### Evidence
+- Homepage currently accounts for approximately 77.5% of organic clicks.
+- Supporting pages including LIRA, CIA rates, and OMERS are already receiving impressions and clicks.
+
+### Implementation
+- Upgraded the existing homepage education/resources section into "Popular Pension Guides."
+- Added guide links using decision-journey ordering: decision, transfer limit, tax consequence, valuation driver, employment event, plan-specific example.
+
+### Success metrics
+- Homepage click share declines from 77.5% toward 65-70%.
+- Non-homepage clicks rise from 51 to 75+.
+- LIRA, CIA rates, OMERS, and what-happens pages hold or improve impressions/clicks.
+- No material loss in homepage calculator-query rankings.
+
+### Status
+Implemented, awaiting 28-day Search Console comparison.
+
 ## [New Article: Deferred Pension vs Commuted Value] — 2026-06-22
 
 ### Published
