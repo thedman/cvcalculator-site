@@ -12,6 +12,7 @@ A curated homepage "Popular Pension Guides" section will distribute internal aut
 ### Implementation
 - Upgraded the existing homepage education/resources section into "Popular Pension Guides."
 - Added guide links using decision-journey ordering: decision, transfer limit, tax consequence, valuation driver, employment event, plan-specific example.
+- Added a compact "More Pension Resources" row so calculator methodology, deferred-vs-CV, HOOPP, and age 55 deadline pages remain discoverable without competing with the primary guide set.
 
 ### Success metrics
 - Homepage click share declines from 77.5% toward 65-70%.
