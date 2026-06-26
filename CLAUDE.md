@@ -13,6 +13,78 @@ Do not propose:
 
 **Upcoming scope (not yet started):** A web/desktop presence via Android-based deployment is under consideration once the Android apps reach full production. This work has not begun and must not be assumed or scaffolded here.
 
+## Project Identity
+
+### Project
+
+CVCalculator
+
+### Production Website
+
+https://cvcalculator.ca/
+
+### Purpose
+
+Educational website and acquisition funnel for the CVCalculator mobile application.
+
+The website provides educational content and decision support. The mobile applications perform the commuted value calculations.
+
+### Hosting
+
+Production hosting: GitHub Pages.
+
+This project is not hosted on Cloudflare Pages. Do not assume Cloudflare Pages deployment procedures used by other repositories.
+
+### Deployment
+
+Production deployments are published through GitHub Pages.
+
+- Repository: `https://github.com/thedman/cvcalculator-site.git` (verified from `git remote -v`).
+- Publishing branch: `main` (verified operationally: pushes to `origin/main` update the live GitHub Pages site).
+- Publishing folder: repository root (`/`) (verified by direct static serving of root `index.html`; no build configuration or generated output directory exists in this repository).
+- Deployment trigger: push to `origin/main`.
+- Expected propagation time: typically a few minutes after push; use a cache-busting query string when verifying live HTML.
+
+The GitHub Pages admin/source setting is not stored in this repository and was not verifiable from repository files. If deployment behavior is unclear, verify the Pages source in GitHub repository settings before diagnosing hosting issues.
+
+### DNS
+
+The custom domain is documented in `CNAME` as `cvcalculator.ca`.
+
+DNS management provider is not documented in this repository.
+
+Current repository-verifiable DNS/hosting signals:
+
+- Apex domain resolves to GitHub Pages IPs (`185.199.108.153` through `185.199.111.153`) when checked during 2026-W24-CVC-DOC-001.
+- `www.cvcalculator.ca` resolves to `thedman.github.io`.
+
+### CDN
+
+No Cloudflare CDN or Cloudflare Pages configuration is documented in this repository.
+
+Live response headers checked during 2026-W24-CVC-DOC-001 returned `Server: GitHub.com` and no Cloudflare cache headers.
+
+### Analytics
+
+Visible repository-configured analytics and verification:
+
+- GA4 via Google tag `G-WEBYFNTP7N`.
+- Google Search Console verification file: `google1dce2fdb7e50e7c5.html`.
+
+### SEO
+
+The homepage is calculator-first. Educational articles support qualified organic acquisition by helping Canadian defined benefit pension members understand commuted value decisions, LIRA transfer limits, taxes, interest rates, and plan-specific considerations.
+
+The mobile apps perform calculations. The website should not become a web calculator or duplicate app calculation logic.
+
+### Deployment Reminder
+
+> This project is deployed through GitHub Pages.
+>
+> Do not assume Cloudflare Pages deployment procedures used by other repositories.
+>
+> Always verify the GitHub Pages publishing source before diagnosing deployment issues.
+
 ## Companion apps
 
 - iOS app: `CVCalculator` repo — App Store ID 6759869222
