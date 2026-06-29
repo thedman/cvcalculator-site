@@ -38,7 +38,6 @@
     } catch (e) {
       /* URLSearchParams unsupported: skip UTM enrichment, non-fatal */
     }
-    if (document.referrer) payload.referrer = document.referrer;
     return payload;
   }
 
