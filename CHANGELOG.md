@@ -1,5 +1,27 @@
 # Changelog
 
+## [Monthly CIA Rate Update] — 2026-07-01
+
+### Rates not yet published — no changes to article
+
+Today is July 1, 2026 (Canada Day), a Canadian national statutory holiday. The CIA publishes monthly commuted value interest rates on the first **business** day of each month. Because July 1 is not a business day, the July 2026 i₁/i₂ rates have not been published yet and are expected on July 2, 2026.
+
+Additionally, the CIA website (cia-ica.ca) and all rate aggregator sites (penad.com, actuarialexceladdin.com, lseg.com, pension411.ca, wealthnorth.ca) returned HTTP 403 Forbidden for all automated fetch attempts — the same proxy-block issue as June 1.
+
+**No changes were made to `how-cia-3500-interest-rates-affect-commuted-value.html`.**
+
+**Note:** The June 2026 rates also remain unconfirmed from the June 1 run (same 403 issue). The article's rate history table still ends at February 2026. Both June and July 2026 rates require a manual lookup.
+
+### Action required
+- On July 2, manually visit https://www.cia-ica.ca/publications/222176e/ to retrieve both June 2026 and July 2026 i₁/i₂ rates.
+- Update the `.example-box` rates block in `how-cia-3500-interest-rates-affect-commuted-value.html` with the July 2026 rates once confirmed.
+- Consider updating the rate history table in the article to extend through the most recent available month.
+- Bump `dateModified` in the JSON-LD schema and the visible "Updated [Month Year]" in the hero to reflect the update date.
+
+### Check in Google Search Console
+- Has the freshness update from the May article dateModified triggered a re-crawl? (Check Coverage report)
+- Are impressions growing for CIA rate queries?
+
 ## [Homepage Authority Distribution Sprint] - 2026-06-26
 
 ### Hypothesis
