@@ -1683,6 +1683,15 @@
     }
     .cv-chip:hover { background: rgba(201,168,76,0.15); }
 
+    #cv-chat-privacy {
+      margin: 0;
+      padding: 0 16px 10px;
+      color: var(--text-3);
+      font-size: 0.68rem;
+      line-height: 1.4;
+    }
+    #cv-chat-privacy a { color: var(--gold-light); }
+
     #cv-chat-input-row {
       padding: 12px 16px;
       border-top: 1px solid var(--border-2);
@@ -1749,6 +1758,7 @@
       <button class="cv-chip" onclick="sendChip(this)">How does the LIRA transfer limit work?</button>
       <button class="cv-chip" onclick="sendChip(this)">What inputs do I need to use the app?</button>
     </div>
+    <p id="cv-chat-privacy">Chats are retained for 30 days to improve the assistant. Do not include personal identifying information. <a href="/privacy">Privacy</a></p>
     <div id="cv-chat-input-row">
       <input id="cv-chat-input" type="text" placeholder="Ask a question…" autocomplete="off" />
       <button id="cv-chat-send" aria-label="Send">
@@ -1767,6 +1777,17 @@
     const chatMessages = document.getElementById('cv-chat-messages');
     const chatChips = document.getElementById('cv-chat-chips');
     let conversationHistory = [];
+    let conversationId;
+
+    try {
+      conversationId = sessionStorage.getItem('cv-chat-conversation-id');
+      if (!conversationId) {
+        conversationId = crypto.randomUUID();
+        sessionStorage.setItem('cv-chat-conversation-id', conversationId);
+      }
+    } catch {
+      conversationId = crypto.randomUUID();
+    }
 
     chatBtn.addEventListener('click', () => chatWindow.classList.toggle('open'));
     chatClose.addEventListener('click', () => chatWindow.classList.remove('open'));
@@ -1801,7 +1822,7 @@
         const res = await fetch(WORKER_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ messages: conversationHistory })
+          body: JSON.stringify({ conversationId, messages: conversationHistory })
         });
         const data = await res.json();
         const reply = data.reply ?? 'Sorry, I could not get a response.';
