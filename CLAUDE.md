@@ -71,6 +71,36 @@ Visible repository-configured analytics and verification:
 - GA4 via Google tag `G-WEBYFNTP7N`.
 - Google Search Console verification file: `google1dce2fdb7e50e7c5.html`.
 
+### Chat Interaction Operations
+
+Anonymous chat-helper interaction persistence entered production with commit `b20ad957af6f6b6300ca21a7f2b586bf101f191c`.
+
+- Storage: Cloudflare D1 database `cvcalculator-chat`.
+- Recorded fields: anonymous conversation ID, user message, assistant reply, creation and expiry timestamps, and message count.
+- Not recorded: email address, IP address, location, or device identifiers.
+- Retention: 30 days, represented by the row's `expires_at` timestamp. Expired rows are removed by the Worker's retention cleanup.
+- Review path: Cloudflare Dashboard -> D1 -> `cvcalculator-chat` -> Console.
+
+Canonical review query:
+
+```sql
+SELECT created_at, user_message, assistant_reply, message_count
+FROM chat_interactions
+WHERE expires_at > datetime('now')
+ORDER BY created_at DESC;
+```
+
+Acceptance evidence recorded at launch:
+
+- A QA interaction persisted successfully.
+- Its 30-day expiry timestamp was verified.
+- The QA record was deleted after testing.
+- The database returned to an empty baseline.
+- The production homepage and privacy page returned HTTP 200.
+- The live chat retention notice and anonymous conversation identifier were verified.
+
+Changes to collected fields, retention behavior, storage providers, or the privacy disclosure are production privacy and data-governance changes. Review them deliberately before deployment and update this section when the operating model changes.
+
 ### SEO
 
 The homepage is calculator-first. Educational articles support qualified organic acquisition by helping Canadian defined benefit pension members understand commuted value decisions, LIRA transfer limits, taxes, interest rates, and plan-specific considerations.
