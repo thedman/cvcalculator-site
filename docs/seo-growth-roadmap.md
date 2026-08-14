@@ -107,6 +107,16 @@ A new pension-plan guide should begin only when:
 
 Do not publish plan guides on a fixed cadence if the evidence or quality gate is not met.
 
+### Plan-Guide Expansion Checkpoint - August 2026
+
+The Federal Public Service Pension Plan transfer value guide was published on August 13, 2026 in commit `e7b1132`, expanding the plan-specific cluster beyond Ontario. Current published sequence: OMERS -> HOOPP -> Ontario Teachers' -> Federal Public Service.
+
+Next-guide candidates are PSPP Ontario, OPTrust, CAAT, and UPP, followed by additional provincial opportunities. PSPP is the current leading candidate but is not authorized automatically.
+
+Before starting guide 5, allow the Federal guide time to index and review plan-page impressions, clicks, CTR, emerging plan-name queries, Federal's early performance, and any organic PSPP, OPTrust, CAAT, or UPP demand. Select the next guide from observed opportunity rather than publication cadence.
+
+Continue deliberate, high-quality plan expansion without establishing a fixed content-production schedule.
+
 ## Quarterly Review
 
 Evaluate:
