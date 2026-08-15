@@ -26,6 +26,10 @@ It is an execution planning document, not a publication quota. The operating pos
 - Adaptable: update priorities when query demand, indexing, or conversion data changes.
 - Readiness-gated: begin work when evidence and editorial quality support it, not because a date arrived.
 
+## Completed Checkpoints
+
+- 2026-08-14 - Homepage resource hierarchy reorganized around decision resources, pension-plan guides, and supporting technical resources based on landing-page acquisition evidence. Deployed in `b429069`; observe before further homepage optimization.
+
 ## Initiative 1: CVCalculator
 
 ### SEO Growth Round 2 - Pension Plan Cluster Expansion
