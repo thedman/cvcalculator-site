@@ -12,6 +12,7 @@
     "/hoopp-commuted-value": ["article", "hoopp_commuted_value", "pension_guide", "hoopp"],
     "/how-cia-3500-interest-rates-affect-commuted-value": ["article", "how_cia_3500_interest_rates_affect_commuted_value", "pension_guide", "commuted_value"],
     "/omers-commuted-value": ["article", "omers_commuted_value", "pension_guide", "omers"],
+    "/optrust-commuted-value": ["article", "optrust_commuted_value", "pension_guide", "optrust"],
     "/ontario-teachers-commuted-value": ["article", "ontario_teachers_commuted_value", "pension_guide", "otpp"],
     "/should-i-take-my-commuted-value": ["article", "should_i_take_my_commuted_value", "pension_guide", "commuted_value"],
     "/what-happens-to-db-pension-when-you-leave-employer-canada": ["article", "what_happens_to_db_pension_when_you_leave_employer_canada", "pension_guide", "commuted_value"]
