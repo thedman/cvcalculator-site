@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use — CVCalculator</title>
+  <meta name="description" content="Terms of Use for the CVCalculator iOS and Android apps, including pension estimates, purchases, and responsible use." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cvcalculator.ca/terms" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #f5f0e8;
+      --navy-2:     #ede8df;
+      --navy-3:     #e4ddd2;
+      --gold:       #8a6d2f;
+      --gold-light: #a07d35;
+      --gold-dim:   #c9a84c;
+      --text-1:     #0d1628;
+      --text-2:     #2d3d56;
+      --text-3:     #52617a;
+      --border:     rgba(138,109,47,0.2);
+      --border-2:   rgba(0,0,0,0.08);
+    }
+
+    html { scroll-behavior: smooth; }
+    a:focus-visible { outline: 2px solid #6b5320; outline-offset: 4px; }
+    .skip-link { position: absolute; left: 16px; top: -100px; z-index: 101; background: #f5f0e8; color: #0d1628; padding: 12px; }
+    .skip-link:focus { top: 8px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    body {
+      background: var(--navy);
+      color: var(--text-1);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(245,240,232,0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-2);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700; font-size: 1rem; color: #f5f0e8;
+    }
+
+    .nav-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600; font-size: 1.1rem; color: var(--text-1);
+    }
+
+    .nav-back {
+      font-size: 0.8rem;
+      color: var(--text-3);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: #6b5320; }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── HERO ── */
+    .page-hero {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid var(--border-2);
+    }
+
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #6b5320;
+      margin-bottom: 12px;
+    }
+
+    .page-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      color: var(--text-1);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .page-hero .meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--text-3);
+      letter-spacing: 0.08em;
+    }
+
+    /* ── SUMMARY BOX ── */
+    .summary-box {
+      background: rgba(138,109,47,0.06);
+      border: 1.5px solid rgba(138,109,47,0.2);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 40px 0 0;
+    }
+
+    .summary-box-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #6b5320;
+      margin-bottom: 8px;
+    }
+
+    .summary-box p {
+      font-size: 0.95rem;
+      color: var(--text-1);
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    /* ── CONTENT ── */
+    .policy-content {
+      padding: 48px 0 80px;
+    }
+
+    .policy-section {
+      margin-bottom: 48px;
+    }
+
+    .policy-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-1);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-2);
+    }
+
+    .policy-section h2 .section-tag {
+      display: inline-block;
+      margin-left: 10px;
+      padding: 2px 8px;
+      background: rgba(138,109,47,0.08);
+      border: 1px solid rgba(138,109,47,0.2);
+      border-radius: 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.1em;
+      color: #6b5320;
+      vertical-align: middle;
+      font-weight: 400;
+    }
+
+    .policy-section p {
+      font-size: 0.92rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+    }
+
+    .policy-section ul li {
+      font-size: 0.92rem;
+      color: var(--text-2);
+      line-height: 1.7;
+      padding: 5px 0 5px 20px;
+      position: relative;
+      border-bottom: 1px solid var(--border-2);
+    }
+
+    .policy-section ul li:last-child { border-bottom: none; }
+
+    .policy-section ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold-dim);
+    }
+
+    .policy-section a {
+      color: #6b5320;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(107,83,32,0.3);
+      transition: border-color 0.2s;
+    }
+
+    .policy-section a:hover { border-color: #6b5320; }
+
+    /* ── WEBSITE SECTION HIGHLIGHT ── */
+    .website-section {
+      background: var(--navy-2);
+      border: 1.5px solid var(--border-2);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .website-section h2 {
+      border-bottom-color: var(--border);
+    }
+
+    /* ── DIVIDER ── */
+    .policy-divider {
+      border: none;
+      border-top: 1px solid var(--border-2);
+      margin: 48px 0;
+    }
+
+    .divider-label {
+      text-align: center;
+      margin-top: -12px;
+    }
+
+    .divider-label span {
+      background: var(--navy);
+      padding: 0 16px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-3);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border-2);
+      background: var(--navy);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-left { font-size: 0.8rem; color: var(--text-3); }
+
+    .footer-links { display: flex; gap: 24px; }
+
+    .footer-links a {
+      font-size: 0.8rem;
+      color: var(--text-3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: #6b5320; }
+
+    @media (max-width: 600px) {
+      .container { padding: 0 16px; }
+      nav { padding: 12px 16px; }
+      .footer-links {
+        width: 100%;
+        min-width: 0;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms of Use — CVCalculator",
+  "url": "https://cvcalculator.ca/terms",
+  "description": "Terms of Use for the CVCalculator mobile apps.",
+  "dateModified": "2026-11-06",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CVCalculator",
+    "url": "https://cvcalculator.ca/"
+  }
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- NAV -->
+  <nav aria-label="Main navigation">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">CV</div>
+      <span class="nav-logo-text">CVCalculator</span>
+    </a>
+    <a href="/" class="nav-back">← Back to home</a>
+  </nav>
+
+  <main id="main-content">
+  <div class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Legal</div>
+      <h1>Terms of Use</h1>
+      <div class="meta">CVCalculator for iOS and Android &nbsp;·&nbsp; Last updated: November 6, 2026</div>
+      <div class="summary-box">
+        <div class="summary-box-label">The short version</div>
+        <p>CVCalculator provides educational pension estimates and scenario comparisons. Results are not official pension quotations or personalized advice. Confirm your options with your pension administrator and a qualified professional before making a decision.</p>
+      </div>
+    </div>
+  </div>
+  <div class="policy-content">
+    <div class="container">
+      <section class="policy-section">
+        <h2>1. Scope and acceptance</h2>
+        <p>These Terms of Use apply to the CVCalculator mobile applications for iOS and Android (the "App"), provided by CVCalculator ("we", "us", "our"). Please read them before using the App. By using the App, you agree to these terms. If you do not agree, do not use the App.</p><p>Any applicable app-store licence and purchase terms also apply. These terms do not replace Apple’s applicable standard or custom end-user licence agreement.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>2. Educational purpose; no professional advice</h2>
+        <p>The App provides general educational information, estimated commuted values, and hypothetical pension and retirement scenarios. It does not provide individualized financial, investment, tax, legal, or actuarial advice. Use of the App does not create a professional advisory relationship.</p><p>Results are not official benefit statements, pension valuations, transfer quotations, or guarantees of future outcomes. Your actual entitlements are governed by applicable legislation and your pension plan documents, as determined by your pension administrator.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>3. Estimates and calculation limitations</h2>
+        <p>Results depend on your inputs, the App’s methodology, available data, and selected assumptions. Actual values may differ because of plan-specific provisions, valuation dates, interest rates, mortality assumptions, indexing, early retirement benefits, eligibility requirements, tax rules, rounding, or other factors. The App may not account for every provision of your pension plan.</p><p>The calculation methodology uses published Canadian Institute of Actuaries (CIA) Section 3500 assumptions, CPM2014 mortality tables, and the CPM-B improvement scale, with the rates and settings selected in the App. Referencing these sources does not mean that an estimate has been certified or approved by the CIA. Rate updates may be delayed or unavailable, and stored or bundled rates may be used instead. Check the selected valuation month and any manual rate overrides before calculating.</p><p>CVCalculator is independent and is not affiliated with or endorsed by the CIA, pension administrators, pension plans, or regulators.</p><p>Investment, inflation, retirement-income, transfer-limit, and tax scenarios, where provided, are illustrations rather than predictions or determinations of your personal eligibility or obligations. Actual outcomes may differ materially.</p><p>Do not make a pension election, transfer, retirement, investment, or tax decision solely on an App result. Obtain an official quotation from your pension administrator and consult a qualified professional about your circumstances and any applicable deadlines.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>4. Your responsibilities</h2>
+        <p>You are responsible for checking the accuracy and completeness of your inputs and reviewing the assumptions and dates used in each calculation. Confirm that the App is appropriate for your pension circumstances before relying on an estimate.</p><p>You must use the App lawfully. You may not bypass purchase restrictions, interfere with its operation, or copy, distribute, modify, or reverse engineer its software except as permitted by applicable law, applicable app-store terms, or relevant open-source licences.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>5. Purchases and paid features</h2>
+        <p>CV Pro on iOS offers monthly and annual auto-renewing subscriptions and a one-time lifetime purchase. On Android, purchases are processed through Google Play, with monthly and annual subscription options and a lifetime purchase where offered. Available products may vary by platform and storefront. Any price, included features, and payment terms are presented in the App or applicable app store before purchase. The price, currency, billing period, and applicable taxes displayed at checkout govern your purchase. Purchases are processed through the applicable app store and are subject to its payment and purchase terms. A one-time purchase does not renew automatically. If you purchase a subscription, it renews automatically for the billing period shown at checkout unless you cancel under the applicable store’s rules. Any trial or introductory offer applies only if shown at checkout; its duration, eligibility, and subsequent price are set out there.</p><p>For Apple purchases, manage or cancel subscriptions in your Apple Account subscription settings. For Google Play purchases, use Google Play’s Payments &amp; subscriptions settings. Follow the cancellation deadline shown by the store; for an Apple free or discounted trial, cancel at least 24 hours before it ends if you do not want to renew. Uninstalling the App does not cancel a subscription. Cancellation normally stops future renewals while access continues for the remaining paid period, subject to store rules and applicable law.</p><p>Both platforms provide a Restore Purchases option. Use the store account associated with the original purchase; restoration depends on the entitlement recognized by that store and may require an internet connection. Restoring purchases does not restore saved pension scenarios.</p><p>Refund requests may be submitted through the applicable app store’s refund process. Nothing in these terms limits any refund, cancellation, or other remedy available under applicable law. Availability of purchases across devices or platforms depends on the purchase terms and supported restoration features; a purchase on one platform does not by itself guarantee access on another.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>6. Privacy and saved information</h2>
+        <p>Please review our <a href="/privacy">Privacy Policy</a> for information about the practices it describes. App permissions, platform disclosures, and device backup settings may also be relevant to your use.</p><p>Preserve any scenarios or reports you wish to retain. Uninstalling the App, changing devices, or losing device data may affect access to saved information. We do not promise that lost scenarios can be recovered.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>7. Intellectual property and licence</h2>
+        <p>The App’s software, branding, and content belong to their respective owners. Subject to these terms and applicable app-store terms, you receive a limited, non-exclusive, non-transferable licence to use the App on devices you own or control, with any sharing rights permitted by the applicable store. No ownership of the App is transferred to you.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>8. Updates and availability</h2>
+        <p>We may update the App to correct errors, reflect changes in data or methodology, or improve functionality. An updated calculation may differ from an earlier result. We do not guarantee support for every device or operating-system version, uninterrupted availability, or any particular future feature.</p><p>Any changes affecting paid access remain subject to applicable purchase terms and consumer law.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>9. Warranties and liability</h2>
+        <p>To the extent permitted by applicable law, the App is provided "as is" and "as available", without warranties of uninterrupted operation, error-free results, or suitability for a particular purpose.</p><p>To the extent permitted by applicable law, CVCalculator is not liable for indirect or consequential losses arising from use of, or inability to use, the App, including losses arising from reliance on estimates or loss of saved information.</p><p>Nothing in these terms excludes or limits liability, warranties, consumer rights, or remedies that cannot lawfully be excluded or limited. Where applicable law gives you greater protection, that protection applies.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>10. Ending use</h2>
+        <p>You may stop using and uninstall the App at any time. If you have a subscription, cancel it separately through the store to stop renewals. Your licence may end if you materially breach these terms, subject to applicable law and any required notice or opportunity to remedy the breach. Ending use does not remove any rights or remedies you have under applicable law.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>11. Changes to these terms</h2>
+        <p>Updates will be posted on this page with a revised date. Where required by law, we will provide additional notice or seek consent before a material change takes effect. Changes do not retrospectively remove accrued rights or override applicable purchase terms.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>12. Governing law and disputes</h2>
+        <p>These terms are governed by the laws of Ontario and applicable Canadian federal laws, subject to any mandatory protections in your place of residence. Nothing in these terms requires arbitration, prevents you from bringing a claim in a court available to you under applicable law, or waives any right to participate in a class proceeding where that right cannot lawfully be waived.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>13. Contact</h2>
+        <p>For questions about these terms or the App, contact CVCalculator at <a href="mailto:privacy@cvcalculator.ca">privacy@cvcalculator.ca</a>.</p>
+      </section>
+
+    </div>
+  </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">Built in Canada · CIA §3500 · CPM2014</div>
+        <div class="footer-links">
+          <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" target="_blank" rel="noopener noreferrer">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.dmccrory.cv_calculator" target="_blank" rel="noopener noreferrer">Google Play</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/#features">Features</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms" aria-current="page">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
