@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; form-action 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-mc7a6/xPJYzF3dHMMAFxtepyRwKHZ/OnM1Gye3i/8ok=' 'sha256-d4vjzniPrvUiC++HSC8K50g/PVEJWMjoOjulzvi84cE=' 'sha256-vAPmvpoNPGk7wjZazgPgFAzi0J6x+odtCMtcwkMSPe0=' 'sha256-evc1xFd7deyBXUWmcMM8SChlO1aeY+bAA1JDtXrYvlA=' 'sha256-Kah6/s6AcF/7PW46Fcv9qAAkvROJoU9v1gFV9tGLmLs='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://developer.apple.com https://www.google-analytics.com https://www.googletagmanager.com; media-src 'self'; connect-src 'self' https://solitary-dream-576f.dmccrory.workers.dev https://shared-lead-registry-worker.dmccrory.workers.dev https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEBYFNTP7N"></script>
   <script>
@@ -1200,6 +1202,7 @@
       }
     }
   </style>
+<style>.cv-crosspromo:hover { border-color:rgba(138,109,47,0.35) !important; transform:translateY(-3px); }</style>
 </head>
 <body>
 
@@ -1522,7 +1525,7 @@
       </div>
       <div class="faq-list">
         <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFAQ(this)">
+          <button class="faq-question" data-cv-action="faq">
             Who is CVCalculator for?
             <span class="faq-icon">+</span>
           </button>
@@ -1531,7 +1534,7 @@
           </div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFAQ(this)">
+          <button class="faq-question" data-cv-action="faq">
             What is a commuted value of pension calculator?
             <span class="faq-icon">+</span>
           </button>
@@ -1540,7 +1543,7 @@
           </div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFAQ(this)">
+          <button class="faq-question" data-cv-action="faq">
             What is CIA §3500 and why does it matter?
             <span class="faq-icon">+</span>
           </button>
@@ -1549,7 +1552,7 @@
           </div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFAQ(this)">
+          <button class="faq-question" data-cv-action="faq">
             What is the LIRA transfer limit?
             <span class="faq-icon">+</span>
           </button>
@@ -1558,7 +1561,7 @@
           </div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFAQ(this)">
+          <button class="faq-question" data-cv-action="faq">
             Should I take my commuted value or keep my pension?
             <span class="faq-icon">+</span>
           </button>
@@ -1567,7 +1570,7 @@
           </div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFAQ(this)">
+          <button class="faq-question" data-cv-action="faq">
             Why does my CV change from month to month?
             <span class="faq-icon">+</span>
           </button>
@@ -1576,7 +1579,7 @@
           </div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFAQ(this)">
+          <button class="faq-question" data-cv-action="faq">
             Which pension plans does CVCalculator support?
             <span class="faq-icon">+</span>
           </button>
@@ -1595,7 +1598,7 @@
         <div class="eyebrow">Also by the same developer</div>
         <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);color:var(--text-1);margin:12px 0 14px;">Two tools. One mission.</h2>
         <p style="font-size:0.95rem;color:var(--text-2);line-height:1.8;margin-bottom:40px;">Give Canadians accurate financial tools that work for them — private, no broker referrals, no lead generation. Purchase options are shown in each app.</p>
-        <a href="https://renewaliq.ca" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:flex-start;gap:20px;background:var(--navy-2);border:1.5px solid var(--border-2);border-radius:20px;padding:28px 32px;text-decoration:none;text-align:left;transition:border-color 0.2s,transform 0.2s;max-width:540px;margin:0 auto;" onmouseover="this.style.borderColor='rgba(138,109,47,0.35)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.08)';this.style.transform='translateY(0)'">
+        <a href="https://renewaliq.ca" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:flex-start;gap:20px;background:var(--navy-2);border:1.5px solid var(--border-2);border-radius:20px;padding:28px 32px;text-decoration:none;text-align:left;transition:border-color 0.2s,transform 0.2s;max-width:540px;margin:0 auto;" class="cv-crosspromo">
           <div style="width:48px;height:48px;background:rgba(0,0,0,0.07);border:1.5px solid rgba(0,0,0,0.12);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">🏠</div>
           <div>
             <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:#6b5320;margin-bottom:6px;">RenewalIQ — renewaliq.ca</div>
@@ -1897,11 +1900,11 @@
       <div class="cv-msg bot">Hi! I can answer questions about commuted values, the CVCalculator app, and how the calculation works. What would you like to know?</div>
     </div>
     <div id="cv-chat-chips">
-      <button class="cv-chip" onclick="sendChip(this)">What is a commuted value?</button>
-      <button class="cv-chip" onclick="sendChip(this)">How does the LIRA transfer limit work?</button>
-      <button class="cv-chip" onclick="sendChip(this)">What inputs do I need to use the app?</button>
+      <button class="cv-chip" data-cv-action="chip">What is a commuted value?</button>
+      <button class="cv-chip" data-cv-action="chip">How does the LIRA transfer limit work?</button>
+      <button class="cv-chip" data-cv-action="chip">What inputs do I need to use the app?</button>
     </div>
-    <p id="cv-chat-privacy">Chats are retained for 30 days to improve the assistant. Do not include personal identifying information. <a href="/privacy">Privacy</a></p>
+    <p id="cv-chat-privacy">Chats are marked as expired after 30 days. Deletion runs after a later successful chat request, so records may remain longer; there is no guaranteed deletion deadline. Do not include personal identifying information. <a href="/privacy">Privacy</a></p>
     <div id="cv-chat-input-row">
       <input id="cv-chat-input" type="text" placeholder="Ask a question…" autocomplete="off" />
       <button id="cv-chat-send" aria-label="Send">
@@ -1978,5 +1981,6 @@
       }
     }
   </script>
+<script>document.addEventListener('click', function(event) { const element = event.target.closest('[data-cv-action]'); if (!element) return; if (element.dataset.cvAction === 'faq') toggleFAQ(element); if (element.dataset.cvAction === 'chip') sendChip(element); });</script>
 </body>
 </html>

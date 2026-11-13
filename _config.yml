@@ -1,0 +1,11 @@
+# GitHub Pages/Jekyll publishing exclusions. Source guidance stays in the repo.
+exclude:
+  - AGENTS.md
+  - CLAUDE.md
+  - README.md
+  - CHANGELOG.md
+  - docs
+  - drafts
+  - website-narrative-alignment-assessment.md
+  - website-narrative-implementation-summary.md
+  - website-narrative-target-state.md

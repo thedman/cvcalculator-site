@@ -78,7 +78,7 @@ Anonymous chat-helper interaction persistence entered production with commit `b2
 - Storage: Cloudflare D1 database `cvcalculator-chat`.
 - Recorded fields: anonymous conversation ID, user message, assistant reply, creation and expiry timestamps, and message count.
 - Not recorded: email address, IP address, location, or device identifiers.
-- Retention: 30 days, represented by the row's `expires_at` timestamp. Expired rows are removed by the Worker's retention cleanup.
+- Retention decision (2026-11-12): retain request-triggered cleanup. Rows are marked expired after 30 days via `expires_at`; a later successful chat request triggers background deletion of expired rows. No scheduled deletion or guaranteed physical-deletion deadline exists. Inactivity or cleanup failures can extend storage beyond 30 days. Public disclosures must distinguish expiry from physical deletion.
 - Review path: Cloudflare Dashboard -> D1 -> `cvcalculator-chat` -> Console.
 
 Canonical review query:
