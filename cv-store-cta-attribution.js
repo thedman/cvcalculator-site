@@ -3,6 +3,7 @@
   var PAGE_METADATA = {
     "/": ["homepage", "homepage", "homepage", "commuted_value"],
     "/app-walkthrough": ["walkthrough", "app_walkthrough", "calculator_utility", "commuted_value"],
+    "/caat-commuted-value": ["article", "caat_commuted_value", "pension_guide", "caat"],
     "/commuted-value-age-55-deadline-canada": ["article", "commuted_value_age_55_deadline_canada", "pension_guide", "commuted_value"],
     "/commuted-value-calculator-canada": ["article", "commuted_value_calculator_canada", "calculator_utility", "commuted_value"],
     "/commuted-value-lira-transfer-limit-explained": ["article", "commuted_value_lira_transfer_limit_explained", "pension_guide", "commuted_value"],
