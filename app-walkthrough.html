@@ -422,19 +422,22 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="/cv-ux.css" />
 </head>
 <body>
+<a href="#main-content" class="cv-skip-link">Skip to content</a>
 
   <!-- NAV -->
-  <nav>
+  <nav class="cv-site-nav" aria-label="Main navigation">
     <a href="/" class="nav-logo">
       <div class="nav-logo-icon">CV</div>
       <span class="nav-logo-text">CVCalculator</span>
     </a>
-    <a href="#download" class="nav-cta" data-ga-event="cta_clicked" data-ga-cta_id="nav_download" data-ga-page_type="walkthrough" data-ga-destination_type="internal" data-ga-entry_point="nav" data-ga-event_property_id="cvcalculator">
-      &#9654; Download Free
-    </a>
-  </nav>
+
+
+    <div class="cv-nav-links"><a href="/#resources">Learn</a><a href="/#plan-guides">Plan guides</a><a href="#download" class="nav-cta" data-ga-event="cta_clicked" data-ga-cta_id="nav_download" data-ga-page_type="walkthrough" data-ga-destination_type="internal" data-ga-entry_point="nav" data-ga-event_property_id="cvcalculator">Get the app</a></div>
+</nav>
+<main id="main-content">
 
   <!-- PAGE HEADER -->
   <div class="page-header">
@@ -543,7 +546,7 @@
       <div class="reveal">
         <div class="eyebrow">Available now on iOS and Android</div>
         <h2>Ready to understand what your pension is worth?</h2>
-        <p>Free to download. Explore a high-level estimate at no cost. Exact CV and full analysis with CV Pro.</p>
+        <p>Free to download. Explore a high-level estimate at no cost. Detailed estimates and analysis with CV Pro.</p>
         <div class="cta-actions">
           <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="btn-primary" target="_blank" rel="noopener noreferrer" data-ga-event="app_store_click" data-ga-location="walkthrough_cta">
             &#8595; Download on the App Store
@@ -566,7 +569,8 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  </main>
+<footer>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-left">Built in Canada · CIA §3500 · CPM2014</div>
@@ -577,7 +581,11 @@
           <a href="/#resources">Resources</a>
           <a href="https://renewaliq.ca" target="_blank" rel="noopener noreferrer">RenewalIQ</a>
           <a href="/privacy">Privacy</a>
-        </div>
+
+        <a href="/#plan-guides">Plan guides</a>
+        <a href="/app-walkthrough">App walkthrough</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:privacy@cvcalculator.ca">Contact</a></div>
       </div>
     </div>
   </footer>

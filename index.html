@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; form-action 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-mc7a6/xPJYzF3dHMMAFxtepyRwKHZ/OnM1Gye3i/8ok=' 'sha256-d4vjzniPrvUiC++HSC8K50g/PVEJWMjoOjulzvi84cE=' 'sha256-vAPmvpoNPGk7wjZazgPgFAzi0J6x+odtCMtcwkMSPe0=' 'sha256-evc1xFd7deyBXUWmcMM8SChlO1aeY+bAA1JDtXrYvlA=' 'sha256-Kah6/s6AcF/7PW46Fcv9qAAkvROJoU9v1gFV9tGLmLs='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://developer.apple.com https://www.google-analytics.com https://www.googletagmanager.com; media-src 'self'; connect-src 'self' https://solitary-dream-576f.dmccrory.workers.dev https://shared-lead-registry-worker.dmccrory.workers.dev https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; form-action 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-FWVhBgHJDW/n8DsulOKTHhiES0i7zqQxdLhI6Bty7iI=' 'sha256-IJ9KoDiFszeBkwNEoI0OuleR1GIMLVp0GGt/3JFdnI8=' 'sha256-iXaTkZuGEksLFQnWSSXSndSMiv8fc2h942WZScTetQ0=' 'sha256-EJbM0fkZdFp2C1fR0zZAva6oPU/owaC0nI63BMdb/OY=' 'sha256-x6KN3OIATvSUcW7JBlJCOs7vYYuV6Q5+huzJDYeNKpo='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://developer.apple.com https://www.google-analytics.com https://www.googletagmanager.com; media-src 'self'; connect-src 'self' https://solitary-dream-576f.dmccrory.workers.dev https://shared-lead-registry-worker.dmccrory.workers.dev https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEBYFNTP7N"></script>
@@ -9,7 +9,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
+
     gtag('config', 'G-WEBYFNTP7N');
 
     // Delegated CTA click tracker — fires for any element with data-ga-event
@@ -31,7 +31,7 @@
   <meta name="description" content="Estimate your Canadian DB pension's commuted value with CIA §3500 rates — then track how it moves month to month. LIRA split, sensitivity and break-even analysis. Free to try on iOS." />
   <meta name="keywords" content="commuted value calculator, Canadian pension calculator, defined benefit pension Canada, should I take my commuted value, CIA 3500, LIRA, defined benefit pension calculator, commuted value Canada, pension lump sum Canada, DB pension calculator, leave defined benefit pension, OMERS commuted value, HOOPP commuted value, Teachers pension commuted value, PSPP commuted value, UPP commuted value, University Pension Plan commuted value" />
   <meta property="og:title" content="CVCalculator — Canadian Commuted Value Calculator" />
-  <meta property="og:description" content="Know your commuted value and track how it moves with interest rates between annual pension statements. Built on the same actuarial standard your pension administrator uses." />
+  <meta property="og:description" content="Know your commuted value and track how it moves with interest rates between annual pension statements. Educational scenarios; your administrator determines official benefits and amounts." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cvcalculator.ca" />
   <meta property="og:image" content="https://cvcalculator.ca/favicon-192x192.png" />
@@ -53,25 +53,25 @@
         "applicationCategory": "FinanceApplication",
         "url": "https://apps.apple.com/us/app/commuted-value-calculator/id6759869222",
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"},
-        "description": "Canadian commuted value calculator using CIA §3500, CPM2014 mortality tables, and ITA §8517 LIRA transfer limit. Free on iOS."
+        "description": "Canadian commuted value calculator using CIA §3500, CPM2014 mortality tables, and ITA §8517 LIRA transfer limit. Free to download on iOS; optional paid analysis."
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type": "Question", "name": "Who is CVCalculator for?", "acceptedAnswer": {"@type": "Answer", "text": "CVCalculator is built for Canadians who are members of a defined benefit pension plan and are considering leaving their employer. It supports PSPP, OMERS, HOOPP, Teachers', UPP, and any other Canadian DB plan that follows the CIA §3500 standard."}},
-          {"@type": "Question", "name": "What is a commuted value of pension calculator?", "acceptedAnswer": {"@type": "Answer", "text": "A commuted value of pension calculator estimates the lump sum present value of your lifetime defined benefit pension. Instead of comparing only the monthly pension and a single cash amount, it applies CIA interest rates and Canadian mortality tables to estimate what the future pension stream is worth today."}},
-          {"@type": "Question", "name": "What is CIA Section 3500 and why does it matter?", "acceptedAnswer": {"@type": "Answer", "text": "CIA §3500 is the Canadian Institute of Actuaries standard that governs how commuted values must be calculated for Canadian pension plans. It specifies the two-tier interest rate structure, mortality tables (CPM2014 with CPM-B improvement scale), and blending methodology. CVCalculator implements this standard exactly."}},
-          {"@type": "Question", "name": "What is the LIRA transfer limit?", "acceptedAnswer": {"@type": "Answer", "text": "Under Income Tax Act Section 8517, only a portion of your commuted value can be transferred into a Locked-In Retirement Account (LIRA) tax-free. The limit is your accrued pension multiplied by a prescribed factor that increases with age. Any amount above this limit is paid as taxable cash in the year of termination."}},
-          {"@type": "Question", "name": "Should I take my commuted value or keep my pension?", "acceptedAnswer": {"@type": "Answer", "text": "There is no universal answer. It depends on your age, health, risk tolerance, investment discipline, and expected longevity. CVCalculator's break-even analysis shows the age at which the pension surpasses the invested CV under different return rate scenarios."}},
+          {"@type": "Question", "name": "Who is CVCalculator for?", "acceptedAnswer": {"@type": "Answer", "text": "CVCalculator is built for Canadians who are members of a defined benefit pension plan and are considering leaving their employer — whether through resignation, early retirement, or termination. If your plan offers a commuted value option and you're trying to decide whether to take the lump sum or stay in the plan, this tool is designed specifically for you. Plan features and calculation bases differ. Check the methodology and your official package before using a scenario for your plan."}},
+          {"@type": "Question", "name": "What is a commuted value of pension calculator?", "acceptedAnswer": {"@type": "Answer", "text": "A commuted value of pension calculator estimates the lump sum present value of your lifetime defined benefit pension. Instead of comparing only the monthly pension and a single cash amount, it applies prescribed CIA interest rates and Canadian mortality tables to estimate what your future pension stream is worth in today's dollars. For the full input list and methodology, see how a commuted value calculator works in Canada."}},
+          {"@type": "Question", "name": "What is CIA Section 3500 and why does it matter?", "acceptedAnswer": {"@type": "Answer", "text": "CIA §3500 is the Canadian Institute of Actuaries standard that governs how commuted values must be calculated for Canadian pension plans. It specifies the two-tier interest rate structure, mortality tables (CPM2014 with CPM-B improvement scale), and blending methodology. CVCalculator uses a simplified educational model based on this framework."}},
+          {"@type": "Question", "name": "What is the LIRA transfer limit?", "acceptedAnswer": {"@type": "Answer", "text": "Under Income Tax Act Section 8517, only a portion of your commuted value can be transferred directly into a Locked-In Retirement Account (LIRA) on a tax-sheltered basis. The limit is based on your accrued pension and a prescribed factor that increases with age. Any amount above this limit must be taken as taxable cash in the year of termination. CVCalculator calculates this split automatically so you know what to expect before you negotiate."}},
+          {"@type": "Question", "name": "Should I take my commuted value or keep my pension?", "acceptedAnswer": {"@type": "Answer", "text": "This is one of the most consequential financial decisions you'll make — and there's no universal answer. It depends on your age, health, risk tolerance, investment discipline, spouse situation, and how long you expect to live. CVCalculator's break-even analysis shows you the age at which the pension surpasses the invested CV under different return scenarios. Most people find this framing — rather than comparing lump sum to pension amount — fundamentally changes how they think about the decision. We always recommend speaking with a qualified financial advisor before deciding."}},
           {"@type": "Question", "name": "Why does my commuted value change from month to month?", "acceptedAnswer": {"@type": "Answer", "text": "The CIA publishes new i₁ and i₂ interest rates monthly. Your CV is highly sensitive to these rates — particularly i₂. When interest rates rise, your CV falls; when rates fall, your CV rises."}},
-          {"@type": "Question", "name": "Which pension plans does CVCalculator support?", "acceptedAnswer": {"@type": "Answer", "text": "CVCalculator supports any Canadian defined benefit pension plan using the CIA §3500 standard — including PSPP, OMERS, HOOPP, Teachers', UPP, and most other provincial and federal plans."}}
+          {"@type": "Question", "name": "Which pension plans does CVCalculator support?", "acceptedAnswer": {"@type": "Answer", "text": "CVCalculator models educational scenarios from user-entered pension details. It does not verify plan eligibility or compatibility with every plan or benefit design. Use the methodology guide to check which inputs and limitations matter. Your pension administrator provides the official value."}}
         ]
       }
     ]
   }
   </script>
   <meta name="robots" content="index, follow" />
-  <link rel="sitemap" type="application/xml" href="/cvcalculator/sitemap.xml" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
@@ -1203,19 +1203,22 @@
     }
   </style>
 <style>.cv-crosspromo:hover { border-color:rgba(138,109,47,0.35) !important; transform:translateY(-3px); }</style>
+  <link rel="stylesheet" href="/cv-ux.css" />
 </head>
 <body>
+<a href="#main-content" class="cv-skip-link">Skip to content</a>
 
   <!-- NAV -->
-  <nav>
-    <div class="nav-logo">
+  <nav class="cv-site-nav" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="CVCalculator home">
       <div class="nav-logo-icon">CV</div>
       <span class="nav-logo-text">CVCalculator</span>
-    </div>
-    <a href="#download" class="nav-cta" data-ga-event="cta_clicked" data-ga-cta_id="nav_download" data-ga-page_type="homepage" data-ga-destination_type="internal" data-ga-entry_point="nav" data-ga-event_property_id="cvcalculator">
-      &#9654; Download Free
     </a>
-  </nav>
+
+
+    <div class="cv-nav-links"><a href="/#resources">Learn</a><a href="/#plan-guides">Plan guides</a><a href="#download" class="nav-cta" data-ga-event="cta_clicked" data-ga-cta_id="nav_download" data-ga-page_type="homepage" data-ga-destination_type="internal" data-ga-entry_point="nav" data-ga-event_property_id="cvcalculator">Get the app</a></div>
+</nav>
+<main id="main-content">
 
   <!-- HERO -->
   <section class="hero">
@@ -1224,11 +1227,8 @@
         <div class="hero-content">
           <div class="hero-eyebrow eyebrow">Commuted Value of Pension Calculator · Track It Month to Month · Canada</div>
           <p class="hero-tagline" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.15rem,1.7vw,1.4rem);font-style:italic;color:#6b5320;line-height:1.4;margin-bottom:14px;animation:fadeUp 0.8s 0.05s ease both;">Your pension is more than a monthly payment. Understand what it's worth.</p>
-          <h1>Understand your commuted value — a pension calculator for Canadian DB plans.</h1>
-          <p class="hero-desc">
-            Your defined benefit pension is one of your largest financial assets, but its value changes far more often than most members realize. Every day you continue working can increase your pension entitlement, CIA §3500 interest rates are updated monthly, and most members receive a formal pension statement only once a year.
-            CVCalculator helps you estimate your commuted value, understand how it may move between statements, and compare it against keeping the deferred pension before you decide.
-          </p>
+          <h1>Understand the lump-sum value of your pension.</h1>
+          <p class="hero-desc">A commuted value is a lump-sum value of future pension payments. CVCalculator is a mobile app for Canadian defined-benefit pension members exploring estimates and retirement scenarios. Your plan determines your official amount and available options.</p>
           <div class="hero-actions">
             <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="btn-primary" target="_blank" rel="noopener noreferrer" data-ga-event="app_store_click" data-ga-location="hero">
               &#8595; Download on the App Store
@@ -1250,7 +1250,7 @@
           <div class="phone-frame">
             <div class="phone-notch"></div>
             <div class="phone-screen">
-              <div class="phone-eyebrow">RESULTS</div>
+              <div class="phone-eyebrow">ILLUSTRATIVE RESULTS</div>
               <div class="phone-title">Your CV</div>
               <div class="phone-card">
                 <div class="phone-card-label">COMMUTED VALUE</div>
@@ -1304,36 +1304,13 @@
     </div>
   </div>
 
-  <!-- EMAIL UPDATES -->
-  <section class="signup-section" aria-labelledby="signup-heading">
-    <div class="container">
-      <div class="signup-inner">
-        <div class="signup-copy">
-          <h2 id="signup-heading">Stay Updated</h2>
-          <p>Receive occasional updates when new pension guides, calculator improvements, and Canadian retirement planning resources are published.</p>
-        </div>
-        <div>
-          <form class="signup-form" data-lead-capture data-cta-location="homepage_rate_updates" data-page-type="homepage" data-cta-id="homepage_email_capture" data-entry-point="rate_updates_section" data-success-target="cv-subscribe-thanks" data-error-target="cv-subscribe-err">
-            <label class="sr-only" for="homepage-signup-email">Email address</label>
-            <input id="homepage-signup-email" type="email" name="email" placeholder="Email address" autocomplete="email" inputmode="email" aria-describedby="homepage-signup-note cv-subscribe-err" required />
-            <button type="submit">Subscribe</button>
-          </form>
-          <p id="cv-subscribe-err" class="signup-message signup-message--error" role="alert" aria-live="polite" style="display:none;"></p>
-          <p id="cv-subscribe-thanks" class="signup-message signup-message--success" role="status" aria-live="polite" style="display:none;">You're subscribed. We'll be in touch when there is something useful to share.</p>
-          <p id="homepage-signup-note" class="signup-note">No spam. Unsubscribe anytime.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script src="/cv-lead-capture.js" defer></script>
-
   <!-- PENSION DECISION GUIDE -->
   <section class="features" id="resources" style="background: var(--navy-2);">
     <div class="container">
       <div class="section-header reveal">
         <div class="eyebrow">Pension Education</div>
         <h2>Your Pension Decision Guide</h2>
-        <p>After you estimate your commuted value, use these pension guides to understand the decision around it. They explain the Canadian defined benefit pension factors that shape your options, from transfer limits and tax considerations to why your pension value changes between statements.</p>
+        <p>Start with the question in front of you. These guides explain your options before you explore an estimate. Explore leaving-work options, transfer limits, taxes and why an estimated value can change between statements.</p>
       </div>
       <div class="resource-group">
         <div class="resource-group-header reveal">
@@ -1350,7 +1327,7 @@
           <div class="feature-card resource-card reveal">
             <div class="feature-icon">🏦</div>
             <h4>Understand LIRA Transfer Limits</h4>
-            <p>See how the maximum transfer value determines what can move tax-free and what becomes taxable cash.</p>
+            <p>See how the maximum transfer value determines what may move tax-deferred and what may become taxable cash.</p>
             <a href="/commuted-value-lira-transfer-limit-explained" class="resource-card-link" data-ga-event="cta_clicked" data-ga-cta_id="popular_guides_lira_transfer_limit" data-ga-page_type="homepage" data-ga-destination_type="internal" data-ga-entry_point="popular_guides" data-ga-event_property_id="cvcalculator">LIRA transfer limits and maximum transfer value <span aria-hidden="true">→</span></a>
           </div>
           <div class="feature-card resource-card reveal">
@@ -1362,7 +1339,7 @@
         </div>
       </div>
 
-      <div class="resource-group reveal">
+      <div class="resource-group reveal" id="plan-guides">
         <div class="resource-group-header">
           <h3>Guides for Your Pension Plan</h3>
           <p>Review the transfer-value rules and decision context for your specific defined benefit pension plan.</p>
@@ -1387,12 +1364,36 @@
           <a href="/commuted-value-taxes-canada" class="secondary-resource-link" data-ga-event="cta_clicked" data-ga-cta_id="popular_guides_commuted_value_taxes" data-ga-page_type="homepage" data-ga-destination_type="internal" data-ga-entry_point="popular_guides" data-ga-event_property_id="cvcalculator">Understand the tax impact</a>
           <a href="/how-cia-3500-interest-rates-affect-commuted-value" class="secondary-resource-link" data-ga-event="cta_clicked" data-ga-cta_id="popular_guides_cia_rates" data-ga-page_type="homepage" data-ga-destination_type="internal" data-ga-entry_point="popular_guides" data-ga-event_property_id="cvcalculator">CIA §3500 interest rates</a>
           <a href="/deferred-pension-vs-commuted-value-canada" class="secondary-resource-link" data-ga-event="cta_clicked" data-ga-cta_id="popular_guides_deferred_vs_cv" data-ga-page_type="homepage" data-ga-destination_type="internal" data-ga-entry_point="popular_guides" data-ga-event_property_id="cvcalculator">Deferred pension vs. commuted value</a>
-          <a href="/commuted-value-age-55-deadline-canada" class="secondary-resource-link" data-ga-event="cta_clicked" data-ga-cta_id="more_resources_age_55_deadline" data-ga-page_type="homepage" data-ga-destination_type="internal" data-ga-entry_point="more_resources" data-ga-event_property_id="cvcalculator">Age 55 commuted value deadline</a>
+          <a href="/commuted-value-age-55-deadline-canada" class="secondary-resource-link" data-ga-event="cta_clicked" data-ga-cta_id="more_resources_age_55_deadline" data-ga-page_type="homepage" data-ga-destination_type="internal" data-ga-entry_point="more_resources" data-ga-event_property_id="cvcalculator">Commuted value eligibility and deadlines</a>
           <a href="/commuted-value-calculator-canada" class="secondary-resource-link" data-ga-event="cta_clicked" data-ga-cta_id="more_resources_calculator_canada" data-ga-page_type="homepage" data-ga-destination_type="internal" data-ga-entry_point="more_resources" data-ga-event_property_id="cvcalculator">Calculator methodology</a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- EMAIL UPDATES -->
+  <section class="signup-section" aria-labelledby="signup-heading">
+    <div class="container">
+      <div class="signup-inner">
+        <div class="signup-copy">
+          <h2 id="signup-heading">Stay Updated</h2>
+          <p>Receive occasional updates when new pension guides, calculator improvements, and Canadian retirement planning resources are published.</p>
+        </div>
+        <div>
+          <form class="signup-form" data-lead-capture data-cta-location="homepage_rate_updates" data-page-type="homepage" data-cta-id="homepage_email_capture" data-entry-point="rate_updates_section" data-success-target="cv-subscribe-thanks" data-error-target="cv-subscribe-err">
+            <label class="cv-email-label" for="homepage-signup-email">Email address (required)</label>
+            <input id="homepage-signup-email" type="email" name="email" placeholder="Email address" autocomplete="email" inputmode="email" aria-describedby="homepage-signup-note cv-subscribe-err" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p id="cv-subscribe-err" class="signup-message signup-message--error" role="alert" aria-live="polite" style="display:none;"></p>
+          <p id="cv-subscribe-thanks" class="signup-message signup-message--success" role="status" aria-live="polite" style="display:none;" tabindex="-1">You're subscribed. We'll be in touch when there is something useful to share.</p>
+          <p id="homepage-signup-note" class="signup-note">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="/cv-lead-capture.js" defer></script>
+
 
   <!-- FEATURES -->
   <section class="features" id="features">
@@ -1455,7 +1456,7 @@
         <div class="how-step reveal">
           <div class="how-step-num">1</div>
           <h3>Enter your pension details</h3>
-          <p>Your date of birth, termination date, accrued pension, EURD, and plan features. Use the built-in pension estimator if you don't have your statement handy.</p>
+          <p>Use your pension statement to enter your date of birth, leaving date, pension earned so far, and earliest date for an unreduced pension. The walkthrough explains the fields and optional plan features.</p>
         </div>
         <div class="how-step reveal">
           <div class="how-step-num">2</div>
@@ -1484,9 +1485,9 @@
       <div class="breakeven-inner">
         <div class="breakeven-content reveal">
           <div class="eyebrow">Break-Even Analysis</div>
-          <h2>At what age does the pension actually win?</h2>
-          <p>This is the question most people never get a clear answer to. CVCalculator models your commuted value growing pre-retirement, then drawing down annually once you start collecting — the same way your real money would actually work.</p>
-          <p>For example, at a 4% return, the CV depletes at age 82 — but at 8% return, the CV outlasts 95. Tap any row to see the full math behind the verdict.</p>
+          <h2>How do the scenarios compare?</h2>
+          <p>Compare possible investment cash flows with the pension benefits you would keep. Constant-return scenarios help explain assumptions; they do not forecast actual investment results.</p>
+          <p>The app explores hypothetical investment outcomes under selected assumptions. Results depend on pension features, taxes, fees and returns; a depletion age is not a complete measure of pension value. See the <a href="/deferred-pension-vs-commuted-value-canada#comparison-example">worked comparison and its assumptions</a>.</p>
           <p style="font-size:0.8rem; color:var(--text-3); margin-top:8px;">Results vary based on your pension amount, retirement age, and return assumptions. This is illustrative only.</p>
         </div>
         <div class="breakeven-visual reveal">
@@ -1525,69 +1526,48 @@
         <h2>Everything you need to know</h2>
       </div>
       <div class="faq-list">
-        <div class="faq-item reveal">
-          <button class="faq-question" data-cv-action="faq">
+        <details class="faq-item reveal"><summary class="faq-question">
             Who is CVCalculator for?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            CVCalculator is built for Canadians who are members of a defined benefit pension plan and are considering leaving their employer — whether through resignation, early retirement, or termination. If your plan offers a commuted value option and you're trying to decide whether to take the lump sum or stay in the plan, this tool is designed specifically for you. It supports PSPP, OMERS, HOOPP, Teachers', UPP, and any other Canadian DB plan that follows the CIA §3500 standard.
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" data-cv-action="faq">
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary><div class="faq-answer">
+            CVCalculator is built for Canadians who are members of a defined benefit pension plan and are considering leaving their employer — whether through resignation, early retirement, or termination. If your plan offers a commuted value option and you're trying to decide whether to take the lump sum or stay in the plan, this tool is designed specifically for you. Plan features and calculation bases differ. Check the methodology and your official package before using a scenario for your plan.
+          </div></details>
+        <details class="faq-item reveal"><summary class="faq-question">
             What is a commuted value of pension calculator?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary><div class="faq-answer">
             A commuted value of pension calculator estimates the lump sum present value of your lifetime defined benefit pension. Instead of comparing only the monthly pension and a single cash amount, it applies prescribed CIA interest rates and Canadian mortality tables to estimate what your future pension stream is worth in today's dollars. For the full input list and methodology, see <a href="/commuted-value-calculator-canada">how a commuted value calculator works in Canada</a>.
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" data-cv-action="faq">
+          </div></details>
+        <details class="faq-item reveal"><summary class="faq-question">
             What is CIA §3500 and why does it matter?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            CIA §3500 is the Canadian Institute of Actuaries standard that governs how commuted values must be calculated for Canadian pension plans. It specifies the interest rate structure (two-tier: i₁ for the first 10 years, i₂ beyond), the mortality tables to use (CPM2014 with improvement scale CPM-B), and the blending methodology between your EURD and Optimal Retirement Date. CVCalculator implements this standard exactly — the same framework your pension administrator uses.
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" data-cv-action="faq">
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary><div class="faq-answer">
+            CIA §3500 is the Canadian Institute of Actuaries standard that governs how commuted values must be calculated for Canadian pension plans. It specifies the interest rate structure (two-tier: i₁ for the first 10 years, i₂ beyond), the mortality tables to use (CPM2014 with improvement scale CPM-B), and the blending methodology between your EURD and Optimal Retirement Date. CVCalculator uses a simplified educational model based on this framework — the same framework your pension administrator uses.
+          </div></details>
+        <details class="faq-item reveal"><summary class="faq-question">
             What is the LIRA transfer limit?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary><div class="faq-answer">
             Under Income Tax Act Section 8517, only a portion of your commuted value can be transferred directly into a Locked-In Retirement Account (LIRA) on a tax-sheltered basis. The limit is based on your accrued pension and a prescribed factor that increases with age. Any amount above this limit must be taken as taxable cash in the year of termination. CVCalculator calculates this split automatically so you know what to expect before you negotiate.
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" data-cv-action="faq">
+          </div></details>
+        <details class="faq-item reveal"><summary class="faq-question">
             Should I take my commuted value or keep my pension?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary><div class="faq-answer">
             This is one of the most consequential financial decisions you'll make — and there's no universal answer. It depends on your age, health, risk tolerance, investment discipline, spouse situation, and how long you expect to live. CVCalculator's break-even analysis shows you the age at which the pension surpasses the invested CV under different return scenarios. Most people find this framing — rather than comparing lump sum to pension amount — fundamentally changes how they think about the decision. We always recommend speaking with a qualified financial advisor before deciding.
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" data-cv-action="faq">
+          </div></details>
+        <details class="faq-item reveal"><summary class="faq-question">
             Why does my CV change from month to month?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary><div class="faq-answer">
             The CIA publishes new i₁ and i₂ interest rates monthly, and your commuted value is highly sensitive to these rates — particularly i₂. When interest rates rise, your CV falls; when rates fall, your CV rises. This is because a lower discount rate makes future pension payments worth more in today's dollars. CVCalculator's 12-month history shows how your CV has moved with rates over the past year, helping you understand how rate changes affect your pension's value.
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" data-cv-action="faq">
+          </div></details>
+        <details class="faq-item reveal"><summary class="faq-question">
             Which pension plans does CVCalculator support?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            CVCalculator supports any Canadian defined benefit pension plan that uses the CIA §3500 standard — including PSPP, OMERS, HOOPP, Teachers', UPP, and most other provincial and federal plans. You enter your own pension details directly, so it works for any plan as long as you have your accrued annual pension amount and retirement date information from your pension statement.
-          </div>
-        </div>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary><div class="faq-answer">
+            CVCalculator models educational scenarios from user-entered pension details. It does not verify plan eligibility or compatibility with every plan or benefit design. Use the methodology guide to check which inputs and limitations matter. Your pension administrator provides the official value.
+          </div></details>
       </div>
     </div>
   </section>
@@ -1626,7 +1606,7 @@
       <div class="reveal">
         <div class="eyebrow">Available now on iOS and Android</div>
         <h2>Estimate today. Understand how your pension value may change. Make your decision with better context.</h2>
-        <p>Free to download. Start with a high-level commuted value estimate, then use CV Pro for exact CV analysis, rate history, sensitivity, and break-even detail.</p>
+        <p>Free to download on iOS and Android, with a high-level estimate included. CV Pro offers paid analysis through subscription and lifetime options where offered. See the app or store for current features and purchase terms.</p>
         <div style="display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;">
           <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="app-store-badge" target="_blank" rel="noopener noreferrer" data-ga-event="app_store_click" data-ga-location="download_section">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height:54px; width:auto; display:block;" />
@@ -1647,7 +1627,8 @@
   </div>
 
   <!-- FOOTER -->
-  <footer>
+  </main>
+<footer>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-left">Built in Canada · CIA §3500 · CPM2014</div>
@@ -1660,20 +1641,16 @@
           <a href="https://renewaliq.ca" target="_blank" rel="noopener noreferrer">RenewalIQ</a>
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms of Use</a>
-        </div>
+
+        <a href="/#resources">Learn</a>
+        <a href="/#plan-guides">Plan guides</a>
+        <a href="/app-walkthrough">App walkthrough</a>
+        <a href="mailto:privacy@cvcalculator.ca">Contact</a></div>
       </div>
     </div>
   </footer>
 
   <script>
-    // FAQ toggle
-    function toggleFAQ(btn) {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
-    }
-
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
@@ -1878,7 +1855,7 @@
   </style>
 
   <!-- Chat button -->
-  <button id="cv-chat-btn" aria-label="Open CV Calculator Assistant">
+  <button id="cv-chat-btn" aria-label="Open CV Calculator Assistant" aria-controls="cv-chat-window" aria-expanded="false">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:#0d1628">
       <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l4.93-1.37A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
     </svg>
@@ -1886,7 +1863,7 @@
   </button>
 
   <!-- Chat window -->
-  <div id="cv-chat-window">
+  <div id="cv-chat-window" role="region" aria-label="CV Assistant">
     <div id="cv-chat-header">
       <div id="cv-chat-header-left">
         <div id="cv-chat-avatar">CV</div>
@@ -1897,7 +1874,7 @@
       </div>
       <button id="cv-chat-close" aria-label="Close chat">✕</button>
     </div>
-    <div id="cv-chat-messages">
+    <div id="cv-chat-messages" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Conversation">
       <div class="cv-msg bot">Hi! I can answer questions about commuted values, the CVCalculator app, and how the calculation works. What would you like to know?</div>
     </div>
     <div id="cv-chat-chips">
@@ -1907,6 +1884,7 @@
     </div>
     <p id="cv-chat-privacy">Chats are marked as expired after 30 days. Deletion runs after a later successful chat request, so records may remain longer; there is no guaranteed deletion deadline. Do not include personal identifying information. <a href="/privacy">Privacy</a></p>
     <div id="cv-chat-input-row">
+      <label class="sr-only" for="cv-chat-input">Ask CV Assistant a question</label>
       <input id="cv-chat-input" type="text" placeholder="Ask a question…" autocomplete="off" />
       <button id="cv-chat-send" aria-label="Send">
         <svg viewBox="0 0 24 24" style="fill:#f5f0e8"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
@@ -1936,8 +1914,14 @@
       conversationId = crypto.randomUUID();
     }
 
-    chatBtn.addEventListener('click', () => chatWindow.classList.toggle('open'));
-    chatClose.addEventListener('click', () => chatWindow.classList.remove('open'));
+    function setChatOpen(open) {
+      chatWindow.classList.toggle('open', open);
+      chatBtn.setAttribute('aria-expanded', String(open));
+      if (open) chatInput.focus(); else chatBtn.focus();
+    }
+    chatBtn.addEventListener('click', () => setChatOpen(!chatWindow.classList.contains('open')));
+    chatClose.addEventListener('click', () => setChatOpen(false));
+    chatWindow.addEventListener('keydown', e => { if (e.key === 'Escape') setChatOpen(false); });
     chatSend.addEventListener('click', sendMessage);
     chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
 
@@ -1982,6 +1966,6 @@
       }
     }
   </script>
-<script>document.addEventListener('click', function(event) { const element = event.target.closest('[data-cv-action]'); if (!element) return; if (element.dataset.cvAction === 'faq') toggleFAQ(element); if (element.dataset.cvAction === 'chip') sendChip(element); });</script>
+<script>document.addEventListener('click', function(event) { const element = event.target.closest('[data-cv-action]'); if (!element) return; if (element.dataset.cvAction === 'chip') sendChip(element); });</script>
 </body>
 </html>
