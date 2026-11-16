@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; form-action 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-RumF7SAUNjbpmWWqJjj+d42q+vAz9xLG01A742RBIN0=' 'sha256-2m3DYhAVFMGzfHbgvR6x6/EDnVrJhsSHEYW4nF/c1oQ=' 'sha256-7iCKc10IFWKSV+jIOts4lCEB/YvxpumYSAWlyqovlQc='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://developer.apple.com https://www.google-analytics.com https://www.googletagmanager.com; media-src 'self'; connect-src 'self' https://solitary-dream-576f.dmccrory.workers.dev https://shared-lead-registry-worker.dmccrory.workers.dev https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; form-action 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-RumF7SAUNjbpmWWqJjj+d42q+vAz9xLG01A742RBIN0=' 'sha256-TCh4rYwzmbFRe3QrKRQHnvQKQXOMXU2abbYxv9EICCg=' 'sha256-PAZPZEFiDkFkdC4es0fLfD4uCXXIjayUjVIqv4YKG5k='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://developer.apple.com https://www.google-analytics.com https://www.googletagmanager.com; media-src 'self'; connect-src 'self' https://solitary-dream-576f.dmccrory.workers.dev https://shared-lead-registry-worker.dmccrory.workers.dev https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEBYFNTP7N"></script>
@@ -49,7 +49,7 @@
         "name": "What inputs do I need for a commuted value calculation?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You need: your annual accrued pension at termination, your date of birth, your termination date, your earliest unreduced retirement date (EURD), and whether your plan includes a survivor benefit or CPP bridge. These are all found on your pension statement or termination package."
+          "text": "You need your annual accrued pension at termination, your date of birth, your termination date, your earliest unreduced retirement date (EURD), and whether your plan includes a survivor benefit or CPP bridge. All of this information appears on your pension statement or termination package."
         }
       },
       {
@@ -57,7 +57,7 @@
         "name": "How accurate is a commuted value calculator?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A calculator using the correct CIA §3500 methodology — including the two-tier interest rate structure, CPM2014 mortality tables with CPM-B improvement scale, and proper blending between EURD and optimal retirement date — will produce results very close to your plan administrator's official figure. Small differences may arise from survivor benefit assumptions or plan-specific features."
+          "text": "Differences in benefits, valuation dates, indexing, mortality or retirement assumptions can materially affect an estimate. CVCalculator results are educational scenarios, not official pension quotes. Your administrator confirms the amount and whether a transfer is available."
         }
       },
       {
@@ -65,7 +65,7 @@
         "name": "What is the LIRA transfer limit in Canada?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Under Income Tax Act Section 8517, only a portion of your commuted value can be transferred into a Locked-In Retirement Account (LIRA) on a tax-sheltered basis. The limit equals your accrued pension multiplied by a prescribed factor based on your age at termination. Any CV exceeding this limit is paid as taxable cash in the year of termination."
+          "text": "Under Income Tax Act Section 8517, only a portion of your commuted value can be transferred into a Locked-In Retirement Account (LIRA) on a tax-sheltered basis. The limit equals your accrued pension multiplied by a prescribed factor based on your age at transfer. Any CV exceeding this limit is paid as taxable cash in the year of termination."
         }
       },
       {
@@ -73,7 +73,7 @@
         "name": "Why does my commuted value change each month?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The Canadian Institute of Actuaries publishes new i₁ and i₂ interest rates monthly. Your commuted value moves inversely with these rates — when rates rise, your CV falls; when rates fall, your CV rises. The i₂ rate, which applies beyond 10 years, has the largest impact."
+          "text": "The CIA publishes new i₁ and i₂ interest rates monthly. Your commuted value moves inversely with these rates — when rates rise, your CV falls; when rates fall, your CV rises. The i₂ rate, which applies beyond 10 years, has the largest single impact on your commuted value."
         }
       }
     ]
@@ -185,27 +185,32 @@
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"Article","headline":"Commuted Value of Pension Calculator Canada | Inputs & Results","description":"Learn how a Canadian commuted value calculator works: CIA §3500 rates, CPM2014 mortality, DB pension inputs, LIRA limit, and break-even results.","author":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca","sameAs":"https://apps.apple.com/us/app/commuted-value-calculator/id6759869222"},"publisher":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca","logo":{"@type":"ImageObject","url":"https://cvcalculator.ca/favicon-192x192.png"}},"datePublished":"2026-04-01","dateModified":"2026-06-03","url":"https://cvcalculator.ca/commuted-value-calculator-canada","mainEntityOfPage":"https://cvcalculator.ca/commuted-value-calculator-canada"},
+    {"@type":"Article","headline":"Commuted Value of Pension Calculator Canada | Inputs & Results","description":"Learn how a Canadian commuted value calculator works: CIA §3500 rates, CPM2014 mortality, DB pension inputs, LIRA limit, and break-even results.","author":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca","sameAs":"https://apps.apple.com/us/app/commuted-value-calculator/id6759869222"},"publisher":{"@type":"Organization","name":"CVCalculator","url":"https://cvcalculator.ca","logo":{"@type":"ImageObject","url":"https://cvcalculator.ca/favicon-192x192.png"}},"datePublished":"2026-04-01","dateModified":"2026-11-15","url":"https://cvcalculator.ca/commuted-value-calculator-canada","mainEntityOfPage":"https://cvcalculator.ca/commuted-value-calculator-canada"},
     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CVCalculator","item":"https://cvcalculator.ca"},{"@type":"ListItem","position":2,"name":"Commuted Value Calculator Canada","item":"https://cvcalculator.ca/commuted-value-calculator-canada"}]}
   ]}
   </script>
+  <link rel="stylesheet" href="/cv-ux.css" />
 </head>
 <body>
+<a href="#main-content" class="cv-skip-link">Skip to content</a>
 
-<nav>
+<nav class="cv-site-nav" aria-label="Main navigation">
   <a href="/" class="nav-logo">
     <div class="nav-logo-icon">CV</div>
     <span class="nav-logo-text">CVCalculator</span>
   </a>
-  <a href="/" class="nav-back">← Back to home</a>
+
+
+    <div class="cv-nav-links"><a href="/#resources">Learn</a><a href="/#plan-guides">Plan guides</a><a href="/#download" class="nav-cta">Get the app</a></div>
 </nav>
+<main id="main-content">
 
 <div class="page-hero">
   <div class="container">
     <div class="eyebrow">Commuted Value of Pension Calculator · Canada</div>
     <h1>How a commuted value of pension calculator works in Canada</h1>
     <p class="intro">If you're leaving a defined benefit pension, calculating your commuted value is the first step. This guide explains the Canadian DB pension inputs, the CIA §3500 assumptions, the LIRA transfer limit, and the decision outputs to review before you sign anything.</p>
-    <div class="meta">By the CVCalculator Team · Updated May 2026 · 8 min read</div>
+    <div class="meta">By the CVCalculator Team · Updated November 15, 2026 · 8 min read</div>
   </div>
 </div>
 
@@ -214,8 +219,8 @@
 
     <h2>What a commuted value calculator does</h2>
     <p>A <strong>commuted value of pension calculator</strong> estimates the lump sum present value of your defined benefit pension — the amount of money you'd receive today instead of collecting monthly payments for the rest of your life.</p>
-    <p>The calculation isn't a simple formula. It uses a two-tier interest rate structure, Canadian mortality tables, and a blending methodology between two retirement dates — all prescribed by the <strong><a href="/how-cia-3500-interest-rates-affect-commuted-value">Canadian Institute of Actuaries (CIA) under standard §3500</a></strong>. Any calculator that doesn't implement this standard will produce inaccurate results.</p>
-    <p>Your pension administrator uses the same standard. A well-built Canadian commuted value calculator lets you run your own estimate before your official termination package arrives — so you're not negotiating blind.</p>
+    <p>The calculation isn't a simple formula. It uses a two-tier interest rate structure, Canadian mortality tables, and a blending methodology between two retirement dates — all prescribed by the <strong><a href="/how-cia-3500-interest-rates-affect-commuted-value">our explanation of Canadian Institute of Actuaries (CIA) standard §3500</a></strong>. The applicable calculation basis depends on the benefit design and pension rules.</p>
+    <p>An educational model can help you explore assumptions before your package arrives. Matching a standard's name does not establish compatibility with every plan feature or guarantee agreement with the official amount.</p>
 
     <div class="callout">
       <p><strong>Why this matters:</strong> The commuted value for a mid-career Canadian with a meaningful DB pension often falls between $300,000 and $900,000. Getting an independent estimate before you sign helps you understand the official number, the taxable portion, and whether the deferred pension is still the better option.</p>
@@ -224,12 +229,13 @@
     <h2>What you need before you calculate</h2>
     <p>Most of this information appears on your annual pension statement or in your termination package. If you haven't received one yet, your HR or pension administrator is required to provide it.</p>
 
-    <table class="input-table">
+    <div class="cv-table-scroll" role="region" aria-label="Pension inputs and where to find them; scroll horizontally if needed" tabindex="0"><table class="input-table">
+<caption>Pension inputs and where to find them</caption>
       <thead>
         <tr>
-          <th>Input</th>
-          <th>What it is</th>
-          <th>Where to find it</th>
+          <th scope="col">Input</th>
+          <th scope="col">What it is</th>
+          <th scope="col">Where to find it</th>
         </tr>
       </thead>
       <tbody>
@@ -245,7 +251,7 @@
         </tr>
         <tr>
           <td>Termination date</td>
-          <td>The date you leave your employer — determines which month's CIA rates apply</td>
+          <td>The date you leave your employer; ask the administrator to confirm the separate valuation date and applicable rates</td>
           <td>HR documentation</td>
         </tr>
         <tr>
@@ -264,17 +270,17 @@
           <td>Plan documents</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
 
     <h2>The CIA §3500 calculation — what actually happens</h2>
     <p>The commuted value is calculated as the present value of your future pension payments, discounted using interest rates and adjusted for the probability that you will be alive to receive each payment. The CIA §3500 standard prescribes exactly how this is done.</p>
     <p><strong>The two-tier interest rate structure:</strong> The CIA publishes two rates monthly — i₁ and i₂. The i₁ rate applies to pension payments in the first 10 years after the calculation date. The i₂ rate applies to payments beyond 10 years. Because most of a pension's value lies in payments 10+ years out, i₂ is the dominant driver of your commuted value. When i₂ rises, your CV falls. When it drops, your CV rises.</p>
     <p><strong>Mortality tables:</strong> The calculation uses CPM2014 mortality tables with the CPM-B improvement scale — the standard for Canadian pensioners. These tables reflect current Canadian life expectancy with projected future improvements, which is why a Canadian-specific calculator produces different results than a generic present-value formula.</p>
-    <p><strong>Blending between EURD and optimal retirement date:</strong> The CIA §3500 standard requires blending between two valuation dates — your EURD and a calculated optimal retirement date. This blending, introduced in the December 2020 standard update, is one of the more complex parts of the calculation and is often omitted by simplified online tools.</p>
+    <p>Retirement commencement assumptions are separate from the valuation date. For relevant benefits, the <a href="https://www.cia-ica.ca/publications/226006e/" rel="noopener noreferrer">CIA standards, paragraph 3530.06</a>, describe a 50/50 retirement-age assumption subject to stated conditions and exceptions. A simplified model does not establish that every benefit can be represented.</p>
 
     <div class="cta-box">
       <h3>Run your own commuted value of pension estimate</h3>
-      <p>CVCalculator implements the full CIA §3500 standard — two-tier rates, CPM2014 mortality, December 2020 blending — and shows the LIRA transfer limit and break-even age alongside the estimated lump sum.</p>
+      <p>CVCalculator uses user-entered pension details, two interest-rate inputs and Canadian mortality assumptions to model educational estimates. It also estimates a transfer split and investment scenarios. It does not determine official entitlement or validate every plan's benefit design.</p>
       <div class="cta-actions">
         <a href="https://apps.apple.com/us/app/commuted-value-calculator/id6759869222" class="cta-btn" target="_blank" rel="noopener noreferrer" data-ga-event="app_store_click" data-ga-location="article_cta">↓ Download CVCalculator — Free on iOS</a>
         <a href="https://play.google.com/store/apps/details?id=com.dmccrory.cv_calculator" class="cta-btn" target="_blank" rel="noopener noreferrer" data-ga-event="google_play_download_clicked" data-ga-platform="android" data-ga-destination_type="google_play" data-ga-page_type="article" data-ga-cta_id="article_android_interest" data-ga-entry_point="article_cta" data-ga-event_property_id="cvcalculator">Get it on Google Play</a>
@@ -293,7 +299,7 @@
       <div class="output-card primary">
         <div class="output-card-label">Tax-sheltered portion</div>
         <h3>LIRA Transfer Amount</h3>
-        <p>The portion of your CV that can move into a Locked-In Retirement Account tax-free under ITA §8517. Locked in until retirement age.</p>
+        <p>The portion of your CV that can move into a Locked-In Retirement Account on a tax-deferred basis under the applicable section 8517 rules. Locked in until retirement age.</p>
       </div>
       <div class="output-card">
         <div class="output-card-label">Taxable portion</div>
@@ -303,13 +309,13 @@
       <div class="output-card">
         <div class="output-card-label">Decision tool</div>
         <h3>Break-Even Age</h3>
-        <p>The age at which accumulated pension payments overtake the invested CV. The most useful frame for comparing lump sum vs. pension.</p>
+        <p>A scenario comparison under selected assumptions. Distinguish account depletion from cumulative-payment crossover; neither determines the best pension option by itself.</p>
       </div>
     </div>
 
     <h2>How to use CVCalculator — step by step</h2>
     <ol class="step-list">
-      <li><strong>Download the app</strong> — CVCalculator is free to download on iOS. Free users get a high-level estimate; exact CV results and full analysis are available with CV Pro.</li>
+      <li><strong>Download the app</strong> — CVCalculator is free to download on iOS. Free users get a high-level estimate; detailed CV estimates and full analysis are available with CV Pro.</li>
       <li><strong>Enter your pension details</strong> — input your date of birth, termination date, accrued annual pension, and EURD. If you have a bridge benefit or survivor benefit, toggle those on and enter the amounts. If you don't have exact figures yet, the built-in estimator can generate a reasonable starting estimate.</li>
       <li><strong>Review your CV and split</strong> — the app calculates your commuted value in real time as you type. You'll see your total CV, LIRA transfer limit, and taxable cash split immediately.</li>
       <li><strong>Explore the Analysis tab</strong> — this is where the decision-making tools live. Break-even analysis shows the age at which the pension catches your invested CV under five different return scenarios. The 12-month history shows how your CV has shifted as CIA rates have changed month to month.</li>
@@ -317,9 +323,9 @@
     </ol>
 
     <h2>Why monthly CIA rates matter for your pension's value</h2>
-    <p>The CIA publishes new i₁ and i₂ rates at the start of each month, and your commuted value is calculated using the rates in effect at your termination date. This means <strong>your CV changes with the rate environment</strong> — sometimes by tens of thousands of dollars.</p>
+    <p>The CIA publishes new i₁ and i₂ rates at the start of each month, and the applicable rate basis depends on the valuation date confirmed by your administrator. This means <strong>your CV changes with the rate environment</strong> — sometimes by tens of thousands of dollars.</p>
     <p>In a rising rate environment, your CV will generally fall month over month; in a falling rate environment, it generally rises. CVCalculator's 12-month history view plots your CV across each of the past 12 months using the corresponding CIA rates, so you can see the range your value has traded in and understand its sensitivity to changing conditions.</p>
-    <p>This is not a reason to delay a departure unnecessarily — but if you have discretion over your exact termination date within a quarter, it's worth checking which month produces the highest CV before you commit to a date.</p>
+    <p>The valuation date and calculation basis are determined under the applicable rules; they are not always simply your leaving date. Ask your administrator which date and assumptions apply rather than choosing a departure date based on an estimate.</p>
 
     <h2>Common mistakes when calculating commuted value</h2>
     <ul>
@@ -354,12 +360,12 @@
 
       <div class="faq-item">
         <h3>How accurate is a commuted value calculator?</h3>
-        <p>A calculator that correctly implements CIA §3500 — including the two-tier interest rate structure, CPM2014 mortality tables with CPM-B improvement, and December 2020 blending methodology — will produce results very close to your plan administrator's official figure. Small differences may arise from plan-specific features like early retirement factors or indexation provisions.</p>
+        <p>Differences in benefits, valuation dates, indexing, mortality or retirement assumptions can materially affect an estimate. CVCalculator results are educational scenarios, not official pension quotes. Your administrator confirms the amount and whether a transfer is available.</p>
       </div>
 
       <div class="faq-item">
         <h3>What is the LIRA transfer limit?</h3>
-        <p>Under Income Tax Act Section 8517, only a portion of your commuted value can be transferred into a Locked-In Retirement Account (LIRA) tax-free. The limit equals your accrued pension multiplied by a prescribed factor based on your age at termination. Any CV exceeding this limit is paid as taxable cash in the year of termination.</p>
+        <p>Under Income Tax Act Section 8517, only a portion of your commuted value can be transferred into a Locked-In Retirement Account (LIRA) tax-free. The limit equals your accrued pension multiplied by a prescribed factor based on your age at transfer. Any CV exceeding this limit is paid as taxable cash in the year of termination.</p>
       </div>
 
       <div class="faq-item">
@@ -377,11 +383,12 @@
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--text-1);margin:12px 0 14px;">Get notified when CIA rates change</h2>
     <p style="font-size:0.9rem;color:var(--text-2);line-height:1.8;margin-bottom:24px;">CIA i₁ and i₂ rates move monthly and directly affect your commuted value. We'll let you know when they change.</p>
     <form data-lead-capture data-cta-location="article_rate_updates" data-page-type="article" data-cta-id="article_email_capture" data-entry-point="rate_updates_section" data-success-target="cv-sub-ty-5" data-error-target="cv-sub-err-5" novalidate style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
-      <input type="email" name="email" placeholder="your@email.com" required style="flex:1;min-width:220px;max-width:300px;padding:12px 18px;border:1.5px solid rgba(0,0,0,0.15);border-radius:28px;background:var(--navy-2);color:var(--text-1);font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;" />
+      <label for="email-cv-sub-err-5" class="cv-email-label">Email address (required)</label>
+      <input type="email" aria-describedby="cv-sub-err-5" autocomplete="email" inputmode="email" name="email" placeholder="your@email.com" required style="flex:1;min-width:220px;max-width:300px;padding:12px 18px;border:1.5px solid rgba(0,0,0,0.15);border-radius:28px;background:var(--navy-2);color:var(--text-1);font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;"  id="email-cv-sub-err-5" />
       <button type="submit" style="padding:12px 26px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#f5f0e8;font-family:'Outfit',sans-serif;font-weight:600;font-size:0.9rem;border:none;border-radius:28px;cursor:pointer;">Subscribe</button>
     </form>
     <p id="cv-sub-err-5" role="alert" aria-live="polite" style="display:none;font-size:0.85rem;color:#b3261e;font-weight:600;margin-top:12px;"></p>
-    <p id="cv-sub-ty-5" style="display:none;font-size:0.9rem;color:#6b5320;font-weight:600;margin-top:16px;">✓ You're subscribed. We'll be in touch when rates move.</p>
+    <p id="cv-sub-ty-5" style="display:none;font-size:0.9rem;color:#6b5320;font-weight:600;margin-top:16px;" role="status" aria-live="polite" tabindex="-1">✓ You're subscribed. We'll be in touch when rates move.</p>
     <p style="font-size:0.72rem;color:var(--text-3);margin-top:14px;">No spam. Unsubscribe any time.</p>
   </div>
 </div>
@@ -398,6 +405,7 @@
   </div>
 </div>
 
+</main>
 <footer>
   <div class="container">
     <div class="footer-inner">
@@ -408,7 +416,12 @@
         <a href="/#features">Features</a>
         <a href="https://renewaliq.ca" target="_blank" rel="noopener noreferrer">RenewalIQ</a>
         <a href="/privacy">Privacy</a>
-      </div>
+
+        <a href="/#resources">Learn</a>
+        <a href="/#plan-guides">Plan guides</a>
+        <a href="/app-walkthrough">App walkthrough</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:privacy@cvcalculator.ca">Contact</a></div>
     </div>
   </div>
 </footer>

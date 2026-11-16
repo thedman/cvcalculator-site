@@ -47,6 +47,22 @@
     var emailInput = form.querySelector('input[type="email"]');
     var submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('button');
 
+    function showError(message, invalid) {
+      if (errorEl) {
+        errorEl.textContent = message;
+        errorEl.style.display = 'block';
+      }
+      if (emailInput) {
+        emailInput.setAttribute('aria-invalid', String(invalid));
+        emailInput.focus();
+      }
+      if (submitBtn) submitBtn.disabled = false;
+    }
+
+    if (emailInput) emailInput.addEventListener('input', function () {
+      emailInput.removeAttribute('aria-invalid');
+    });
+
     form.addEventListener('submit', function (event) {
       event.preventDefault();
 
@@ -56,13 +72,12 @@
       }
 
       var email = ((emailInput && emailInput.value) || '').trim();
-      if (!email) {
-        if (errorEl) {
-          errorEl.textContent = 'Please enter your email address.';
-          errorEl.style.display = 'block';
-        }
+      if (!email || (emailInput && !emailInput.validity.valid)) {
+        showError(email ? 'Please enter a valid email address.' : 'Please enter your email address.', true);
         return;
       }
+
+      if (emailInput) emailInput.removeAttribute('aria-invalid');
 
       if (submitBtn) submitBtn.disabled = true;
 
@@ -92,7 +107,10 @@
         .then(function (result) {
           if (result.ok && result.data && result.data.success === true) {
             form.style.display = 'none';
-            if (successEl) successEl.style.display = 'block';
+            if (successEl) {
+              successEl.style.display = 'block';
+              successEl.focus();
+            }
             if (typeof window.gtag === 'function') {
               window.gtag('event', 'email_signup_completed', {
                 property_id: PRODUCT_INTEREST,
@@ -106,19 +124,11 @@
             var message = (result.data && result.data.error)
               ? result.data.error
               : 'Something went wrong. Please try again.';
-            if (errorEl) {
-              errorEl.textContent = message;
-              errorEl.style.display = 'block';
-            }
-            if (submitBtn) submitBtn.disabled = false;
+            showError(message, false);
           }
         })
         .catch(function () {
-          if (errorEl) {
-            errorEl.textContent = 'Network error. Please check your connection and try again.';
-            errorEl.style.display = 'block';
-          }
-          if (submitBtn) submitBtn.disabled = false;
+          showError('Network error. Please check your connection and try again.', false);
         });
     });
   }
